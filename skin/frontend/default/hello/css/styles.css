@@ -100,9 +100,9 @@ ul,ol         { list-style:none; }
 .main { /*width:900px;*/ margin:0 auto; min-height:400px; padding:25px 25px 80px; background:#fffffe url(../images/bkg_main2.gif) 0 0 no-repeat; text-align:left; }
 
 /* Base Columns */
-.col-left { float:left; width:195px; padding:0 0 1px; }
-.col-main { float:left;/* width:685px; */padding:0 0 1px; }
-.col-right { float:right; /*width:195px; */padding:0 0 1px; }
+.col-left { /*float:left; width:195px; padding:0 0 1px; */}
+.col-main { /*float:left; width:685px; padding:0 0 1px; */}
+.col-right { /*float:right; width:195px; padding:0 0 1px; */}
 
 /* 1 Column Layout */
 .col1-layout .col-main { float:none; width:auto; }
@@ -542,7 +542,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /********** < Navigation */
 .nav-container { background:#0a263d url(../images/bkg_nav0.jpg) 50% 0 repeat-y; }
-#nav { width:918px; margin:0 auto; padding:0 16px; font-size:13px; }
+#nav { /*width:918px; margin:0 auto; padding:0 16px; font-size:13px; */}
 
 /* All Levels */ /* Style consistent throughout all nav levels */
 #nav li { position:relative; text-align:left; }
@@ -1704,7 +1704,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Footer ================================================================================ */
 .footer-container { border-top:15px solid #b6d1e2; }
-.footer { width:930px; margin:0 auto; padding:10px 10px 50px; }
+.footer { /*width:930px;*/ margin:0 auto; padding:10px 10px 50px; }
 .footer .store-switcher { display:inline; margin:0 5px 0 0; color:#fff; }
 .footer .store-switcher label { font-weight:bold; vertical-align:middle; }
 .footer .store-switcher select { padding:0; vertical-align:middle; }
@@ -1726,7 +1726,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Sample Data============================================================================ */
 .home-callout { margin-bottom:12px; }
 .home-callout img { display:block }
-.home-spot { float:left; width:470px; margin-left:20px; }
+.home-spot {/* float:left; width:470px; margin-left:20px; */}
 .best-selling h3 { margin:12px 0 6px 0; color:#e25203; font-size:1.2em; }
 .best-selling table { border-top:1px solid #ccc; }
 .best-selling tr.odd { background:#eee url(../images/best_selling_tr_odd_bg.gif) 0 100% repeat-x; }
