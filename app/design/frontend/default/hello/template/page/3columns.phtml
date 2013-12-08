@@ -41,19 +41,19 @@
     <div class="page container">
         <?php echo $this->getChildHtml('header') ?>
         <div class="main-container col3-layout">
-            <div class="main row-fluid">
+            <div class="main row">
                 <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <div class="span12">
-                    <div class="col-wrapper span9">
-                        <div class="row-fluid">
-                            <div class="col-left sidebar span3"><?php echo $this->getChildHtml('left') ?></div>
-                            <div class="col-main span9">
+                <div class="col-md-12">
+                    <div class="col-wrapper col-md-9 col-sm-12">
+                        <div class="row">
+                            <div class="col-left sidebar col-md-3 col-sm-3"><?php echo $this->getChildHtml('left') ?></div>
+                            <div class="col-main col-md-9 col-sm-9">
                                 <?php echo $this->getChildHtml('global_messages') ?>
                                 <?php echo $this->getChildHtml('content') ?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-right sidebar span3"><?php echo $this->getChildHtml('right') ?></div>
+                    <div class="col-right sidebar col-md-3 col-sm-12"><?php echo $this->getChildHtml('right') ?></div>
                 </div>
             </div>
         </div>
