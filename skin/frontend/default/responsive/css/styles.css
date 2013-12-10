@@ -545,7 +545,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav { /*width:918px; margin:0 auto; padding:0 16px; font-size:13px; */}
 
 /* All Levels */ /* Style consistent throughout all nav levels */
-#nav li { position:relative; text-align:left; }
+/*#nav li { position:relative; text-align:left; }
 #nav li.over { z-index:998; }
 #nav a,
 #nav a:hover { display:block; line-height:1.3em; text-decoration:none; }
@@ -553,30 +553,30 @@ tr.summary-details-excluded { font-style:italic; }
 #nav li ul span {white-space:normal; }
 #nav ul li.parent a { background:url(../images/bkg_nav2.gif) 100% 100% no-repeat; }
 #nav ul li.parent li a { background-image:none; }
-
+*/
 /* 0 Level */
-#nav li { float:left; }
+/*#nav li { float:left; }
 #nav li.active a { color:#d96708; }
 #nav a { float:left; padding:5px 12px 6px 8px; color:#a7c6dd; font-weight:bold; }
 #nav li.over a,
 #nav a:hover { color:#d96708; }
-
+*/
 /* 1st Level */
-#nav ul li,
+/*#nav ul li,
 #nav ul li.active { float:none; margin:0; padding-bottom:1px; background:#ecf3f6 url(../images/bkg_nav1.gif) 0 100% repeat-x; }
 #nav ul li.last { background:#ecf3f6; padding-bottom:0; }
 
 #nav ul a,
 #nav ul a:hover { float:none; padding:0; background:none; }
 #nav ul li a { font-weight:normal !important; }
-
+*/
 /* 2nd Level */
-#nav ul,
+/*#nav ul,
 #nav div { position:absolute; width:15em; top:27px; left:-10000px; border:1px solid #899ba5; }
 #nav div ul { position:static; width:auto; border:none; }
-
+*/
 /* 3rd+ Level */
-#nav ul ul,
+/*#nav ul ul,
 #nav ul div { top:5px; }
 
 #nav ul li a { background:#ecf3f6; }
@@ -585,12 +585,12 @@ tr.summary-details-excluded { font-style:italic; }
 #nav ul li a:hover { color:#2f2f2f !important; }
 #nav ul span,
 #nav ul li.last li span { padding:3px 15px 4px 15px; }
-
+*/
 /* Show menu */
-#nav li ul.shown-sub,
+/*#nav li ul.shown-sub,
 #nav li div.shown-sub { left:0; z-index:999; }
 #nav li .shown-sub ul.shown-sub,
-#nav li .shown-sub li div.shown-sub { left:100px; }
+#nav li .shown-sub li div.shown-sub { left:100px; }*/
 /********** Navigation > */
 /* ======================================================================================= */
 
@@ -670,7 +670,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-layered-nav .block-title { border:0; padding:0; height:24px; background:url(../images/bkg_block-layered-title.gif) 0 0 no-repeat; text-indent:-999em; overflow:hidden; }
 .block-layered-nav .block-subtitle { line-height:1.35; background:#d5e8ff url(../images/bkg_block-layered1.gif) 0 50% repeat; padding:3px 9px; border:1px solid #b9ccdd; border-width:1px 0; text-transform:uppercase; color:#1f5070; }
 .block-layered-nav .block-content { border:1px solid #a0b3c3; background:#e7f1f4; }
-.block-layered-nav dt { background:url(../images/bkg_block-layered-dt.gif) 9px 11px no-repeat; padding:7px 10px 0 25px; font-weight:bold; text-transform:uppercase; }
+.block-layered-nav dt { background:url(../images/bkg_block-layered-dt.gif) 9px 11px no-repeat; padding:7px 10px 0 7px; font-weight:bold; text-transform:uppercase; }
 .block-layered-nav dd { padding:0 12px 12px; background:url(../images/bkg_block-layered-dd.gif) 0 100% repeat-x; }
 .block-layered-nav dd.last { background:none; }
 .block-layered-nav .currently li { background:#fff url(../images/bkg_block-layered-li.gif) 0 100% repeat-x; padding:6px 24px 6px 10px; position:relative; z-index:1; line-height:1.5; }
@@ -799,7 +799,7 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid { border-bottom:1px solid #d9ddd3; background:url(../images/bkg_grid.gif) 0 0 repeat; position:relative; }
 .products-grid.last { border-bottom:0; }
 .products-grid li.item {/* float:left; width:138px; */padding:12px 10px 80px; }
-.products-grid .product-image { display:block; width:135px; height:135px; margin:0 0 10px; }
+.products-grid .product-image { /*display:block; width:135px; height:135px; margin:0 0 10px; */}
 .products-grid .product-name { /*min-height:2.7em;*/ margin:0 0 5px; font-weight:bold; font-size:13px; color:#203548; }
 .products-grid .product-name a { color:#203548; }
 .products-grid .price-box { margin:5px 0; }
