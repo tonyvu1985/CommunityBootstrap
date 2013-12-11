@@ -24,7 +24,7 @@ class Responsive_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
         $itemPositionClassPrefix = $parentPositionClass ? $parentPositionClass . '-' : 'nav-';
 
         foreach ($children as $child) {
-
+            
             $child->setLevel($childLevel);
             $child->setIsFirst($counter == 1);
             $child->setIsLast($counter == $childrenCount);
@@ -32,22 +32,33 @@ class Responsive_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
 
             $outermostClassCode = '';
             $outermostClass = $menuTree->getOutermostClass();
-  
-            if ($childLevel == 0 && $outermostClass) {
-                $outermostClassCode = ' class="' . $outermostClass . '" ';
-                $child->setClass($outermostClass);
+            
+            if ($child->hasChildren()) {
+                if ($childLevel == 0 && $outermostClass) {
+                    $outermostClassCode = ' class="' . $outermostClass . '"';
+                    $child->setClass($outermostClass);
+                }
+            }            
+            $html .= '<li ' . $this->_getRenderedMenuItemAttributes($child) . '>';                        
+            if($child->hasChildren()){                
+                $html   .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown">'
+                        . $this->escapeHtml($child->getName()) . '<b class="caret"></b>' .
+                        '</a>';                
             }
-
-            $html .= '<li ' . $this->_getRenderedMenuItemAttributes($child) . '>';
-            $html .= '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '><span>'
-                . $this->escapeHtml($child->getName()) . '</span></a>';
-
+            else{
+                $html .= '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '>'
+                        . $this->escapeHtml($child->getName()) . '</a>';
+            }
+            
             if ($child->hasChildren()) {
                 if (!empty($childrenWrapClass)) {
                     $html .= '<div class="' . $childrenWrapClass . '">';
                 }
                 $html .= '<ul class="level' . $childLevel . ' dropdown-menu">';
                 $html .= $this->_getHtml($child, $childrenWrapClass);
+                $html .= '<li class="divider"></li>';
+                $html .= '<li>' . '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '>'
+                            . $this->escapeHtml($child->getName()) . '</li>';
                 $html .= '</ul>';
 
                 if (!empty($childrenWrapClass)) {
