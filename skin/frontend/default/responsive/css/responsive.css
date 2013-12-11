@@ -32,8 +32,12 @@
     .quick-access{text-align: right}
 }
 @media (max-width: 767px) {
+    /* quick access nav */
     .quick-access{text-align: left; padding-top: 15px; clear: both}
     .header .links{float:left}
+    
+    /* custoner login */
+    .registered-customer .required{text-align: left; margin-top: 10px}
 }
  
 /* Landscape phones and down */
