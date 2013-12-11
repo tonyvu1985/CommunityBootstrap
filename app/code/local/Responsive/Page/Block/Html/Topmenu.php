@@ -40,14 +40,21 @@ class Responsive_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
                 }
             }            
             $html .= '<li ' . $this->_getRenderedMenuItemAttributes($child) . '>';                        
-            if($child->hasChildren()){                
-                $html   .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown">'
-                        . $this->escapeHtml($child->getName()) . '<b class="caret"></b>' .
-                        '</a>';                
-            }
-            else{
-                $html .= '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '>'
-                        . $this->escapeHtml($child->getName()) . '</a>';
+            
+            if ($childLevel == 0){ // Top level 0 
+                if($child->hasChildren()){                
+                    $html   .= '<a href="#" class="dropdown-toggle" data-toggle="dropdown">'
+                            . $this->escapeHtml($child->getName()) . '<b class="caret"></b>' .
+                            '</a>';                
+                }
+                else{
+                    $html .= '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '>'
+                            . $this->escapeHtml($child->getName()) . '</a>';
+                }
+            }else{                
+                    $html .= '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '>'
+                            . $this->escapeHtml($child->getName()) . '</a>';
+                
             }
             
             if ($child->hasChildren()) {
@@ -56,8 +63,9 @@ class Responsive_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
                 }
                 $html .= '<ul class="level' . $childLevel . ' dropdown-menu">';
                 $html .= $this->_getHtml($child, $childrenWrapClass);
+                /* last link to the parent category */
                 $html .= '<li class="divider"></li>';
-                $html .= '<li>' . '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '>'
+                $html .= '<li>' . '<a id="nav-parentlink" href="' . $child->getUrl() . '">'
                             . $this->escapeHtml($child->getName()) . '</li>';
                 $html .= '</ul>';
 
@@ -65,6 +73,7 @@ class Responsive_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
                     $html .= '</div>';
                 }
             }
+            
             $html .= '</li>';
 
             $counter++;
@@ -103,7 +112,11 @@ class Responsive_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
        }
 
        if ($item->hasChildren()) {
-           $classes[] = 'parent dropdown';
+           if ($item->getLevel() == 0){
+                $classes[] = 'parent dropdown';
+           }else{
+                $classes[] = 'parent dropdown-submenu';
+           }
        }
 
        return $classes;

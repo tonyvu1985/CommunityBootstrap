@@ -543,7 +543,10 @@ tr.summary-details-excluded { font-style:italic; }
 /********** < Navigation */
 /*.nav-container { background:#0a263d url(../images/bkg_nav0.jpg) 50% 0 repeat-y; }*/
 #nav { /*width:918px; margin:0 auto; padding:0 16px; font-size:13px; */}
-
+#nav li a{text-decoration: none; text-transform: uppercase}
+#nav li ul li a{text-transform: none; text-align: left}
+#nav-parentlink{color: #ff0000}
+.navbar-header .navbar-brand{text-decoration: none; color: #e26703}
 /* All Levels */ /* Style consistent throughout all nav levels */
 /*#nav li { position:relative; text-align:left; }
 #nav li.over { z-index:998; }
@@ -1798,3 +1801,53 @@ tr.summary-details-excluded { font-style:italic; }
 /* ======================================================================================= */
 
 .guest-select {width:305px !important;}
+
+/* MULTI-LEVEL DROPDOWNS FOR BOOTSTRAP */
+.dropdown-submenu{
+    position:relative;
+}
+
+.dropdown-submenu > .dropdown-menu
+{
+    top:0;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu{
+    display:block;
+}
+
+.dropdown-submenu > a:after{
+    display:block;
+    content:" ";
+    float:right;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid;
+    border-width:5px 0 5px 5px;
+    border-left-color:#cccccc;
+    margin-top:5px;
+    margin-right:-10px;
+}
+
+.dropdown-submenu:hover > a:after{
+    border-left-color:#ffffff;
+}
+
+.dropdown-submenu .pull-left{
+    float:none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu{
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+}

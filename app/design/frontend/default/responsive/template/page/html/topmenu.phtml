@@ -31,10 +31,7 @@
  * @see Mage_Page_Block_Html_Topmenu
  */
 ?>
-<script type="text/javascript">$.noConflict()</script>
-<?php $_menu = $this->getHtml('level-top') ;
- 
-?>
+<?php $_menu = $this->getHtml('level-top') ;?>
 
 <?php if($_menu): ?>
 <nav class="navbar navbar-default" role="navigation">
@@ -45,7 +42,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <!--<a class="navbar-brand" href="#">Brand</a>  -->
+        <a class="navbar-brand" href="#">freemarket</a>
   </div>    
   <div class="nav-container collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul id="nav" class="nav navbar-nav">
@@ -54,11 +51,3 @@
 </div>
 </nav>
 <?php endif ?>
-
-
-<script>
-    jQuery('.dropdown-toggle').click(function( event ) {
-        event.preventDefault();                 
-      });
-</script>
-    
