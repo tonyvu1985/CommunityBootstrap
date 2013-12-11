@@ -31,12 +31,13 @@
  * @see Mage_Page_Block_Html_Topmenu
  */
 ?>
+<script type="text/javascript">$.noConflict()</script>
 <?php $_menu = $this->getHtml('level-top') ;
  
 ?>
 
 <?php if($_menu): ?>
-<div class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -51,5 +52,5 @@
         <?php echo $_menu ?>
     </ul>
 </div>
-</div>
+</nav>
 <?php endif ?>
