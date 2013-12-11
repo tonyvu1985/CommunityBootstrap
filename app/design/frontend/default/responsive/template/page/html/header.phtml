@@ -29,13 +29,17 @@
 ?>
 <div class="header-container">
     <div class="header row">
-        <?php if ($this->getIsHomePage()):?>
-       <!-- <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong>--><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo col-sm-2"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a><!--</h1>-->
+    <!--   <?php if ($this->getIsHomePage()):?>
+       <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong>--><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo col-sm-2"><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
         <?php else:?>
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo col-sm-2"><strong><?php echo $this->getLogoAlt() ?></strong><img class="img-responsive" src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
-        <?php endif?>
-        <div class="quick-access col-sm-10">
+        <?php endif?> -->
+        
+        <div class="col-sm-5">
             <?php echo $this->getChildHtml('topSearch') ?>
+        </div>
+        
+        <div class="quick-access col-sm-7">            
             <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
             <?php echo $this->getChildHtml('topLinks') ?>
             <?php echo $this->getChildHtml('store_language') ?>

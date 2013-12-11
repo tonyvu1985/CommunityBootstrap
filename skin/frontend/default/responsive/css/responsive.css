@@ -28,7 +28,13 @@
 @media (min-width: 768px) and (max-width: 979px) {}
  
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) {}
+@media (min-width:768px){
+    .quick-access{text-align: right}
+}
+@media (max-width: 767px) {
+    .quick-access{text-align: left; padding-top: 15px; clear: both}
+    .header .links{float:left}
+}
  
 /* Landscape phones and down */
 @media (max-width: 480px) {}
