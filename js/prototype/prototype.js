@@ -1928,7 +1928,9 @@ Element.Methods = {
 
   hide: function(element) {
     element = $(element);
-    element.style.display = 'none';
+    if(!isBootstrapEvent){
+        element.style.display = 'none';
+    }
     return element;
   },
 
