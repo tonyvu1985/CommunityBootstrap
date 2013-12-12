@@ -1854,3 +1854,7 @@ tr.summary-details-excluded { font-style:italic; }
     -moz-border-radius:6px 0 6px 6px;
     border-radius:6px 0 6px 6px;
 }
+
+/* custom CSS */
+/* checkout onepage */
+#checkout-step-login .radio{display: inline-block}

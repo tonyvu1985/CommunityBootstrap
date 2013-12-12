@@ -30,10 +30,8 @@
 /* Landscape phone to portrait tablet */
 @media (min-width:768px){
     /* quick access nav */
-    .quick-access{text-align: right}
+    .quick-access{text-align: right}   
     
-    /* checkout /cart */
-    .cart .totals{margin-top: 20px}
 }
 @media (max-width: 767px) {
     /* quick access nav */
@@ -43,6 +41,8 @@
     /* custoner login */
     .registered-customer .required{text-align: left; margin-top: 10px}    
     
+    /* checkout /cart */
+    .cart .totals{margin-top: 20px}
 }
  
 /* Landscape phones and down */
