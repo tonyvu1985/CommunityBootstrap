@@ -136,19 +136,19 @@
             <script type="text/javascript">decorateTable('shopping-cart-table')</script>
         </fieldset>
     </form>
-    <div class="cart-collaterals">
-        <div class="col2-set">
-            <div class="col-1">
+    <div class="cart-collaterals row">
+        <div class="col2-set col-md-9 col-sm-12">
+            <div class="col-md-6 col-sm-12">
                 <?php echo $this->getChildHtml('crosssell') ?>
             </div>
-            <div class="col-2">
+            <div class="col-md-6 col-sm-12">
                 <?php /* Extensions placeholder */ ?>
                 <?php echo $this->getChildHtml('checkout.cart.extra') ?>
                 <?php echo $this->getChildHtml('coupon') ?>
                 <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
             </div>
         </div>
-        <div class="totals">
+        <div class="totals col-md-3 col-sm-12">
             <?php echo $this->getChildHtml('totals'); ?>
             <?php if(!$this->hasError()): ?>
             <ul class="checkout-types">
