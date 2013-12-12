@@ -177,7 +177,7 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .form-list li.control .input-box { clear:none; display:inline; width:auto; }
 /*.form-list li.fields { margin-right:-15px; }*/
 .form-list .input-box { display:block; clear:both;/* width:260px; */}
-.form-list .field { float:left; width:275px; }
+.form-list .field { /*float:left; width:275px; */}
 .form-list input.input-text {/* width:254px; */}
 .form-list textarea { width:254px; height:10em; }
 .form-list select { width:260px; }
@@ -1857,4 +1857,4 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* custom CSS */
 /* checkout onepage */
-#checkout-step-login .radio{display: inline-block}
+#checkout-step-login .radio, #checkoutSteps .radio{display: inline-block}
