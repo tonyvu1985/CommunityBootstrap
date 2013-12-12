@@ -812,8 +812,8 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid .availability { line-height:21px; }
 .products-grid .actions { position:absolute; bottom:12px; }
 .col2-left-layout .products-grid,
-.col2-right-layout .products-grid { width:632px; margin:0 auto; }
-.col1-layout .products-grid { width:790px; margin:0 auto; }
+.col2-right-layout .products-grid {/* width:632px; */margin:0 auto; }
+.col1-layout .products-grid {/* width:790px; */margin:0 auto; }
 
 /* View Type: List */
 .products-list li.item { border-bottom:1px solid #d9ddd3; padding:12px 10px; }
