@@ -6,6 +6,19 @@
  *
  *--------------------------------------------------------------------------*/
 
+var isBootstrapEvent = false;
+if (window.jQuery) {  
+  jQuery('*').on('hide.bs.dropdown', function( event ) {
+    isBootstrapEvent = true;
+  });
+  jQuery('*').on('hide.bs.collapse', function( event ) {
+    isBootstrapEvent = true;
+  });
+  jQuery('*').on('hide.bs.modal', function( event ) {
+    isBootstrapEvent = true;
+  });
+}
+
 var Prototype = {
 
   Version: '1.7',
