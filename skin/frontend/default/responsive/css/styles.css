@@ -1861,3 +1861,4 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* social network block */
 #divnetworkshare{margin-top: 10px; text-align: left}
+#divnetworkshare a{color: #fff}

@@ -42,14 +42,12 @@
         <?php echo $this->getChildHtml('header') ?>
         <div class="main-container col2-right-layout">
             <div class="main row">
-                <?php echo $this->getChildHtml('breadcrumbs') ?>
-                <div class="col-md-12">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>                
                     <div class="col-main col-md-9">
                         <?php echo $this->getChildHtml('global_messages') ?>
                         <?php echo $this->getChildHtml('content') ?>
                     </div>
-                    <div class="col-right sidebar col-md-3"><?php echo $this->getChildHtml('right') ?></div>
-                </div>
+                    <div class="col-right sidebar col-md-3"><?php echo $this->getChildHtml('right') ?></div>                
             </div>
         </div>
         <?php echo $this->getChildHtml('footer') ?>
