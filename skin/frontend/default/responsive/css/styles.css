@@ -108,7 +108,7 @@ ul,ol         { list-style:none; }
 .col1-layout .col-main { float:none; width:auto; }
 
 /* 2 Columns Layout */
-.col2-left-layout .col-main { float:right; }
+.col2-left-layout .col-main { /*float:right; */}
 .col2-right-layout .col-main {}
 
 /* 3 Columns Layout */
@@ -1536,14 +1536,14 @@ tr.summary-details-excluded { font-style:italic; }
 .my-account .title-buttons .link-rss { float:none; margin:0; }
 
 /********** < Dashboard */
-.dashboard .welcome-msg { margin:0 8em 1.5em 0; }
+.dashboard .welcome-msg { margin:0 0 1.5em 0; }
 .dashboard .welcome-msg p { margin:0; }
 .dashboard .col2-set { margin:0 0 15px; }
 
 /* General Box */
 .box-account { background:#fff url(../images/bkg_account_box.gif) 0 0 repeat-x; border:1px solid #ccc; border-color:#ccc #999 #999 #ccc; padding:15px; margin: 0 0 20px; }
 .box-account .box-head { border-bottom:1px solid #d9dde3; margin:0 0 10px; text-align:right; }
-.box-account .box-head h2 { float:left; margin:0; font-size:13px; font-weight:bold; text-transform:uppercase; background-position:0 0; background-repeat:no-repeat; padding-left:21px; color:#e65505; }
+.box-account .box-head h2 { float:left; margin:0; font-size:13px; font-weight:bold; text-transform:uppercase; background-position:0 0; background-repeat:no-repeat; /*padding-left:21px;*/ color:#e65505; }
 
 .dashboard .box .box-title { background:url(../images/bkg_divider1.gif) 0 100% repeat-x; padding:0 0 2px; margin:0 0 8px; text-align:right; }
 .dashboard .box .box-title h3,
