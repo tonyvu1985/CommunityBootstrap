@@ -180,7 +180,7 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .form-list .field { /*float:left; width:275px; */}
 .form-list input.input-text {/* width:254px; */}
 .form-list textarea { /*width:254px; */height:10em; }
-.form-list select { width:260px; }
+.form-list select {/* width:260px; */}
 .cart-collaterals  .form-list select{width: 80%}
 .form-list li.wide .input-box { width:535px; }
 .form-list li.wide input.input-text { width:529px; }
@@ -738,11 +738,11 @@ tr.summary-details-excluded { font-style:italic; }
 .block-compared .block-title strong { background-image:url(../images/i_block-list.gif); background-position:0 1px; }
 
 /* Block: Poll */
-.block-poll .block-title strong { background-image:url(../images/i_block-poll.gif); }
-.block-poll .block-subtitle { font-size:12px; }
+.block-poll .block-title strong {/* background-image:url(../images/i_block-poll.gif); */}
+.block-poll .block-subtitle { font-size:14px; }
 .block-poll label { color:#777; font-weight:bold; }
 .block-poll input.radio { float:left; margin:1px -18px 0 0; }
-.block-poll .label { display:block; margin-left:18px; }
+.block-poll .label { display:block; margin-left:18px; text-align: left}
 .block-poll li { padding:3px 9px; }
 .block-poll .actions { margin:5px 0 0; }
 .block-poll button.button span { border-color:#406a83; background:#618499; }
