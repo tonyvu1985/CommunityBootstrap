@@ -43,6 +43,8 @@
     
     /* checkout /cart */
     .cart .totals{margin-top: 20px}
+    #shopping-cart-table .item-editable{display: none}
+    #shopping-cart-table .item-image{display: none}
 }
  
 /* Landscape phones and down */

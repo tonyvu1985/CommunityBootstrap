@@ -394,7 +394,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .data-table thead th .tax-flag { font-size:11px; white-space:nowrap; }
 
 .data-table tfoot { border-bottom:1px solid #d9dde3; }
-.data-table tfoot tr.first td { background:url(../images/bkg_tfoot.gif) 0 0 repeat-x; }
+.data-table tfoot tr.first td {/* background:url(../images/bkg_tfoot.gif) 0 0 repeat-x; */}
 .data-table tfoot tr { background-color:#dee5e8 !important; }
 .data-table tfoot td { padding-top:1px; padding-bottom:1px; border-bottom:0; border-right:1px solid #d9dde3; }
 .data-table tfoot strong { font-size:16px; }
