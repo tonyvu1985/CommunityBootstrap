@@ -137,7 +137,7 @@ ul,ol         { list-style:none; }
 /* Form Elements */
 input,select,textarea,button { font:12px/15px Arial, Helvetica, sans-serif; vertical-align:middle; color:#2f2f2f; }
 input.input-text,select,textarea { background:#fff; border:1px solid #b6b6b6; }
-input.input-text,textarea { padding:2px; }
+/*input.input-text,textarea { padding:2px; }*/
 select { padding:1px; }
 select option { padding-right:10px; }
 select.multiselect option { border-bottom:1px solid #b6b6b6; padding:2px 5px; }
@@ -179,7 +179,7 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .form-list .input-box { display:block; clear:both;/* width:260px; */}
 .form-list .field { /*float:left; width:275px; */}
 .form-list input.input-text {/* width:254px; */}
-.form-list textarea { width:254px; height:10em; }
+.form-list textarea { /*width:254px; */height:10em; }
 .form-list select { width:260px; }
 .cart-collaterals  .form-list select{width: 80%}
 .form-list li.wide .input-box { width:535px; }
@@ -1116,7 +1116,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .box-tags .form-add button.button span {/* border-color:#406a83; background:#618499; */}
 .product-view .box-tags .note { margin:3px 0 0; padding:0 0 0 23px; font-size:11px; }
 
-/* Block: Reviews */
+/* Block: Reviews 
 .product-view .box-reviews dl { margin:15px 0; }
 .product-view .box-reviews dt a,
 .product-view .box-reviews dt span { font-weight:bold; }
@@ -1131,7 +1131,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .box-reviews .form-add .form-list .input-box { width:360px; }
 .product-view .box-reviews .form-add .form-list input.input-text,
 .product-view .box-reviews .form-add .form-list textarea { width:354px; }
-
+*/
 /* Send a Friend */
 .send-friend .form-list { width:615px; overflow:hidden; }
 .send-friend .form-list li { margin-right:-15px; }
