@@ -1164,6 +1164,7 @@ tr.summary-details-excluded { font-style:italic; }
 .advanced-search-summary ul { float:left; width:49%; }
 .advanced-search-summary strong { color:#E17C24; padding-left:15px; background:url(../images/i_search_criteria.gif) 0 3px no-repeat; }
 .advanced-search-summary p { clear:both; font-weight:bold; margin:0; }
+.advanced-search .input-range input.input-text {display: inline}
 
 /* CMS Home Page */
 .cms-home .subtitle {}

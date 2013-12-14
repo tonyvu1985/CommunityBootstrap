@@ -34,6 +34,8 @@
     
 }
 @media (max-width: 767px) {
+    .col-right{margin-top: 20px;}
+    
     /* quick access nav */
     .quick-access{text-align: left; padding-top: 15px; clear: both}
     .header .links{float:left}
