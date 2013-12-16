@@ -539,6 +539,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .links { float:right;/* margin:0 0 6px; */}
 .header .links li { float:left; font-size:11px; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat; padding:0 8px 0 7px; }
 .header .links a { color:#ebbc58; }
+.header .links .top-link-cart i{margin-left: 5px; color: #fff}
 .header-container .top-container { clear:both; padding:5px 10px 0 12px; text-align:right; }
 .header-container .top-container a { font-size:11px; color:#ebbc58; }
 
@@ -1863,3 +1864,6 @@ tr.summary-details-excluded { font-style:italic; }
 /* social network block */
 #divnetworkshare{margin-top: 10px; text-align: left}
 #divnetworkshare a{color: #fff}
+
+/* popup cart page */
+#popupcart{position: absolute; right: 0; z-index: 2; margin: 25px 14px 0px 0px; background:#fff; text-align: left; display: none}
