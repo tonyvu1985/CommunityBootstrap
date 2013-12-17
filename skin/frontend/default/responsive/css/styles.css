@@ -355,8 +355,8 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .pager .limiter label { vertical-align:middle; }
 .pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .pager .pages { margin:0 140px; }
-.pager .pages ol { display:inline; }
-.pager .pages li { display:inline; margin:0 2px; }
+/*.pager .pages ol { display:inline; }
+.pager .pages li { display:inline; margin:0 2px; }*/
 .pager .pages .current {}
 
 /* Sorter */
@@ -522,7 +522,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .welcome-msg a { color:#ebbc58; }
 .header .form-search { /*position:absolute; top:0; right:29px; width:315px; height:30px; background:url(../images/bkg_form-search.gif) 0 0 no-repeat; padding:1px 0 0 16px; */}
 .header .form-search label { float:left; width:24px; height:21px; text-align:left; text-indent:-999em; overflow:hidden; }
-.header .form-search input.input-text { float:left; padding: 10px; width: 98%; margin-top: 15px;/* border-color:#5c7989; width:209px; margin-right:4px; */}
+.header .form-search input.input-text {/* float:left; padding: 10px; width: 98%; margin-top: 15px; border-color:#5c7989; width:209px; margin-right:4px; */}
 .header .form-search button.button { float:left; }
 .header .form-search button.button span { border:0; height:21px; background:url(../images/btn_search.gif) 0 0 no-repeat; padding:0 0 0 3px; font:bold 11px/21px Tahoma, Verdana, Arial, sans-serif; }
 .header .form-search button.button span span { background-position:100% 0; padding:0 6px 0 3px; }
