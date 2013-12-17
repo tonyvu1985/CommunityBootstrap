@@ -349,12 +349,12 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .sub-title { clear:both; padding:15px 0 0; font-size:15px; font-weight:bold; margin:0 0 6px; color:#e25203; }
 
 /* Pager */
-.pager { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:0px 8px; /*border-top:1px solid #e2e2e2; */text-align:center; }
-.pager .amount { float:left; margin:0; }
-.pager .limiter { float:right; }
-.pager .limiter label { vertical-align:middle; }
-.pager .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
-.pager .pages { margin:0 140px; }
+.pager-responsive { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:0px 8px; /*border-top:1px solid #e2e2e2; */text-align:center; }
+.pager-responsive .amount { float:left; margin:0; }
+.pager-responsive .limiter { float:right; }
+.pager-responsive .limiter label { vertical-align:middle; }
+.pager-responsive .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
+.pager-responsive .pages { margin:0 140px; }
 /*.pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }*/
 .pager .pages .current {}
@@ -369,7 +369,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 
 /* Toolbar */
 .toolbar {}
-.toolbar .pager { padding:0px; /*border-bottom:1px solid #fff; */}
+.toolbar .pager-responsive { padding:0px; /*border-bottom:1px solid #fff; */}
 .toolbar .sorter { border-bottom:1px solid #fff; }
 .toolbar-bottom {}
 
@@ -1775,7 +1775,7 @@ tr.summary-details-excluded { font-style:italic; }
 .dashboard .box .box-title:after,
 .box-reviews li.item:after,
 .box-tags li.item:after,
-.pager:after,
+.pager-responsive:after,
 .sorter:after,
 .ratings:after,
 .add-to-box:after,
