@@ -43,3 +43,11 @@
     </div>
 </div>
 <?php echo $this->getChildHtml('topMenu') ?>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('.showminicart').click(function(e){
+            e.preventDefault();                        
+            jQuery('#popupcart').slideToggle("fast"); 
+        });
+    })
+</script>

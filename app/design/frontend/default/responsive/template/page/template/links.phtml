@@ -51,16 +51,3 @@
 <div id="popupcart">    
     <?php echo $this->getLayout()->createBlock('checkout/cart_sidebar')->setTemplate('checkout/cart/sidebar.phtml')->toHtml(); ?>
 </div>
-<script type="text/javascript">
-    jQuery(document).ready(function(){
-        jQuery('.showminicart').click(function(e){
-            e.preventDefault();
-            if (jQuery('#popupcart').is(':hidden')){
-                jQuery('#popupcart').slideDown();
-            }else{
-                jQuery('#popupcart').hide();
-            }
-            
-        });
-    })
-</script>

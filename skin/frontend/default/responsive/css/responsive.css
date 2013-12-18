@@ -47,7 +47,22 @@
     .cart .totals{margin-top: 20px}
     #shopping-cart-table .item-editable{display: none}
     #shopping-cart-table .item-image{display: none}
+    
+    /* catalog category */
+    .pager-responsive .amount{display: none}
+    .pager-responsive .limiter label{display: none}
+    
+    
 }
  
 /* Landscape phones and down */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    
+    /* catalog category */
+    .block-subscribe{display: none}
+    .block-poll{display: none;}
+    
+    .col-main .category-image{display: none}
+    
+    
+}

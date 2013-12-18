@@ -33,16 +33,16 @@
 ?>
 <?php if($this->getCollection()->getSize()): ?>
 <div class="toolbar">
-    <div class="pager-responsive">
-        <p class="amount">
+    <div class="pager-responsive row">
+        <div class="amount col-sm-4 col-xs-12">
             <?php if($this->getLastPageNum()>1): ?>
                 <?php echo $this->__('Items %s to %s of %s total', $this->getFirstNum(), $this->getLastNum(), $this->getTotalNum()) ?>
             <?php else: ?>
                 <strong><?php echo $this->__('%s Item(s)', $this->getTotalNum()) ?></strong>
             <?php endif; ?>
-        </p>
+        </div>
 
-        <div class="limiter">
+        <div class="limiter col-sm-4 col-xs-6">
             <label><?php echo $this->__('Show') ?></label>
             <select onchange="setLocation(this.value)">
             <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
@@ -52,8 +52,9 @@
             <?php endforeach; ?>
             </select> <?php echo $this->__('per page') ?>
         </div>
-
-        <?php echo $this->getPagerHtml() ?>
+        <div class="col-sm-4 col-xs-6">    
+            <?php echo $this->getPagerHtml() ?>
+        </div>
 
     </div>
 
