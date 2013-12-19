@@ -183,10 +183,10 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .form-list textarea { /*width:254px; */height:10em; }
 .form-list select {/* width:260px; */}
 .cart-collaterals  .form-list select{width: 80%}
-.form-list li.wide .input-box { width:535px; }
-.form-list li.wide input.input-text { width:529px; }
-.form-list li.wide textarea { width:529px; }
-.form-list li.wide select { width:535px; }
+.form-list li.wide .input-box { /*width:535px; */}
+.form-list li.wide input.input-text {/* width:529px; */}
+.form-list li.wide textarea { /*width:529px; */}
+.form-list li.wide select { /*width:535px; */}
 .form-list li.additional-row { border-top:1px solid #ccc; margin-top:10px; padding-top:7px; }
 .form-list li.additional-row .btn-remove { float:right; margin:5px 0 0; }
 .form-list .input-range input.input-text { width:74px; }
@@ -351,8 +351,8 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 
 /* Pager */
 .pager-responsive { font-size:11px; background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:0px 8px; /*border-top:1px solid #e2e2e2; */text-align:center; }
-.pager-responsive .amount { float:left; margin:0; }
-.pager-responsive .limiter { float:right; }
+.pager-responsive .amount {/* float:left; margin:0; */ text-align: left}
+.pager-responsive .limiter {/* float:right; */ text-align: right}
 .pager-responsive .limiter label { vertical-align:middle; }
 .pager-responsive .limiter select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .pager-responsive .pages {/* margin:0 140px; */}
@@ -362,8 +362,8 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 
 /* Sorter */
 .sorter { font-size:11px; /*background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:3px 8px; border-top:1px solid #e2e2e2; */}
-.sorter .view-mode { float:left; margin:0; }
-.sorter .sort-by { float:right; padding-right:36px; }
+.sorter .view-mode {/* float:left; margin:0; */ text-align: left}
+.sorter .sort-by {/* float:right; padding-right:36px; */ text-align: right}
 .sorter .sort-by label { vertical-align:middle; }
 .sorter .sort-by select { padding:0; margin:0 0 1px; vertical-align:middle; }
 .sorter .link-feed {}
@@ -1174,7 +1174,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cms-index-index .subtitle {}
 
 /* Sitemap */
-.page-sitemap .links { text-align:right; margin:0 8px -22px 0; }
+.page-sitemap .links { text-align:right; /*margin:0 8px -22px 0; */}
 .page-sitemap .links a { text-decoration:none; position:relative; }
 .page-sitemap .links a:hover { text-decoration:underline; }
 .page-sitemap .sitemap { margin:12px; }

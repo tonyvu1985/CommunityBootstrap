@@ -42,6 +42,10 @@
             <?php endif; ?>
         </div>
 
+        <div class="pagination col-sm-4 col-xs-6">    
+            <?php echo $this->getPagerHtml() ?>
+        </div>
+        
         <div class="limiter col-sm-4 col-xs-6">
             <label><?php echo $this->__('Show') ?></label>
             <select onchange="setLocation(this.value)">
@@ -52,16 +56,12 @@
             <?php endforeach; ?>
             </select> <?php echo $this->__('per page') ?>
         </div>
-        <div class="col-sm-4 col-xs-6">    
-            <?php echo $this->getPagerHtml() ?>
-        </div>
-
     </div>
 
     <?php if( $this->isExpanded() ): ?>
-    <div class="sorter">
+    <div class="sorter row">
         <?php if( $this->isEnabledViewSwitcher() ): ?>
-        <p class="view-mode">
+        <div class="view-mode col-xs-6">
             <?php $_modes = $this->getModes(); ?>
             <?php if($_modes && count($_modes)>1): ?>
             <label><?php echo $this->__('View as') ?>:</label>
@@ -73,10 +73,10 @@
                 <?php endif; ?>
             <?php endforeach; ?>
             <?php endif; ?>
-        </p>
+        </div>
         <?php endif; ?>
     
-        <div class="sort-by">
+        <div class="sort-by col-xs-6">
             <label><?php echo $this->__('Sort By') ?></label>
             <select onchange="setLocation(this.value)">
             <?php foreach($this->getAvailableOrders() as $_key=>$_order): ?>
