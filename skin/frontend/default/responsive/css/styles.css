@@ -97,7 +97,7 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container { background:#fbfaf6 /*url(../images/bkg_main1.gif) 50% 0 no-repeat*/; }
-.main { /*width:900px;*/ margin:0 auto; min-height:400px; padding:25px 25px 80px; background:#fffff; text-align:left; }
+.main { /*width:900px; margin:0 auto; min-height:400px; */padding:20px 15px 30px; background:#fffff; text-align:left; }
 
 /* Base Columns */
 .col-left { /*float:left; width:195px; padding:0 0 1px; */}
@@ -359,7 +359,8 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /*.pager .pages ol { display:inline; }
 .pager .pages li { display:inline; margin:0 2px; }*/
 .pager .pages .current {}
-
+.pager .amount{text-align: left; float:left}
+.pager .pages{text-align: right; float:right}
 /* Sorter */
 .sorter { font-size:11px; /*background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:3px 8px; border-top:1px solid #e2e2e2; */}
 .sorter .view-mode {/* float:left; margin:0; */ text-align: left}
@@ -384,7 +385,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .data-table th.last { border-right:0; }
 .data-table tr.last th,
 .data-table tr.last td { border-bottom:0 !important; }
-.data-table th { padding:3px 8px; font-weight:bold; }
+.data-table th { padding:3px 8px; font-weight:normal; }
 .data-table td { padding:3px 8px; }
 
 .data-table thead th { font-weight:bold; border-right:1px solid #c2d3e0; padding:2px 8px; color:#0a263c; white-space:nowrap; vertical-align:middle; }
@@ -451,7 +452,7 @@ tr.summary-details-excluded { font-style:italic; }
 .std p,
 .std address,
 .std blockquote { margin:0 0 1em; padding:0; }
-.std ul { list-style:disc outside; padding-left:1.5em; }
+.std ul { list-style:disc outside; padding-left:10px; }
 .std ol { list-style:decimal outside; padding-left:1.5em; }
 .std ul ul { list-style-type:circle; }
 .std ul ul,
@@ -712,6 +713,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-related .product { margin-left:20px; }
 
 /* Block: Compare Products */
+.block-compare{clear: both}
 .block-compare .block-title strong { background-image:url(../images/i_block-list.gif); background-position:0 1px; }
 .block-compare button.button span { border-color:#406a83; background:#618499; }
 .page-popup .link-print { background:url(../images/i_print.gif) 0 2px no-repeat; padding:2px 0 2px 25px; font-weight:bold; color:#1e7ec8; }
@@ -792,7 +794,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-login .actions button.button span { border-color:#406a83; background:#618499; }
 
 /* Paypal */
-.sidebar .paypal-logo { display:block; margin:10px 0; text-align:center; }
+.sidebar .paypal-logo { /*display:block; margin:10px 0;*/ text-align:center; }
 .sidebar .paypal-logo a { float:none; }
 /* ======================================================================================= */
 
@@ -1010,8 +1012,8 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-img-box .zoom-notice { font-size:11px; margin:0 0 5px; text-align:center; }
 .product-view .product-img-box .zoom { position:relative; z-index:9; height:18px; margin:0 auto 13px; padding:0 28px; background:url(../images/slider_bg.gif) 50% 50% no-repeat; cursor:pointer; }
 .product-view .product-img-box .zoom.disabled { -moz-opacity:.3; -webkit-opacity:.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";/*IE8*/ opacity:.3; }
-.product-view .product-img-box .zoom #track { position:relative; height:18px; background:#eee}
-.product-view .product-img-box .zoom #handle { position:absolute; left:0; top:-1px; width:9px; height:22px; /*background:url(../images/magnifier_handle.gif) 0 0 no-repeat;  */ background: #ccc}
+.product-view .product-img-box .zoom #track { position:relative; height:18px; background:#f47b8c}
+.product-view .product-img-box .zoom #handle { position:absolute; left:0; top:-4px; width:9px; height:24px; /*background:url(../images/magnifier_handle.gif) 0 0 no-repeat;  */ background: #f17c8e}
 .product-view .product-img-box .zoom .btn-zoom-out { position:absolute; left:2px; top:0; }
 .product-view .product-img-box .zoom .btn-zoom-in { position:absolute; right:2px; top:0; }
 .product-view .product-img-box .more-views h2 { font-size:11px; border-bottom:1px solid #ccc; margin:0 0 8px; text-transform:uppercase; }
@@ -1733,19 +1735,19 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-container .bottom-container { margin:0 0 5px; }
 /* ======================================================================================= */
 
-/* Sample Data============================================================================ */
+/* Sample Data============================================================================ 
 .home-callout { margin-bottom:12px; }
 .home-callout img { display:block }
-.home-spot {/* float:left; width:470px; margin-left:20px; */}
-.best-selling h3 { margin:12px 0 6px 0; color:#e25203; font-size:1.2em; }
+.home-spot { float:left; width:470px; margin-left:20px; }
+/*.best-selling h3 { margin:12px 0 6px 0; color:#e25203; font-size:1.2em; }
 .best-selling table { border-top:1px solid #ccc; }
-.best-selling tr.odd { background:#eee /*url(../images/best_selling_tr_odd_bg.gif) 0 100% repeat-x; */}
-.best-selling tr.even { background:#fff /*url(../images/best_selling_tr_even_bg.gif) 0 100% repeat-x; */}
-.best-selling td { width:50%; border-bottom:1px solid #ccc; padding:8px 10px 8px 8px; font-size:11px; }
+.best-selling tr.odd { background:#eee url(../images/best_selling_tr_odd_bg.gif) 0 100% repeat-x; }
+.best-selling tr.even { background:#fff url(../images/best_selling_tr_even_bg.gif) 0 100% repeat-x; }
+.best-selling td {/*width:50%; padding:8px 10px 8px 8px; border-bottom:1px solid #ccc; font-size:11px; }
 .best-selling .product-img { float:left; border:2px solid #dcdcdc; }
 .best-selling .product-description { margin-left:107px; line-height:1.3em; }
 .best-selling a.product-name,
-.home-spot .best-selling a.product-name:hover { color:#203548; }
+.home-spot .best-selling a.product-name:hover { color:#203548; }*/
 /* ======================================================================================= */
 
 

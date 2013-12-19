@@ -26,7 +26,8 @@
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {}
- 
+
+
 /* Landscape phone to portrait tablet */
 @media (min-width:768px){
     /* quick access nav */
@@ -53,13 +54,16 @@
     .pager-responsive .limiter label{display: none}
     .pager-responsive .pagination{text-align: left}    
     .sorter .view-mode{padding-left:0}
+    
+    /* homepage */
+    .home-callout{display: none}
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
     
     /* catalog category */
-    .block-subscribe, .block-compare, .block-poll{display: none}
+    .block-subscribe, .block-compare, .block-poll, .block-viewed, .block-tags, .paypal-logo{display: none}
     
     .col-main .category-image{display: none}
     
