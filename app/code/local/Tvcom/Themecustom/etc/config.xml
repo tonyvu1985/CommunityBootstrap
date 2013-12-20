@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Tvcom_Themecustom>
+            <version>0.0.1</version>
+        </Tvcom_Themecustom>
+    </modules>
+    
+    <global>
+        <helpers>
+            <themecustom>
+                  <class>Tvcom_Themecustom_Helper</class>
+            </themecustom>
+        </helpers>
+        
+        <models>
+            <themecustom>
+                <class>Tvcom_Themecustom_Model</class>
+            </themecustom>    
+        </models>
+          
+    </global>
+   
+     <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <setting translate="label" module="themecustom">
+                                            <title>Store Hello World Module Section</title>
+                                        </setting>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>
