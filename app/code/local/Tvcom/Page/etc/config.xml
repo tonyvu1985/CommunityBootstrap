@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <modules>
-        <Responsive_Page>
-            <version>1.0.0</version>
-        </Responsive_Page>
+        <Tvcom_Page>
+            <version>0.0.1</version>
+        </Tvcom_Page>
     </modules>
     <global>
         <blocks>
             <page>
                 <rewrite>
-                    <html_topmenu>Responsive_Page_Block_Html_Topmenu</html_topmenu>
+                    <html_topmenu>Tvcom_Page_Block_Html_Topmenu</html_topmenu>
                 </rewrite>
             </page>
         </blocks>

@@ -7,7 +7,7 @@
  * @author      Tony Vu <vuductrung2003@gmail.com>
  */
 
-class Responsive_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
+class Tvcom_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
 {    
     protected function _getHtml(Varien_Data_Tree_Node $menuTree, $childrenWrapClass)
     {
