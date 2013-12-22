@@ -3,6 +3,7 @@
     header("Content-type: text/css; charset: UTF-8");
     
     $bgcolor = '#' . Mage::getStoreConfig('setting/themebg/bgcolor');
+    $bgimage = Mage::getStoreConfig('setting/themebg/bgimage');
     
     $fontfm = Mage::getStoreConfig('setting/themefont/fontfamily');
     $fontsize = Mage::getStoreConfig('setting/themefont/fontsize');
@@ -11,7 +12,7 @@
 
 * { margin:0; padding:0; }
 
-body          { background:<?php echo $bgcolor ?>; font-family: <?php echo $fontfm ?>; font-size:<?php echo $fontsize ?>; color: <?php echo $textcolor ?>; text-align:center}
+body          { background:<?php echo $bgcolor ?> /*url(<?php //echo $bgimage ?>) 0 0 no-repeat*/; font-family: <?php echo $fontfm ?>; font-size:<?php echo $fontsize ?>; color: <?php echo $textcolor ?>; text-align:center}
 
 img           { border:0; vertical-align:top; }
 
