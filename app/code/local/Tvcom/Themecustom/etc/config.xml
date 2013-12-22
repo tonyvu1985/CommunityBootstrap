@@ -40,6 +40,19 @@
                     </children>
                 </admin>
             </resources>
-        </acl>
+        </acl>  
+        
+        <layout> <!-- layout upadte -->
+            <updates>
+                <themecustom>
+                    <file>colorpicker.xml</file>
+                </themecustom>
+            </updates>
+        </layout>
+        
     </adminhtml>
+    
+   
+          
+
 </config>
