@@ -35,7 +35,17 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </bgcolor>                     
+                        </bgcolor>     
+                        
+                        <bgimage translate="label">
+                            <label>Background image</label>
+                            <frontend_type>sfile</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bgimage>    
+                                    
                     </fields>
                 </themebg>      
                 
@@ -47,6 +57,16 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+                        <goofont translate="label">
+                            <label>Google Font</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>    
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Example:</comment>
+                        </goofont>
+                        
                         <fontfamily translate="label">
                             <label>Font family</label>
                             <fontend_type>text</fontend_type>
@@ -57,7 +77,7 @@
                         </fontfamily>
                         
                         <fontsize translate="label">
-                            <label>Font Size</label>
+                            <label>Font size</label>
                             <font_type>text</font_type>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
@@ -66,15 +86,36 @@
                         </fontsize>
                         
                          <textcolor translate="label">
-                            <label>Text Color</label>
+                            <label>Text color</label>
                             <font_type>text</font_type>
+                            <validate>color</validate> 
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            
                         </textcolor>
                     </fields>
                 </themefont>         
+                
+                <header translate="label"> <!-- header -->
+                    <label>Header</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </header>
+                
+                 <footer translate="label"> <!-- footer -->
+                    <label>Footer</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>0</show_in_store>
+                </footer>
+                
             </groups>
         </setting>
     </sections>

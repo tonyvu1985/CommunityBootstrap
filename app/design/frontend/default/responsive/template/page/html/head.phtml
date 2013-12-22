@@ -46,6 +46,15 @@
 <!-- awesome font -->
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+<!-- google font -->
+<?php 
+    $goofont = Mage::getStoreConfig('setting/themefont/goofont');
+    if (trim($goofont) != ""){
+        echo $goofont;
+    }
+?>
+
+
 <!--[if lt IE 7]>
 <script type="text/javascript">
 //<![CDATA[
