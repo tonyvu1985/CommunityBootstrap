@@ -31,7 +31,7 @@
                                 <config>
                                     <children>
                                         <setting translate="label" module="themecustom">
-                                            <title>Store Hello World Module Section</title>
+                                            <title>Setting Section</title>
                                         </setting>
                                     </children>
                                 </config>

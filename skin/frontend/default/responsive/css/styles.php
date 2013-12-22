@@ -1,13 +1,17 @@
 <?php
     require_once('../../../../../app/Mage.php');
-
     header("Content-type: text/css; charset: UTF-8");
+    
     $bgcolor = Mage::getStoreConfig('setting/themebg/bgcolor');
+    
+    $fontfm = Mage::getStoreConfig('setting/themefont/fontfamily');
+    $fontsize = Mage::getStoreConfig('setting/themefont/fontsize');
+    $textcolor = Mage::getStoreConfig('setting/themefont/textcolor');
 ?>
 
 * { margin:0; padding:0; }
 
-body          { background:<?php echo '#' . $bgcolor ?>; font:12px/1.55 Arial, Helvetica, sans-serif; color:#2f2f2f; text-align:center; }
+body          { background:<?php echo $bgcolor ?>; font-family: <?php echo $fontfm ?>; font-size:<?php echo $fontsize ?>; color: <?php echo $textcolor ?>; }
 
 img           { border:0; vertical-align:top; }
 
