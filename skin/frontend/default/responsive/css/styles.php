@@ -3,7 +3,10 @@
     header("Content-type: text/css; charset: UTF-8");
     
     $bgcolor = '#' . Mage::getStoreConfig('setting/themebg/bgcolor');
-    $bgimage = Mage::getStoreConfig('setting/themebg/bgimage');
+    $bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/themebg/bgimage');
+    $bgpositionx = Mage::getStoreConfig('setting/themebg/bgpositionx');
+    $bgpositiony = Mage::getStoreConfig('setting/themebg/bgpositiony');
+    $bgpositionrepeat = Mage::getStoreConfig('setting/themebg/bgrepeat');
     
     $fontfm = Mage::getStoreConfig('setting/themefont/fontfamily');
     $fontsize = Mage::getStoreConfig('setting/themefont/fontsize');
@@ -12,7 +15,7 @@
 
 * { margin:0; padding:0; }
 
-body          { background:<?php echo $bgcolor ?> /*url(<?php //echo $bgimage ?>) 0 0 no-repeat*/; font-family: <?php echo $fontfm ?>; font-size:<?php echo $fontsize ?>; color: <?php echo $textcolor ?>; text-align:center}
+body          { background:<?php echo $bgcolor ?> url(<?php echo $bgimage ?>) <?php echo $bgpositionx ?> <?php echo $bgpositiony ?> <?php echo $bgpositionrepeat ?>; font-family: <?php echo $fontfm ?>; font-size:<?php echo $fontsize ?>; color: <?php echo $textcolor ?>; text-align:center}
 
 img           { border:0; vertical-align:top; }
 
