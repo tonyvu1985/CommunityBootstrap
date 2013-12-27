@@ -1863,3 +1863,6 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* pagination catalog / category */
 .pagination{margin: 0}
+
+/* product page / additional information */
+#product-attribute-specs-table .label{font-size:90%; font-weight:normal}
