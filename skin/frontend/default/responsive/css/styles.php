@@ -2,20 +2,30 @@
     require_once('../../../../../app/Mage.php');
     header("Content-type: text/css; charset: UTF-8");
     
-    $bgcolor = '#' . Mage::getStoreConfig('setting/themebg/bgcolor');
-    $bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/themebg/bgimage');
-    $bgpositionx = Mage::getStoreConfig('setting/themebg/bgpositionx');
-    $bgpositiony = Mage::getStoreConfig('setting/themebg/bgpositiony');
-    $bgpositionrepeat = Mage::getStoreConfig('setting/themebg/bgrepeat');
+    /* theme background */
+    $theme_bgcolor = '#' . Mage::getStoreConfig('setting/themebg/bgcolor');
+    $theme_bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/themebg/bgimage');
+    $theme_bgpositionx = Mage::getStoreConfig('setting/themebg/bgpositionx');
+    $theme_bgpositiony = Mage::getStoreConfig('setting/themebg/bgpositiony');
+    $theme_bgpositionrepeat = Mage::getStoreConfig('setting/themebg/bgrepeat');
     
+    /* theme font */
     $fontfm = Mage::getStoreConfig('setting/themefont/fontfamily');
     $fontsize = Mage::getStoreConfig('setting/themefont/fontsize');
     $textcolor = '#' . Mage::getStoreConfig('setting/themefont/textcolor');
+    
+    /* body style */
+    $container_bgcolor = '#' . Mage::getStoreConfig('setting/body/bgcolor');
+    $container_bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/body/bgimage');
+    $container_bgpositionx = Mage::getStoreConfig('setting/body/bgpositionx');
+    $container_bgpositiony = Mage::getStoreConfig('setting/body/bgpositiony');
+    $container_bgpositionrepeat = Mage::getStoreConfig('setting/body/bgrepeat');
+    
 ?>
 
 * { margin:0; padding:0; }
 
-body          { background:<?php echo $bgcolor ?> url(<?php echo $bgimage ?>) <?php echo $bgpositionx ?> <?php echo $bgpositiony ?> <?php echo $bgpositionrepeat ?>; font-family: <?php echo $fontfm ?>; font-size:<?php echo $fontsize ?>; color: <?php echo $textcolor ?>; text-align:center}
+body          { background:<?php echo $theme_bgcolor ?> url(<?php echo $theme_bgimage ?>) <?php echo $theme_bgpositionx ?> <?php echo $theme_bgpositiony ?> <?php echo $theme_bgpositionrepeat ?>; font-family: <?php echo $fontfm ?>; font-size:<?php echo $fontsize ?>; color: <?php echo $textcolor ?>; text-align:center}
 
 img           { border:0; vertical-align:top; }
 
@@ -85,7 +95,7 @@ ul,ol         { list-style:none; }
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
-.main-container { background:#fbfaf6 /*url(../images/bkg_main1.gif) 50% 0 no-repeat*/; }
+.main-container { background:<?php echo $container_bgcolor ?> url(<?php echo $container_bgimage ?>) <?php echo $container_bgpositionx ?> <?php echo $container_bgpositiony ?> <?php echo $container_bgpositionrepeat ?>;  }
 .main { /*width:900px; margin:0 auto; min-height:400px; */padding:20px 15px 30px; background:#fffff; text-align:left; }
 
 /* Base Columns */
@@ -1051,8 +1061,8 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options ul.options-list li { line-height:1.5; padding:2px 0; }
 .product-options ul.options-list input.radio { float:left; margin-top:3px; }
 .product-options ul.options-list input.checkbox { float:left; margin-top:3px; }
-.product-options ul.options-list .label { display:block; margin-left:18px; }
-.product-options ul.options-list label { font-weight:normal; }
+.product-options ul.options-list .label {/* display:block; margin-left:18px; */}
+.product-options ul.options-list label { font-weight:normal; color: <?php echo $textcolor?>}
 .product-options ul.validation-failed { padding:0 7px; }
 .product-options p.note { margin:0; font-size:11px; }
 .product-options p.required { position:absolute; right:20px; top:20px; }

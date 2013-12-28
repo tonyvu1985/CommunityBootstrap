@@ -4,7 +4,7 @@
  * define the background repeat status
  *
  */
- class Tvcom_Themecustom_Model_Background_Repeat 
+ class Tvcom_Themecustom_Model_Option_Repeat 
  {     
      public function toOptionArray()
      {

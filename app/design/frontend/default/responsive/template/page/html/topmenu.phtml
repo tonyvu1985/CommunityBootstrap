@@ -32,9 +32,15 @@
  */
 ?>
 <?php $_menu = $this->getHtml('level-top') ;?>
-
+<?php 
+    $narbar_style = Mage::getStoreConfig('setting/header/navbar'); 
+    if ($narbar_style ==''){
+        // navbar-default is an option in the setting/header/navbar
+        $narbar_style = 'navbar-default';
+    } 
+?>
 <?php if($_menu): ?>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar <?php echo $narbar_style ?>" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
