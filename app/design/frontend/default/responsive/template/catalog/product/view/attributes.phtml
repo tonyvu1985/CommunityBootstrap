@@ -51,7 +51,7 @@
     
     <div class="" id="product-attribute-specs-table">        
         <?php foreach ($_additional as $_data): ?>
-            <div class="row">
+            <div>
                 <div class="col-sm-1 col-xs-12 label label-info"><?php echo $this->escapeHtml($this->__($_data['label'])) ?></div>
                 <div class="col-sm-11 col-xs-12 data"><?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></div>
             </div>
