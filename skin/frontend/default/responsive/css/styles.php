@@ -1867,6 +1867,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* social network block */
 #divnetworkshare{margin-top: 10px; text-align: left}
 #divnetworkshare a{color: #fff}
+.followus{color: #fff; vertical-align: top; padding: 10px 10px 0px 0px; display: inline-block;}
 
 /* popup cart page */
 #popupcart{position: absolute; right: 0; z-index: 2; margin: 25px 14px 0px 0px; background:#fff; text-align: left; display: none; width: 250px}
