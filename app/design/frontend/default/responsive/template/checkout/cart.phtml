@@ -136,12 +136,12 @@
             <script type="text/javascript">decorateTable('shopping-cart-table')</script>
         </fieldset>
     </form>
-    <div class="cart-collaterals row">
-        <div class="col2-set col-md-9 col-sm-12">
-            <div class="col-md-6 col-sm-12">
+    <div class="cart-collaterals col-md-12 col-sm-12">
+        <div class="cart-left col-md-9 col-sm-12">
+            <div class="crosselldiv col-md-6 col-sm-12">
                 <?php echo $this->getChildHtml('crosssell') ?>
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="extradiv col-md-6 col-sm-12">
                 <?php /* Extensions placeholder */ ?>
                 <?php echo $this->getChildHtml('checkout.cart.extra') ?>
                 <?php echo $this->getChildHtml('coupon') ?>

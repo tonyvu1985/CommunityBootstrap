@@ -1876,3 +1876,6 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* product page / additional information */
 #product-attribute-specs-table .label{font-size:90%; font-weight:normal}
+
+/* cart page */
+.cart-left, .crosselldiv{padding-left:0; padding-right:0}

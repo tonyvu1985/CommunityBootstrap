@@ -34,9 +34,9 @@
 <?php if($this->getItemCount()): ?>
 <div class="crosssell">
     <h2><?php echo $this->__('Based on your selection, you may be interested in the following items:') ?></h2>
-    <ul id="crosssell-products-list">
+    <ul id="crosssell-products-list" class="row">
     <?php foreach ($this->getItems() as $_item): ?>
-        <li class="item">
+        <li class="item col-md-12 col-sm-6 col-xs-12">
             <a class="product-image" href="<?php echo $_item->getProductUrl() ?>" title="<?php echo $this->escapeHtml($_item->getName()) ?>"><img src="<?php echo $this->helper('catalog/image')->init($_item, 'thumbnail')->resize(75); ?>" width="75" height="75" alt="<?php echo $this->escapeHtml($_item->getName()) ?>" /></a>
             <div class="product-details">
                 <h3 class="product-name"><a href="<?php echo $_item->getProductUrl() ?>"><?php echo $this->escapeHtml($_item->getName()) ?></a></h3>
