@@ -1135,6 +1135,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .box-reviews .form-add .form-list .input-box { width:360px; }
 .product-view .box-reviews .form-add .form-list input.input-text,
 .product-view .box-reviews .form-add .form-list textarea { width:354px; }
+
 */
 /* Send a Friend */
 .send-friend .form-list { width:615px; overflow:hidden; }
@@ -1876,7 +1877,6 @@ tr.summary-details-excluded { font-style:italic; }
 .pagination{margin: 0}
 
 /* product page / additional information */
-#product-attribute-specs-table .label{font-size:90%; font-weight:normal}
-
+#product-attribute-specs-table .label{font-size:90%; font-weight:normal;}
 /* cart page */
 .cart-left, .crosselldiv{padding-left:0; padding-right:0}

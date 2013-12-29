@@ -61,6 +61,9 @@
     
     /* homepage */
     .home-callout{display: none}
+    
+    /* product page / additional information */
+    #product-attribute-specs-table .data{padding-left:0}
 }
  
 /* Landscape phones and down */

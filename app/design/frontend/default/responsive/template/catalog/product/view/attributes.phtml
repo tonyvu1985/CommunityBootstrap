@@ -36,27 +36,11 @@
 ?>
 <?php if($_additional = $this->getAdditionalData()): ?>
     <h2><?php echo $this->__('Additional Information') ?></h2>
-    <!--<table class="data-table" id="product-attribute-specs-table">
-        <col width="25%" />
-        <col />
-        <tbody>
+    <div id="product-attribute-specs-table">        
         <?php foreach ($_additional as $_data): ?>
-            <tr>
-                <th class="label label-info"><?php echo $this->escapeHtml($this->__($_data['label'])) ?></th>
-                <td class="data"><?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></td>
-            </tr>
-        <?php endforeach; ?>
-        </tbody>
-    </table>-->
-    
-    <div class="" id="product-attribute-specs-table">        
-        <?php foreach ($_additional as $_data): ?>
-            <div>
-                <div class="col-sm-1 col-xs-12 label label-info"><?php echo $this->escapeHtml($this->__($_data['label'])) ?></div>
-                <div class="col-sm-11 col-xs-12 data"><?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></div>
-            </div>
+            <div class="col-sm-1 col-xs-12 label label-info"><?php echo $this->escapeHtml($this->__($_data['label'])) ?></div>
+            <div class="col-sm-11 col-xs-12 data"><?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></div>
         <?php endforeach; ?>        
     </div>
-    
     <script type="text/javascript">decorateTable('product-attribute-specs-table')</script>
 <?php endif;?>
