@@ -30,18 +30,23 @@
 <table class="data-table table" id="wishlist-table">
     <thead>
         <tr>
+            <?php $number_column = 0; ?>
             <?php foreach ($columns as $column): ?>
-                <th><?php echo $column->getTitle();?></th>
+                <th class="row<?php echo $number_column ?>"><?php echo $column->getTitle();?></th>
+                <?php $number_column++; ?>
             <?php endforeach; ?>
         </tr>
     </thead>
     <tbody>
         <?php if (count($this->getItems())): ?>
+            <?php $number_column = 0; ?>
             <?php foreach ($this->getItems() as $item): ?>
                 <tr id="item_<?php echo $item->getId();?>">
                     <?php foreach ($columns as $column): ?>
-                        <td><?php $column->setItem($item); echo $column->toHtml($item);?></td>
+                        <td class="row<?php echo $number_column ?>"><?php $column->setItem($item); echo $column->toHtml($item);?></td>
+                        <?php $number_column++ ; ?>
                     <?php endforeach; ?>
+                    <?php $number_column = 0 ; ?>
                 </tr>
             <?php endforeach ?>
         <?php else: ?>
