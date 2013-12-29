@@ -50,14 +50,12 @@
                 <li>
                     <label for="email_address" class="required"><em>*</em><?php echo $this->__('Email Address') ?></label>
                     <div class="input-box">
-                        <input type="text" name="email" id="email_address" value="<?php echo $this->escapeHtml($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="input-text validate-email required-entry" />
+                        <input type="text" name="email" id="email_address" value="<?php echo $this->escapeHtml($this->getFormData()->getEmail()) ?>" title="<?php echo $this->__('Email Address') ?>" class="form-control input-text validate-email required-entry" />
                     </div>
                 </li>
                 <?php if ($this->isNewsletterEnabled()): ?>
                 <li class="control">
-                    <div class="input-box">
-                        <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed"<?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox" />
-                    </div>
+                    <input type="checkbox" name="is_subscribed" title="<?php echo $this->__('Sign Up for Newsletter') ?>" value="1" id="is_subscribed"<?php if($this->getFormData()->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox" />
                     <label for="is_subscribed"><?php echo $this->__('Sign Up for Newsletter') ?></label>
                 </li>
                 <?php endif ?>
@@ -157,13 +155,13 @@
                     <div class="field">
                         <label for="password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
                         <div class="input-box">
-                            <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="input-text required-entry validate-password" />
+                            <input type="password" name="password" id="password" title="<?php echo $this->__('Password') ?>" class="form-control input-text required-entry validate-password" />
                         </div>
                     </div>
                     <div class="field">
                         <label for="confirmation" class="required"><em>*</em><?php echo $this->__('Confirm Password') ?></label>
                         <div class="input-box">
-                            <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="input-text required-entry validate-cpassword" />
+                            <input type="password" name="confirmation" title="<?php echo $this->__('Confirm Password') ?>" id="confirmation" class="form-control input-text required-entry validate-cpassword" />
                         </div>
                     </div>
                 </li>
@@ -175,7 +173,7 @@
         <div class="buttons-set">
             <p class="required"><?php echo $this->__('* Required Fields') ?></p>
             <p class="back-link"><a href="<?php echo $this->escapeUrl($this->getBackUrl()) ?>" class="back-link"><small>&laquo; </small><?php echo $this->__('Back') ?></a></p>
-            <button type="submit" title="<?php echo $this->__('Submit') ?>" class="button btn btn-default btn-sm"><?php echo $this->__('Submit') ?></button>
+            <button type="submit" title="<?php echo $this->__('Submit') ?>" class="button btn btn-success"><?php echo $this->__('Submit') ?></button>
         </div>
         <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
             <input name="context" type="hidden" value="checkout" />

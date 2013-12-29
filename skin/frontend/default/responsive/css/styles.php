@@ -1503,7 +1503,7 @@ tr.summary-details-excluded { font-style:italic; }
 .account-login .registered-users h2 { background-image:url(../images/i_page2.gif); }
 .account-login .buttons-set { border:1px solid #bbb6a5; border-top:0; margin:0; padding:8px 13px; background:#dee5e8 url(../images/bkg_buttons-set1.gif) 0 0 repeat-x; }
 
-.account-create {}
+.account-create #is_subscribed{display: inline-block}
 
 /* Captcha ================================================================================ */
 .captcha-note      { clear:left; padding-top:5px; }
@@ -1655,13 +1655,13 @@ tr.summary-details-excluded { font-style:italic; }
 .page-print .price-incl-tax .price { display:inline; }
 
 /* My Wishlist */
-.my-wishlist .data-table td { padding:10px; }
+/*.my-wishlist .data-table td { padding:10px; }
 .my-wishlist .product-image { display:block; width:113px; height:113px; margin:0 0 5px; }
 .my-wishlist textarea { display:block; width:97%; height:109px; }
 .my-wishlist .buttons-set { margin-top:2em; }
 .my-wishlist .buttons-set button.button { float:none; }
 .my-wishlist .buttons-set .btn-add span,
-.my-wishlist .buttons-set .btn-share span { border-color:#406a83; background:#618499; }
+.my-wishlist .buttons-set .btn-share span { border-color:#406a83; background:#618499; }*/
 #wishlist-table .add-to-links { white-space:nowrap; }
 
 /* My Tags */
