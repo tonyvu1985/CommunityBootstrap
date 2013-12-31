@@ -1864,6 +1864,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* custom CSS */
 /* checkout onepage */
 #checkout-step-login .radio, #checkoutSteps .radio{display: inline-block}
+#checkout-step-shipping input[type="checkbox"] {display:inline-block}
 
 /* social network block */
 #divnetworkshare{margin-top: 10px; text-align: left}
