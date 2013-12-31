@@ -90,7 +90,7 @@
                                <?php if ($_rate->getErrorMessage()): ?>
                                     <?php echo $this->escapeHtml($_rate->getErrorMessage()) ?>
                                <?php else: ?>
-                                    <input name="estimate_method" type="radio" value="<?php echo $this->escapeHtml($_rate->getCode()) ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio form-control" />
+                                    <input name="estimate_method" type="radio" value="<?php echo $this->escapeHtml($_rate->getCode()) ?>" id="s_method_<?php echo $_rate->getCode() ?>"<?php if($_rate->getCode()===$this->getAddressShippingMethod()) echo ' checked="checked"' ?> class="radio" />
                                     <label for="s_method_<?php echo $_rate->getCode() ?>"><?php echo $this->escapeHtml($_rate->getMethodTitle()) ?>
                                     <?php $_excl = $this->getShippingPrice($_rate->getPrice(), $this->helper('tax')->displayShippingPriceIncludingTax()); ?>
                                     <?php $_incl = $this->getShippingPrice($_rate->getPrice(), true); ?>
@@ -107,7 +107,7 @@
                 <?php endforeach; ?>
             </dl>
             <div class="buttons-set">
-                <button type="submit" title="<?php echo $this->__('Update Total') ?>" class="button btn btn-default btn-xs" name="do" value="<?php echo $this->__('Update Total') ?>"><span><span><?php echo $this->__('Update Total') ?></span></span></button>
+                <button type="submit" title="<?php echo $this->__('Update Total') ?>" class="button btn btn-success" name="do" value="<?php echo $this->__('Update Total') ?>"><?php echo $this->__('Update Total') ?></button>
             </div>
         </form>
         <?php endif; ?>

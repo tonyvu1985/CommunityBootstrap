@@ -143,8 +143,8 @@ select option { padding-right:10px; }
 select.multiselect option { border-bottom:1px solid #b6b6b6; padding:2px 5px; }
 select.multiselect option:last-child { border-bottom:0; }
 textarea { overflow:auto; }
-input.radio { margin-right:3px; }
-input.checkbox { margin-right:3px; }
+input.radio {/* margin-right:3px; */}
+input.checkbox {/* margin-right:3px; */}
 input.qty { width:2.5em !important; }
 button.button::-moz-focus-inner { /*padding:0; border:0; */} /* FF Fix */
 /*button.button { -webkit-border-fit:lines; } *//* <- Safari & Google Chrome Fix */
@@ -332,7 +332,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .breadcrumbs li strong { font-weight:bold; }
 
 /* Page Heading */
-.page-title { width:100%; overflow:hidden; border-bottom:1px solid #ccc; margin:0 0 25px; }
+.page-title { width:100%; overflow:hidden; border-bottom:1px solid #ccc; margin:0 0 25px; padding-bottom:5px;}
 .page-title h1,
 .page-title h2 { margin:0; font-size:20px; color:#0a263c; }
 .page-title .separator { margin:0 3px; }
@@ -1240,6 +1240,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart .shipping .buttons-set { margin:10px 0 0; border:0; padding:0; text-align:left; }
 .cart .discount .buttons-set button.button,
 .cart .shipping .buttons-set button.button { float:none; margin-left:0; }
+.cart .shipping .radio{display:inline-block}
 
 .cart .discount h2 { background-image:url(../images/i_discount.gif); }
 .cart .discount .input-box { margin:8px 0 0; /*width:260px; */}
