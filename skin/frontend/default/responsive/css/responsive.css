@@ -48,6 +48,9 @@
     /* custoner login */
     .registered-customer .required{text-align: left; margin-top: 10px}    
     
+    /* My Dashboard */
+    .col-order-date, .col-ship-to, .col-order-total{display: none !important}
+    
     /* checkout /cart */
     .cart .totals{margin-top: 20px}
     #shopping-cart-table .item-editable{display: none}
