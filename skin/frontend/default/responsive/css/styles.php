@@ -1543,6 +1543,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* My Account ============================================================================= */
 .my-account .title-buttons .link-rss { float:none; margin:0; }
 .my-account .checkbox{display: inline-block}
+.my-account .limiter{text-align:right}
 /********** < Dashboard */
 .dashboard .welcome-msg { margin:0 0 1.5em 0; }
 .dashboard .welcome-msg p { margin:0; }

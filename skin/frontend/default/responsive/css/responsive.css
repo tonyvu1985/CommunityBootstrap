@@ -70,6 +70,9 @@
     
     /* wishlist */
     #wishlist-table .row0{display: none}
+    
+    /* left bar */
+    .col-left.sidebar{margin-top: 20px;}
 }
  
 /* Landscape phones and down */
