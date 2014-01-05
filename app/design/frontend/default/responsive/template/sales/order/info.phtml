@@ -27,9 +27,13 @@
 <?php /** @var $this Mage_Sales_Block_Order_Info */ ?>
 <?php $_order = $this->getOrder() ?>
 <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
-<div class="page-title title-buttons">
-    <h1><?php echo $this->__('Order #%s - %s', $_order->getRealOrderId(), $_order->getStatusLabel()) ?></h1>
-    <?php echo $this->getChildHtml('buttons') ?>
+<div class="row page-title">
+    <div class="col-sm-8 col-xs-12">
+        <h1><?php echo $this->__('Order #%s - %s', $_order->getRealOrderId(), $_order->getStatusLabel()) ?></h1>
+    </div>
+    <div class="title-buttons col-sm-4 col-xs-12">
+        <?php echo $this->getChildHtml('buttons') ?>
+    </div>
 </div>
 <?php echo $this->getStatusHistoryRssUrl($_order) ?>
 <dl class="order-info">
