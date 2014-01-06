@@ -73,6 +73,10 @@
     
     /* left bar */
     .col-left.sidebar{margin-top: 20px;}
+    
+    /* bootstrap 3 fix the scroll bar of Navbar on Mobile device */
+    .navbar-collapse {max-height: none;}
+    .dropdown-menu{padding-left: 8px;}
 }
  
 /* Landscape phones and down */
