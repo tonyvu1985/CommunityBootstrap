@@ -46,8 +46,14 @@
 <script type="text/javascript">
     jQuery(document).ready(function(){
         jQuery('.showminicart').click(function(e){
-            e.preventDefault();                        
+            e.preventDefault();  
+            e.stopPropagation();
             jQuery('#popupcart').slideToggle("fast"); 
+        });
+        
+        /* close the popupcart wherever you click on the paage */
+        jQuery(document).click(function(){
+            jQuery('#popupcart').slideUp("fast"); 
         });
     })
 </script>
