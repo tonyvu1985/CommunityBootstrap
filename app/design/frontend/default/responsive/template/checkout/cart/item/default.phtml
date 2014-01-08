@@ -73,7 +73,7 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
         <?php endif ?>
     </td>
     <?php if ($this->helper('wishlist')->isAllowInCart()) : ?>
-    <td class="a-center">
+    <td class="col-wishlist a-center">
         <?php if ($isVisibleProduct): ?>
             <a href="<?php echo $this->helper('wishlist')->getMoveFromCartUrl($_item->getId()); ?>" class="link-wishlist use-ajax"><?php echo $this->__('Move'); ?></a>
         <?php endif ?>
