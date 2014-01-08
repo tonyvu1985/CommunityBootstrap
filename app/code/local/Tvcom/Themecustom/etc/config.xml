@@ -18,6 +18,12 @@
                 <class>Tvcom_Themecustom_Model</class>
             </themecustom>    
         </models>
+        
+        <blocks>
+            <themecustom>
+                <class>Tvcom_Themecustom_Block</class>
+            </themecustom>
+        </blocks>
           
     </global>
    

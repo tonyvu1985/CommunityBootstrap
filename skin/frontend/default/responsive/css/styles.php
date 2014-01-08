@@ -2,25 +2,49 @@
     require_once('../../../../../app/Mage.php');
     header("Content-type: text/css; charset: UTF-8");
     
-    /* theme background */
+    /* theme background */    
     $theme_bgcolor = '#' . Mage::getStoreConfig('setting/themebg/bgcolor');
     $theme_bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/themebg/bgimage');
     $theme_bgpositionx = Mage::getStoreConfig('setting/themebg/bgpositionx');
     $theme_bgpositiony = Mage::getStoreConfig('setting/themebg/bgpositiony');
     $theme_bgpositionrepeat = Mage::getStoreConfig('setting/themebg/bgrepeat');
     
+    /* page background */
+    $is_transparent_pagegb = Mage::getStoreConfig('setting/pagebg/transparent');
+    if ($is_transparent_pagegb == false){
+        $page_bgcolor = '#' . Mage::getStoreConfig('setting/pagebg/bgcolor');
+        $page_bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/pagebg/bgimage');
+        $page_bgpositionx = Mage::getStoreConfig('setting/pagebg/bgpositionx');
+        $page_bgpositiony = Mage::getStoreConfig('setting/pagebg/bgpositiony');
+        $page_bgpositionrepeat = Mage::getStoreConfig('setting/pagebg/bgrepeat');
+    }
+    
     /* theme font */
     $fontfm = Mage::getStoreConfig('setting/themefont/fontfamily');
+    
+    // if $fontsize == null then fontsize is 14px from bootstrap theme
     $fontsize = Mage::getStoreConfig('setting/themefont/fontsize');
     $textcolor = '#' . Mage::getStoreConfig('setting/themefont/textcolor');
     
-    /* body style */
+    /* header */
+    $header_link_color = '#' . Mage::getStoreConfig('setting/header/link_color');
+    $header_link_size = Mage::getStoreConfig('setting/header/link_size');
+    
+    /* body */
     $container_bgcolor = '#' . Mage::getStoreConfig('setting/body/bgcolor');
     $container_bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/body/bgimage');
     $container_bgpositionx = Mage::getStoreConfig('setting/body/bgpositionx');
     $container_bgpositiony = Mage::getStoreConfig('setting/body/bgpositiony');
     $container_bgpositionrepeat = Mage::getStoreConfig('setting/body/bgrepeat');
     
+    /* footer */
+    $footer_link_color = '#' . Mage::getStoreConfig('setting/footer/link_color');
+    $footer_link_size = Mage::getStoreConfig('setting/footer/link_size');
+    
+    // get default size 
+    if ($footer_link_size == ''){
+        $footer_link_size = $fontsize;
+    }
 ?>
 
 * { margin:0; padding:0; }
@@ -91,7 +115,7 @@ ul,ol         { list-style:none; }
 
 /* Layout ================================================================================ */
 /*.wrapper { min-width:954px; }*/
-.page {}
+.page {background:<?php echo $page_bgcolor ?> url(<?php echo $page_bgimage ?>) <?php echo $page_bgpositionx ?> <?php echo $page_bgpositiony ?> <?php echo $page_bgpositionrepeat ?>;}
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
@@ -334,7 +358,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 /* Page Heading */
 .page-title { width:100%; overflow:hidden; border-bottom:1px solid #ccc; margin:0 0 25px; padding-bottom:5px;}
 .page-title h1,
-.page-title h2 { margin:0; font-size:20px; color:#0a263c; }
+.page-title h2 { margin:0; /*font-size:20px; color:#0a263c; */}
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; margin:7px 0 0; }
 .title-buttons { text-align:right; }
@@ -519,7 +543,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 /*.header h1.logo { margin:0; }*/
 .header .quick-access { /*float:right; width:600px; padding:28px 10px 0 0; */}
-.header .welcome-msg { margin-bottom:0; /*text-align:right; */color:#fff; }
+.header .welcome-msg { margin-bottom:0; /*text-align:right; color:#fff; */}
 .header .welcome-msg a { color:#ebbc58; }
 .header .form-search { /*position:absolute; top:0; right:29px; width:315px; height:30px; background:url(../images/bkg_form-search.gif) 0 0 no-repeat; padding:1px 0 0 16px; */}
 .header .form-search label { float:left; width:24px; height:21px; text-align:left; text-indent:-999em; overflow:hidden; }
@@ -534,13 +558,13 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-search .search-autocomplete li.odd { background-color:#fffefb; }
 .header .form-search .search-autocomplete li.selected { background-color:#f7e8dd; }
 .header .form-language { clear:both; padding:5px 0 0;/* text-align:right; */}
-.header .form-language label { font-weight:bold; padding-right:5px; color:#a7c6dd; vertical-align:middle; }
+.header .form-language label { font-weight:bold; padding-right:5px;/* color:#a7c6dd; vertical-align:middle; */}
 .header .form-language select { padding:0; }
 .header .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
 .header .links { float:right;/* margin:0 0 6px; */}
 .header .links li { float:left; font-size:11px;/* background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat;*/ padding:10px 15px 0 0px; }
-.header .links a { color:#ebbc58; }
-.header .links .top-link-cart i{margin-left: 5px; color: #fff}
+.header .links a { color:<?php echo $header_link_color ?>; font-size: <?php echo $header_link_size ?>;}
+.header .links .top-link-cart i{margin-left: 5px; color: <?php echo $header_link_color ?>}
 .header-container .top-container { clear:both; padding:5px 10px 0 12px; text-align:right; }
 .header-container .top-container a { font-size:11px; color:#ebbc58; }
 
@@ -1722,13 +1746,13 @@ tr.summary-details-excluded { font-style:italic; }
 .footer .store-switcher { display:inline; margin:0 5px 0 0; color:#fff; }
 .footer .store-switcher label { font-weight:bold; vertical-align:middle; }
 .footer .store-switcher select { padding:0; vertical-align:middle; }
-.footer a { color:#fff; text-decoration:none; }
-.footer a:hover { text-decoration:underline; }
-.footer .bugs { margin:13px 0 0; color:#ecf3f6; }
-.footer .bugs a { color:#ecf3f6; text-decoration:underline; }
+.footer a { color:<?php echo $footer_link_color ?>; text-decoration:none; font-size: <?php echo $footer_link_size ?>}
+.footer a:hover { text-decoration:underline;}
+.footer .bugs { margin:13px 0 0; color:<?php echo $footer_link_color ?>;}
+.footer .bugs a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}
 .footer .bugs a:hover { text-decoration:none; }
-.footer address { margin:0 0 20px; color:#ecf3f6; }
-.footer address a { color:#ecf3f6; text-decoration:underline; }
+.footer address { margin:0 0 20px; color:<?php echo $footer_link_color ?>; }
+.footer address a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}
 .footer address a:hover { text-decoration:none; }
 .footer ul { display:inline; }
 .footer ul.links { display:block; }
@@ -1870,8 +1894,8 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* social network block */
 #divnetworkshare{margin-top: 10px; text-align: left}
-#divnetworkshare a{color: #fff}
-.followus{color: #fff; vertical-align: top; padding: 10px 10px 0px 0px; display: inline-block;}
+#divnetworkshare a{color: <?php echo $header_link_color ?>}
+.followus{/*color: #fff; */vertical-align: top; padding: 10px 10px 0px 0px; display: inline-block;}
 
 /* popup cart page */
 #popupcart{position: absolute; right: 0; z-index: 2; margin: 25px 14px 0px 0px; background:#fff; text-align: left; display: none; width: 250px}
