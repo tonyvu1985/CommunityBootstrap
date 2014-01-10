@@ -132,22 +132,13 @@
                 <?php endforeach ?>
                 </tbody>
             </table>
-            <div class="row">
-                <div class="col-md-6 col-sm-8 col-xs-12">
-                    <div class="col-sm-4 col-xs-12">
-                        <?php if($this->getContinueShoppingUrl()): ?>
-                                <button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue btn btn-default" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><?php echo $this->__('Continue Shopping') ?></button>
-                                <!--<button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>-->
-                        <?php endif; ?>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update btn btn-default"><?php echo $this->__('Update Shopping Cart'); ?></button>
-                    </div>
-                    <div class="col-sm-4 col-xs-12">
-                        <button type="submit" name="update_cart_action" value="empty_cart" title="<?php echo $this->__('Clear Shopping Cart'); ?>" class="button btn-empty btn btn-default" id="empty_cart_button"><?php echo $this->__('Clear Shopping Cart'); ?></button>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-4 col-xs-12"><!-- Blank div --></div>
+            <div class="btncartgroup btn-group">
+                <?php if($this->getContinueShoppingUrl()): ?>
+                    <button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue btn btn-default" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><?php echo $this->__('Continue Shopping') ?></button>
+                    <!--<button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>-->
+                <?php endif; ?>
+                <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update btn btn-default"><?php echo $this->__('Update Shopping Cart'); ?></button>
+                <button type="submit" name="update_cart_action" value="empty_cart" title="<?php echo $this->__('Clear Shopping Cart'); ?>" class="button btn-empty btn btn-default" id="empty_cart_button"><?php echo $this->__('Clear Shopping Cart'); ?></button>                
             </div>
             <script type="text/javascript">decorateTable('shopping-cart-table')</script>
         </fieldset>

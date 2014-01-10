@@ -49,7 +49,7 @@
     .registered-customer .required{text-align: left; margin-top: 10px}    
     
     /* My Dashboard */
-    .col-order-date, .col-ship-to, .col-order-total{display: none !important}
+    .col-order-date, .col-ship-to, .col-order-total, .col-order-status{display: none !important}
     /*.title-buttons{text-align: left}*/
     /* checkout /cart */
     .cart .totals{margin-top: 20px}
@@ -91,5 +91,5 @@
     .data-table td {padding:3px 8px;}
     .data-table thead th{padding:3px 2px;}    
     .cart .title-buttons .checkout-types{float:left; margin-top: 10px;}
-    .buttons-set button.button{float: left; margin-left: 0}
+    .order-review .buttons-set button.button{float: left; margin-left: 0}
 }
