@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Tvlogin_Ajax>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Tvlogin_Ajax>
+    </modules>
+</config>
