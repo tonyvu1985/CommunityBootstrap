@@ -40,11 +40,23 @@
     /* footer */
     $footer_link_color = '#' . Mage::getStoreConfig('setting/footer/link_color');
     $footer_link_size = Mage::getStoreConfig('setting/footer/link_size');
-    
     // get default size 
     if ($footer_link_size == ''){
         $footer_link_size = $fontsize;
     }
+    $footer_text_color = '#' . Mage::getStoreConfig('setting/footer/text_color');
+    $footer_text_size = Mage::getStoreConfig('setting/footer/text_size');
+    // get default size 
+    if ($footer_text_size == ''){
+        $footer_text_size = $fontsize;
+    }
+    $footer_line_color = '#' . Mage::getStoreConfig('setting/footer/line_color');
+    $footer_line_size = Mage::getStoreConfig('setting/footer/line_size');
+    // get default size 10px
+    if ($footer_line_size == ''){
+        $footer_line_size = '10px';
+    }
+    
 ?>
 
 * { margin:0; padding:0; }
@@ -679,7 +691,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-cart .mini-products-list .product-details .nobr { white-space:normal !important; }
 
 /* Block: Account */
-.block-account { border-color:#bbb; }
+.block-account { border:1px solid #bbb; margin-bottom:20px}
 .block-account .block-title { background:#fc9d36; border:0; padding:3px 10px; }
 .block-account .block-title strong { font-size:13px; color:#fff; }
 .block-account .block-content { background:#fbfaf6; padding:7px 10px 7px; }
@@ -1742,17 +1754,17 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Footer ================================================================================ */
-.footer-container { border-top:15px solid #b6d1e2; }
-.footer { /*width:930px;*/ margin:0 auto; padding:10px 10px 50px; }
+.footer-container { border-top:<?php echo $footer_line_size ?> solid <?php echo $footer_line_color ?>; }
+.footer { /*width:930px;*/ margin:0 auto; padding:10px 10px 50px; color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>}
 .footer .store-switcher { display:inline; margin:0 5px 0 0; color:#fff; }
 .footer .store-switcher label { font-weight:bold; vertical-align:middle; }
 .footer .store-switcher select { padding:0; vertical-align:middle; }
 .footer a { color:<?php echo $footer_link_color ?>; text-decoration:none; font-size: <?php echo $footer_link_size ?>}
 .footer a:hover { text-decoration:underline;}
-.footer .bugs { margin:13px 0 0; color:<?php echo $footer_link_color ?>;}
+/*.footer .bugs { margin:13px 0 0; color:<?php echo $footer_link_color ?>;}
 .footer .bugs a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}
-.footer .bugs a:hover { text-decoration:none; }
-.footer address { margin:0 0 20px; color:<?php echo $footer_link_color ?>; }
+.footer .bugs a:hover { text-decoration:none; } */
+.footer address { margin:0 0 20px;}
 .footer address a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}
 .footer address a:hover { text-decoration:none; }
 .footer ul { display:inline; }

@@ -36,9 +36,13 @@
                             <children>
                                 <config>
                                     <children>
-                                        <setting translate="label" module="themecustom">
+                                        <setting translate="label" module="themecustom"> <!-- setting section -->
                                             <title>Setting Section</title>
                                         </setting>
+                                        
+                                        <layout translate="label" module="themecustom"> <!-- layout section -->
+                                            <title>Layout Section</title>
+                                        </layout>
                                     </children>
                                 </config>
                             </children>
