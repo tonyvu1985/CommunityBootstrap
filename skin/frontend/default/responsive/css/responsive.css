@@ -90,6 +90,9 @@
     .products-list .product-shop{margin-left: 0}
     .sorter .sort-by label{display: none}
     
+    /* product options */
+    .product-options{padding: 0}
+    
     /* onepage checkout */
     .data-table td {padding:3px 8px;}
     .data-table thead th{padding:3px 2px;}    

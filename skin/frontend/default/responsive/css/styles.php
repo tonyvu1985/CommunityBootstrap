@@ -780,7 +780,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Block: Poll */
 .block-poll .block-title strong {/* background-image:url(../images/i_block-poll.gif); */}
 .block-poll .block-subtitle { font-size:14px; }
-.block-poll label { color:#777; font-weight:bold; }
+.block-poll label { color:#777; font-weight:normal; font-size:11px; }
 .block-poll input.radio { float:left; margin:1px -18px 0 0; }
 .block-poll .label { display:block; margin-left:18px; text-align: left}
 .block-poll li { padding:3px 9px; }
@@ -1078,7 +1078,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-shop .add-to-links a { color:#1E7EC8 !important; font-weight:normal !important; }
 
 /* Product Options */
-.product-options { margin:20px 0 0; padding:10px 15px 20px; position:relative; background-color:#f6f6f6; border:1px solid #e4e4e4; }
+.product-options { margin:20px 0 0; padding:10px; position:relative; background-color:#f6f6f6; border:1px solid #e4e4e4; }
 .product-options dt { padding:10px 0 0; font-weight:normal; }
 .product-options dt label { font-weight:bold; color:#2f2f2f; }
 .product-options dt label.required em { color:#eb340a; margin-left:5px; }
@@ -1098,7 +1098,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options ul.options-list input.radio { float:left; margin-top:3px; }
 .product-options ul.options-list input.checkbox { float:left; margin-top:3px; }
 .product-options ul.options-list .label {/* display:block; margin-left:18px; */}
-.product-options ul.options-list label { font-weight:normal; color: <?php echo $textcolor?>}
+.product-options ul.options-list label { font-weight:normal; color: <?php echo $textcolor?>; font-size:11px}
 .product-options ul.validation-failed { padding:0 7px; }
 .product-options p.note { margin:0; font-size:11px; }
 .product-options p.required { position:absolute; right:20px; top:20px; }
