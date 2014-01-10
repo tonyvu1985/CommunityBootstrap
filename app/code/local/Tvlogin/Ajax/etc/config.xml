@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Tvlogin_Ajax>
+            <version>0.0.1</version>
+        </Tvlogin_Ajax>
+    </modules>
+    
+    <global>
+    </global>
+</config>
