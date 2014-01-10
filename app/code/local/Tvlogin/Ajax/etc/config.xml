@@ -8,4 +8,15 @@
     
     <global>
     </global>
+    
+    <frontend>
+      <layout>
+          <updates>
+              <tvlogin_ajax module="tvlogin_ajax">
+                  <file>ajaxlogin.xml</file>
+              </tvlogin_ajax>
+          </updates>
+      </layout>
+  </frontend>
+    
 </config>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ajax login
+ * Author: Tony Vu
+ */
+ -->
+<layout version="0.1.0">
+    <default translate="label" module="page">
+    
+        <reference name="head">           
+            <!-- ajax login css and javascript -->
+            <action method="addCss"><stylesheet>css/ajaxlogin/login.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/ajaxlogin/login.js</name></action>
+        </reference>    
+
+        <!-- ajax login -->
+       <reference name="root">
+            <block type="core/template" name="ajax_login" template="ajaxlogin/quick.phtml" />
+        </reference>
+      
+    </default>
+</layout>
