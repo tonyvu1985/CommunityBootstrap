@@ -6,3 +6,5 @@
         Purpose of the stylesheet follows.
 */
 #ajaxlogin{float:left;}
+#ajaxloginModal{text-align: left}
+#ajaxloginModal .modal-title{color: #e26703}
