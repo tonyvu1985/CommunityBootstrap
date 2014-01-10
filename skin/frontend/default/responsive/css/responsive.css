@@ -84,12 +84,16 @@
     
     /* catalog category */
     .block-subscribe, .block-compare, .block-poll, .block-viewed, .block-tags, .paypal-logo{display: none}
-    
     .col-main .category-image{display: none}
+    
+    /* catalog product view */
+    .products-list .product-shop{margin-left: 0}
+    .sorter .sort-by label{display: none}
     
     /* onepage checkout */
     .data-table td {padding:3px 8px;}
     .data-table thead th{padding:3px 2px;}    
     .cart .title-buttons .checkout-types{float:left; margin-top: 10px;}
     .order-review .buttons-set button.button{float: left; margin-left: 0}
+    
 }
