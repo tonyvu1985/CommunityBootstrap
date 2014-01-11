@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Tvlogin_Customer>
+            <version>0.0.1</version>
+        </Tvlogin_Customer>
+    </modules>
+    
+    <global>
+    </global>
+    
+    <frontend>
+      
+      <routers>
+          <customer>
+              <args>
+                  <modules>
+                    <Tvlogin_Customer before="Mage_Customer">Tvlogin_Customer</Tvlogin_Customer>
+                  </modules>
+              </args>
+          </customer>
+      </routers>
+          
+      <layout> <!-- layout update -->
+          <updates>
+              <tvlogin_customer module="tvlogin_customer">
+                  <file>ajaxlogin.xml</file>
+              </tvlogin_customer>
+          </updates>
+      </layout>
+  </frontend>
+    
+</config>
