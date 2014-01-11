@@ -569,6 +569,8 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-search .search-autocomplete li .amount { float:right; font-weight:bold; }
 .header .form-search .search-autocomplete li.odd { background-color:#fffefb; }
 .header .form-search .search-autocomplete li.selected { background-color:#f7e8dd; }
+.header #search_mini_form .caret{margin-left:7px}
+.header #search_mini_form ul li a{text-decoration:none; text-align:left}
 .header .form-language { clear:both; padding:5px 0 0;/* text-align:right; */}
 .header .form-language label { font-weight:bold; padding-right:5px;/* color:#a7c6dd; vertical-align:middle; */}
 .header .form-language select { padding:0; }
