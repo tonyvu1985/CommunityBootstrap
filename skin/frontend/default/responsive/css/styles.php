@@ -709,7 +709,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-currency .block-content select { width:100%; padding:0; }
 
 /* Block: Layered Navigation */
-.block-layered-nav { border:0; }
+.block-layered-nav { border:0; margin-bottom:20px}
 .block-layered-nav .block-title { border:0; padding:0; height:24px; /*background:url(../images/bkg_block-layered-title.gif) 0 0 no-repeat; */ text-indent:-999em; overflow:hidden; }
 .block-layered-nav .block-subtitle { line-height:1.35; background:#d5e8ff; padding:3px 9px; border:1px solid #b9ccdd; border-width:1px 0; text-transform:uppercase; color:#1f5070; }
 .block-layered-nav .block-content { border:1px solid #a0b3c3; background:#e7f1f4; }
