@@ -77,6 +77,9 @@
     /* bootstrap 3 fix the scroll bar of Navbar on Mobile device */
     .navbar-collapse {max-height: none;}
     .dropdown-menu{padding-left: 8px;}
+    
+    /* footer */
+    .footer .footer-right{text-align: left}
 }
  
 /* Landscape phones and down */

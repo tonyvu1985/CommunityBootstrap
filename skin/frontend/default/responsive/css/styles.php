@@ -1767,9 +1767,11 @@ tr.summary-details-excluded { font-style:italic; }
 .footer address { margin:0 0 20px;}
 .footer address a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}
 .footer address a:hover { text-decoration:none; }
+.footer .footer-left{text-align: left}
+.footer .footer-right{text-align: right}
 .footer ul { display:inline; }
 .footer ul.links { display:block; }
-.footer li { display:inline;/* background:url(../images/bkg_pipe2.gif) 100% 60% no-repeat;*/ padding:0 7px 0 4px; }
+.footer li { display:inline;/* background:url(../images/bkg_pipe2.gif) 100% 60% no-repeat;*/ padding:0 10px 0 0px; }
 .footer li.last { background:none !important; padding-right:0 !important; }
 .footer-container .bottom-container { margin:0 0 5px; }
 /* ======================================================================================= */

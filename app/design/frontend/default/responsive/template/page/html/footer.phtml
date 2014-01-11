@@ -25,9 +25,24 @@
  */
 ?>
 <div class="footer-container">
-    <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <!-- <p class="bugs"><?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'"><strong><?php echo $this->__('Report All Bugs') ?></strong></a> <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?></p> -->
-        <address><?php echo $this->getCopyright() ?></address>
+    <div class="footer row">
+        <?php
+            $footerlayout = Mage::getStoreConfig('layout/footer/layout');
+            if ($footerlayout == null or $footerlayout == 'one_column'){
+                 echo $this->getChildHtml();
+                 echo '<address>' . $this->getCopyright() . '</address>';
+            }else{
+        ?>
+            <div class="footer-left col-sm-6 col-xs-12">
+                <?php echo $this->getChildHtml() ?>
+                <!-- <p class="bugs"><?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'"><strong><?php echo $this->__('Report All Bugs') ?></strong></a> <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?></p> -->
+            </div>
+            <div class="footer-right col-sm-6 col-xs-12">
+                <address><?php echo $this->getCopyright() ?></address>
+            </div>
+        <?php
+            }
+        ?>
+        
     </div>
 </div>
