@@ -136,7 +136,7 @@ ul,ol         { list-style:none; }
 
 /* Base Columns */
 .col-left { /*float:left; width:195px; padding:0 0 1px; */}
-.col-left.sidebar{padding-left: 5px}
+.col-left.sidebar{padding-left: 0px}
 .col-main { /*float:left; width:685px; padding:0 0 1px; */}
 .col-right { /*float:right; width:195px; padding:0 0 1px; */}
 
