@@ -132,7 +132,7 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container { background:<?php echo $container_bgcolor ?> url(<?php echo $container_bgimage ?>) <?php echo $container_bgpositionx ?> <?php echo $container_bgpositiony ?> <?php echo $container_bgpositionrepeat ?>;  }
-.main { /*width:900px; margin:0 auto; min-height:400px; */padding:20px 15px 30px; background:#fffff; text-align:left; }
+.main { /*width:900px; margin:0 auto; min-height:400px; */padding:0px 15px 30px; background:#fffff; text-align:left; }
 
 /* Base Columns */
 .col-left { /*float:left; width:195px; padding:0 0 1px; */}
@@ -712,7 +712,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Block: Layered Navigation */
 .block-layered-nav { border:0; margin-bottom:20px}
-.block-layered-nav .block-title { border:0; padding:0; height:24px; /*background:url(../images/bkg_block-layered-title.gif) 0 0 no-repeat; */ text-indent:-999em; overflow:hidden; }
+.block-layered-nav .block-title { border:0; padding:0; height:24px; /*background:url(../images/bkg_block-layered-title.gif) 0 0 no-repeat; */ text-indent:-999em; overflow:hidden; display: none}
 .block-layered-nav .block-subtitle { line-height:1.35; background:#d5e8ff; padding:3px 9px; border:1px solid #b9ccdd; border-width:1px 0; text-transform:uppercase; color:#1f5070; }
 .block-layered-nav .block-content { border:1px solid #a0b3c3; background:#e7f1f4; }
 .block-layered-nav dt {/* background:url(../images/bkg_block-layered-dt.gif) 9px 11px no-repeat;*/ padding:7px 10px 0 7px; font-weight:bold; text-transform:uppercase; }
@@ -837,7 +837,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Category Page ========================================================================= */
-.category-title { border:0; margin:0 0 7px; }
+.category-title { border:0; margin:0 0 7px; display:none;}
 .category-image {/* width:100%; overflow:hidden; margin:0 0 10px; text-align:center; */}
 .category-image img {}
 .category-description { margin:0 0 10px; }
