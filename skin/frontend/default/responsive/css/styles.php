@@ -988,8 +988,8 @@ tr.summary-details-excluded { font-style:italic; }
 .price-to .price-label { font-weight:bold; white-space:nowrap; }
 
 /* Price notice next to the options */
-.price-notice { padding-left:10px; color:#999; }
-.price-notice .price { font-weight:bold; color:#2f2f2f; }
+.price-notice {/* padding-left:10px;*/ color:#999; }
+.price-notice .price { color:#ff0000; }
 
 /* Price as configured */
 .price-as-configured { margin:0; }
@@ -1049,8 +1049,8 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-img-box .zoom-notice { font-size:11px; margin:0 0 5px; text-align:center; }
 .product-view .product-img-box .zoom { position:relative; z-index:9; height:18px; margin:0 auto 13px; padding:0 28px; /*background:url(../images/slider_bg.gif) 50% 50% no-repeat; */ cursor:pointer; }
 .product-view .product-img-box .zoom.disabled { -moz-opacity:.3; -webkit-opacity:.3; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";/*IE8*/ opacity:.3; }
-.product-view .product-img-box .zoom #track { position:relative; height:18px; background:#f47b8c}
-.product-view .product-img-box .zoom #handle { position:absolute; left:0; top:-4px; width:9px; height:24px; /*background:url(../images/magnifier_handle.gif) 0 0 no-repeat;  */ background: #f17c8e}
+.product-view .product-img-box .zoom #track { position:relative; height:18px; background:#eee}
+.product-view .product-img-box .zoom #handle { position:absolute; left:0; top:-4px; width:9px; height:24px; /*background:url(../images/magnifier_handle.gif) 0 0 no-repeat;  */ background: #333}
 .product-view .product-img-box .zoom .btn-zoom-out { position:absolute; left:2px; top:0; }
 .product-view .product-img-box .zoom .btn-zoom-in { position:absolute; right:2px; top:0; }
 .product-view .product-img-box .more-views h2 { font-size:11px; border-bottom:1px solid #ccc; margin:0 0 8px; text-transform:uppercase; }
@@ -1095,13 +1095,12 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options dd textarea { width:98%; height:8em; }
 .product-options dd select { width:99%; }
 .product-options dd .multiselect option { border-bottom:1px dotted #d9e5ee; padding:2px 4px; }
-.product-options ul.options-list { margin-right:5px; }
-.product-options ul.options-list li { line-height:1.5; padding:2px 0; }
-.product-options ul.options-list input.radio { float:left; margin-top:3px; }
-.product-options ul.options-list input.checkbox { float:left; margin-top:3px; }
-.product-options ul.options-list .label {/* display:block; margin-left:18px; */}
-.product-options ul.options-list label { font-weight:normal; color: <?php echo $textcolor?>; font-size:11px}
-.product-options ul.validation-failed { padding:0 7px; }
+.product-options .options-list { margin-right:5px; }
+.product-options .options-list p {/* line-height:1.5; */ margin-left:5px; }
+.product-options .options-list input.radio {/* float:left; margin-top:3px; */ display: inline-block}
+.product-options .options-list input.checkbox {/* float:left; margin-top:3px; */ display: inline-block}
+.product-options .options-list label { font-weight:normal; color: <?php echo $textcolor?>; font-size:11px}
+.product-options .validation-failed { padding:0 7px; }
 .product-options p.note { margin:0; font-size:11px; }
 .product-options p.required { position:absolute; right:20px; top:20px; }
 
