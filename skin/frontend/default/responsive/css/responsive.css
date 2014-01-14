@@ -30,6 +30,9 @@
 @media (max-width:990px){
     /* cart page */
     .extradiv{padding-left:0; padding-right:0; margin-top:20px}
+    
+    /* custoner login */
+    .registered-customer{margin-top: 20px}
 }
 
 /* Landscape phone to portrait tablet */
