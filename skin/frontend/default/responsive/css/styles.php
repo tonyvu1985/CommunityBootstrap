@@ -1703,7 +1703,8 @@ tr.summary-details-excluded { font-style:italic; }
 .my-wishlist .buttons-set .btn-add span,
 .my-wishlist .buttons-set .btn-share span { border-color:#406a83; background:#618499; }*/
 #wishlist-table .add-to-links { white-space:nowrap; }
-
+#wishlist-table .btn-cart {margin:5px 0;}
+#wishlist-table .description{margin-bottom:10px}
 /* My Tags */
 .my-tag-edit { float:left; margin:0 0 10px; }
 .my-tag-edit .btn-remove { float:right; margin:4px 0 0 5px; }
