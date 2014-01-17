@@ -29,27 +29,60 @@
  * @see Mage_Page_Block_Template_Links
  */
 ?>
-<?php $_links = $this->getLinks(); ?>
-<?php if(count($_links)>0): ?>
-<ul class="links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>>
-    <?php foreach($_links as $_link): ?>
-        <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
-            <?php echo $_link->toHtml() ?>
-        <?php else: ?>
-             <!-- check if item is My Cart -->
-             <?php if (strstr($_link->getTitle(), 'My Cart') != '') :?>
-                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo '<i class="cart-icon fa fa-shopping-cart"></i>' . $_link->getLabel() ?><i class="fa fa-sort-asc showminicart"></i></a><?php echo $_link->getAfterText() ?></li>
-            <?php elseif (strstr($_link->getTitle(), 'Checkout') != '') :?>
-                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo '<i class="checkout-icon fa fa-check-square"></i> <span class="checkout-text">' . $_link->getLabel() . '</span>' ?></a><?php echo $_link->getAfterText() ?></li>
-             <?php else: ?>
-                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
-            <?php endif ;?>
-        <?php endif;?>
-    <?php endforeach; ?>
-</ul>
-<?php endif; ?>
+<?php 
+    $_links = $this->getLinks();
 
-<!-- popup cart page -->
-<div id="popupcart">    
-    <?php echo $this->getLayout()->createBlock('checkout/cart_sidebar')->setTemplate('checkout/cart/sidebar.phtml')->toHtml(); ?>
+    // get option yes/no to use ajaxlogin 
+    $ajaxlogin_yesno = Mage::getStoreConfig('ajax/setting/is_login'); 
+    $ajaxregister_yesno = Mage::getStoreConfig('ajax/setting/is_register');
+    $ajaxcontact_yesno = Mage::getStoreConfig('ajax/setting/is_contact');
+?>
+
+<div id="toplink">
+    <?php if(count($_links)>0): ?>
+        <ul class="links"<?php if($this->getName()): ?> id="<?php echo $this->getName() ?>"<?php endif;?>>
+            <?php foreach($_links as $_link): ?>
+                <?php if ($_link instanceof Mage_Core_Block_Abstract):?>
+                    <?php echo $_link->toHtml() ?>
+                <?php else: ?>
+                     <!-- check if item is My Cart -->
+                     <?php if (strstr($_link->getTitle(), 'My Cart') != '') :?>
+                        <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo '<i class="cart-icon fa fa-shopping-cart"></i> ' . $_link->getLabel() ?><i class="fa fa-sort-asc showminicart"></i></a><?php echo $_link->getAfterText() ?></li>
+                     <?php else : ?>
+                        <!-- check if it s login -->
+                        <?php if (strstr($_link->getTitle(), 'Log In') != '') :?>
+                            <!-- check if ajaxlogin is YES -->
+                            <?php if ($ajaxlogin_yesno == 1) : ?>
+                                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a class="loginlink" data-toggle="modal" data-target="#ajaxloginModal" href="" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+                            <?php elseif (strstr($_link->getTitle(), 'Checkout') != '') :?>
+                                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo '<i class="checkout-icon fa fa-check-square"></i> <span class="checkout-text">' . $_link->getLabel() . '</span>' ?></a><?php echo $_link->getAfterText() ?></li>
+                            <?php else : ?>
+                                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+                            <?php endif ;?>    
+                        <!-- check if it s register -->        
+                        <?php elseif (strstr($_link->getTitle(), 'Register') != '') : ?>
+                            <?php if ($ajaxregister_yesno == 1) : ?>
+                                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a class="registerlink" data-toggle="modal" data-target="#ajaxregisterModal" href="" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+                            <?php else : ?>
+                                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+                            <?php endif ;?>  
+                        <?php elseif (strstr($_link->getTitle(), 'Contact Us') != '') : ?>
+                            <?php if ($ajaxcontact_yesno == 1) : ?>
+                                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a class="contactlink" data-toggle="modal" data-target="#ajaxcontactModal" href="" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+                            <?php else : ?>
+                                <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+                            <?php endif ;?>
+                        <?php else : ?>     
+                            <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
+                        <?php endif ;?>
+                    <?php endif ;?>
+                <?php endif;?>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+    <!-- popup cart page -->
+    <div id="popupcart">    
+        <?php echo $this->getLayout()->createBlock('checkout/cart_sidebar')->setTemplate('checkout/cart/sidebar.phtml')->toHtml(); ?>
+    </div>
 </div>

@@ -18,7 +18,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         <h4 class="modal-title" id="myModalLabel">LOGIN</h4>
       </div>
-      <form action="<?php echo Mage::getBaseUrl() . 'customer/account/ajaxloginpost' ?>" method="post" id="ajaxlogin-form">
+      <form action="<?php echo Mage::getBaseUrl() . 'customer/account/login' ?>" method="post" id="ajaxlogin-form">
           <div class="modal-body">                      
             <p><?php echo $this->__('If you have an account with us, please log in.') ?></p>
             <p><input type="text" name="login[username]" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email form-control" title="<?php echo $this->__('Email Address') ?>" placeholder="Email"/></p>
@@ -33,37 +33,34 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<script>
-jQuery(document).ready(function() {
-    var testing = false;
-    jQuery('#btnlogin').bind('click', function() {
-        jQuery.ajax({
-            url: jQuery('#ajaxlogin-form').attr('action'),
-            type: 'post',
-            data: jQuery('#ajaxlogin-form').serialize(),
-            async: false,
-            success: function(data) {
-                var response = data.responseText;
-                alert(response)   ; 
-                alert(data);
-                if (data == 'true')
-                {
-                    testing = true;
-                    //$('#ajaxlogin-form').attr('action', 'https://example.com');
-                 //   $('#ajaxlogin-form').submit();
+<script type="text/javascript">
+    
+jQuery(document).ready(function() {   
+    
+        jQuery('#btnlogin').bind('click', function() {
+            jQuery.ajax({
+                url: jQuery('#ajaxlogin-form').attr('action'),
+                type: 'post',
+                data: jQuery('#ajaxlogin-form').serialize(),
+                async: false,
+                success: function(data) {               
+                    json = eval("(" + data + ")");
+                   // alert(json.user);
+                    if (json.logined == 1){                                                                               
+                        /* update the toplink */
+                        jQuery('#toplink').html(json.toplink);
+                        /* username */
+                        jQuery('.welcome-msg').html('Welcome,' + json.user);                                                
+                    }else{
+                        alert('Your username/password are incorrect');
+                    }
+                },
+                error: function() {
+                    alert('There has been an error, please alert us immediately');
                 }
-                else
-                {
-                    alert('Your username/password are incorrect');
-                }
-            },
-            error: function() {
-                alert('There has been an error, please alert us immediately');
-            }
-        });
-
-        return testing;
-    });
+            });
+        });    
+    
 });
 
 </script>
