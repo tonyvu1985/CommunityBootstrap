@@ -7,10 +7,8 @@
  */
 ?>
 <div id="ajaxlogin">
-    <?php if($this->helper('customer')->isLoggedIn() == 1): ?>
-    <a href="<?php echo Mage::getBaseUrl() ?>/customer/account/logout/" title="Log Out">Log Out</a>
-     <?php else: ?>   
-        <button class="btn btn-danger" id="btnajaxlogin" data-toggle="modal" data-target="#ajaxloginModal">Login</button>
+    <?php if($this->helper('customer')->isLoggedIn() == null): ?> 
+        <a id="btnajaxlogin" data-toggle="modal" data-target="#ajaxloginModal" alt="customer login"><i class="fa fa-user"></i></a>
     <?php endif; ?>   
 </div>
 
@@ -23,13 +21,15 @@
         <h4 class="modal-title" id="myModalLabel">LOGIN</h4>
       </div>
       <form action="<?php echo Mage::getBaseUrl() . 'customer/account/login' ?>" method="post" id="ajaxlogin-form">
-          <div class="modal-body">                      
+          <div class="modal-body">          
+            <p class="smslogin"></p>  
             <p><?php echo $this->__('If you have an account with us, please log in.') ?></p>
             <p><input type="text" name="login[username]" value="<?php echo $this->escapeHtml($this->getUsername()) ?>" id="email" class="input-text required-entry validate-email form-control" title="<?php echo $this->__('Email Address') ?>" placeholder="Email"/></p>
             <p><input type="password" name="login[password]" class="input-text required-entry validate-password form-control" id="pass" title="<?php echo $this->__('Password') ?>" placeholder="Password" /></p>
             <p><a href="<?php echo Mage::getBaseUrl() . 'customer/account/forgotpassword/' ?>"><?php echo $this->__('Forgot Your Password?') ?></a></p>
           </div>
           <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary" id="btnlogin">Login</button>
           </div>
       </form>
@@ -40,7 +40,6 @@
 <script type="text/javascript">
     
 jQuery(document).ready(function() {   
-    
         jQuery('#btnlogin').bind('click', function() {
             jQuery.ajax({
                 url: jQuery('#ajaxlogin-form').attr('action'),
@@ -54,10 +53,14 @@ jQuery(document).ready(function() {
                         /* update the toplink */
                         jQuery('#toplink').html(json.toplink);
                         /* username */
-                        jQuery('.welcome-msg').html('Welcome,' + json.user);                                                
+                        jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
+                        jQuery('.smslogin').html('Welcome, ' + json.user + '!');
+                        jQuery('#btnajaxlogin').hide();
                     }else{
-                        alert('Your username/password are incorrect');
+                        jQuery('.smslogin').html('Your username or password are incorrect !');
                     }
+                    /* show login message */
+                    jQuery('.smslogin').show();
                 },
                 error: function() {
                     alert('There has been an error, please alert us immediately');
