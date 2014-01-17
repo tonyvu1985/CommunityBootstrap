@@ -5,6 +5,8 @@
     Description:
         Purpose of the stylesheet follows.
 */
-#ajaxlogin{float:left;}
+#ajaxlogin{float:left; z-index: 10}
 #ajaxloginModal{text-align: left}
 #ajaxloginModal .modal-title{color: #e26703}
+.smslogin{display: none; color: #e26703}
+#ajaxlogin .fa-user{color: #fff; margin-left: 20px; font-size: 30px; cursor: pointer}
