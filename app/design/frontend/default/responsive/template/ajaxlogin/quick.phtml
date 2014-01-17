@@ -7,7 +7,11 @@
  */
 ?>
 <div id="ajaxlogin">
-    <button class="btn btn-danger" id="btnajaxlogin" data-toggle="modal" data-target="#ajaxloginModal">Login</button>
+    <?php if($this->helper('customer')->isLoggedIn() == 1): ?>
+    <a href="<?php echo Mage::getBaseUrl() ?>/customer/account/logout/" title="Log Out">Log Out</a>
+     <?php else: ?>   
+        <button class="btn btn-danger" id="btnajaxlogin" data-toggle="modal" data-target="#ajaxloginModal">Login</button>
+    <?php endif; ?>   
 </div>
 
 <!-- Modal -->
