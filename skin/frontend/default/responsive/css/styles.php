@@ -575,8 +575,8 @@ tr.summary-details-excluded { font-style:italic; }
 .header .form-language label { font-weight:bold; padding-right:5px;/* color:#a7c6dd; vertical-align:middle; */}
 .header .form-language select { padding:0; }
 .header .form-language select.flags option { background-position:4px 50%; background-repeat:no-repeat; padding-left:25px; }
-.header .links { float:right;/* margin:0 0 6px; */}
-.header .links li { float:left; font-size:11px;/* background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat;*/ padding:10px 15px 0 0px; }
+.header .links { /*float:right; */margin:6px 0 6px; }
+.header .links li { font-size:11px;/* float:left; background:url(../images/bkg_pipe1.gif) 100% 60% no-repeat;*/ padding:10px 15px 0 0px; }
 .header .links a { color:<?php echo $header_link_color ?>; font-size: <?php echo $header_link_size ?>;}
 .header .links .top-link-cart i{margin-left: 5px; color: <?php echo $header_link_color ?>}
 .header-container .top-container { clear:both; padding:5px 10px 0 12px; text-align:right; }
