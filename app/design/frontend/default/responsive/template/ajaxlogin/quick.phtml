@@ -6,12 +6,6 @@
  * Description
  */
 ?>
-<div id="ajaxlogin">
-    <?php if($this->helper('customer')->isLoggedIn() == null): ?> 
-        <a id="btnajaxlogin" data-toggle="modal" data-target="#ajaxloginModal" alt="customer login"><i class="fa fa-user"></i></a>
-    <?php endif; ?>   
-</div>
-
 <!-- Modal -->
 <div class="modal fade" id="ajaxloginModal" tabindex="-1" role="dialog" aria-labelledby="Ajax login form" aria-hidden="true">
   <div class="modal-dialog">
@@ -36,38 +30,3 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-<script type="text/javascript">
-    
-jQuery(document).ready(function() {   
-        jQuery('#btnlogin').bind('click', function() {
-            jQuery.ajax({
-                url: jQuery('#ajaxlogin-form').attr('action'),
-                type: 'post',
-                data: jQuery('#ajaxlogin-form').serialize(),
-                async: false,
-                success: function(data) {               
-                    json = eval("(" + data + ")");
-                   // alert(json.user);
-                    if (json.logined == 1){                                                                               
-                        /* update the toplink */
-                        jQuery('#toplink').html(json.toplink);
-                        /* username */
-                        jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
-                        jQuery('.smslogin').html('Welcome, ' + json.user + '!');
-                        jQuery('#btnajaxlogin').hide();
-                    }else{
-                        jQuery('.smslogin').html('Your username or password are incorrect !');
-                    }
-                    /* show login message */
-                    jQuery('.smslogin').show();
-                },
-                error: function() {
-                    alert('There has been an error, please alert us immediately');
-                }
-            });
-        });    
-    
-});
-
-</script>
