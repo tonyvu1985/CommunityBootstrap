@@ -1,45 +1,59 @@
 /* 
  * Ajax login
  */
+
+/* reset ajaxform */
 function ajaxform_reset(){
     jQuery('.loginlink').click(function(){
         jQuery('#ajaxlogin-form')[0].reset();
     });
 }
 
+/*submit ajaxform */
+function ajaxform_submit(){
+    jQuery.ajax({
+        url: jQuery('#ajaxlogin-form').attr('action'),
+        type: 'post',
+        data: jQuery('#ajaxlogin-form').serialize(),
+        async: false,
+        success: function(data) {               
+            json = eval("(" + data + ")");
+           // alert(json.user);
+            if (json.logined == 1){                                                                               
+                /* update the toplink */
+                jQuery('#toplink').html(json.toplink);
+                /* username */
+                jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
+                jQuery('.smslogin').html('Welcome, ' + json.user + '!');
+                jQuery('#btnajaxlogin').hide();
+                jQuery('#btnlogin').hide();
+            }else{
+                jQuery('.smslogin').html('Your username or password are incorrect !');
+            }
+            /* show login message */
+            jQuery('.smslogin').show();
+        },
+        error: function() {
+            alert('There has been an error, please alert us immediately');
+        }
+    });
+}
 jQuery(document).ready(function() {   
         /* reset ajax form */
         ajaxform_reset();
         
-        /* ajax request */
+        /* click button */
         jQuery('#btnlogin').bind('click', function() {
-            jQuery.ajax({
-                url: jQuery('#ajaxlogin-form').attr('action'),
-                type: 'post',
-                data: jQuery('#ajaxlogin-form').serialize(),
-                async: false,
-                success: function(data) {               
-                    json = eval("(" + data + ")");
-                   // alert(json.user);
-                    if (json.logined == 1){                                                                               
-                        /* update the toplink */
-                        jQuery('#toplink').html(json.toplink);
-                        /* username */
-                        jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
-                        jQuery('.smslogin').html('Welcome, ' + json.user + '!');
-                        jQuery('#btnajaxlogin').hide();
-                    }else{
-                        jQuery('.smslogin').html('Your username or password are incorrect !');
-                    }
-                    /* show login message */
-                    jQuery('.smslogin').show();
-                },
-                error: function() {
-                    alert('There has been an error, please alert us immediately');
-                }
-            });
+            ajaxform_submit();
         });    
     
+        /* press enter */
+        jQuery(document).keypress(function(e){
+            if(e.which == 13){
+               ajaxform_submit(); 
+            }
+        });
+        
     /* Make the TopLink always on top */
     var num = 50; //number of pixels before modifying styles
     jQuery(window).bind('scroll', function () {
