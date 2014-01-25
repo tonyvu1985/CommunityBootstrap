@@ -66,7 +66,7 @@ class Tvcom_Page_Block_Html_Topmenu extends Mage_Page_Block_Html_Topmenu
                 /* last link to the parent category */
                 $html .= '<li class="divider"></li>';
                 $html .= '<li>' . '<a id="nav-parentlink" href="' . $child->getUrl() . '">'
-                            . $this->escapeHtml($child->getName()) . '</li>';
+                            . $this->escapeHtml($child->getName()) . '</a></li>';
                 $html .= '</ul>';
 
                 if (!empty($childrenWrapClass)) {
