@@ -1258,6 +1258,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart .cart-collaterals .col2-set { /*float:left; width:605px; */}
 .cart .cart-collaterals .col2-set .col-2 { /*width:294px; */}
 .btncartgroup{margin-top:15px;}
+.btncartgroup button{margin-bottom:7px;}
 .cart .crosssell { border:1px solid #cec3b6; background:#fafaec; padding:12px 15px; }
 .cart .crosssell h2 { font-size:13px; font-weight:bold; }
 .cart .crosssell .product-image { float:left; width:75px; height:75px; border:1px solid #d0cdc9; }
