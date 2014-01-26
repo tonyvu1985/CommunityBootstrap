@@ -1,13 +1,13 @@
 /* 
-    Document   : login.css
     Created on : 11/01/2014, 9:19:50 AM
     Author     : Tony Vu
+    Email      : vuductrung2003@gmail.com
     Description:
         Purpose of the stylesheet follows.
 */
 #ajaxloginModal{text-align: left}
 #ajaxloginModal .modal-title{color: #e26703}
-.smslogin{display: none; color: #e26703}
+#ajaxloginModal .smslogin{display: none; color: #e26703}
 
 .header{z-index: 1000;}
 .fixed {position:fixed; top:0; background: #fff; opacity: 0.95; left: 0; padding: 10px 20px}
