@@ -7,5 +7,32 @@
     </modules>
     
     <global>
+        <helpers>
+            <ajax>
+                <class>Tvlogin_Ajax_Helper</class>
+            </ajax>
+        </helpers>
     </global>
+    
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <tvajaxlogin_setting translate="label" module="ajax">
+                                            <title>Setting</title>
+                                        </tvajaxlogin_setting>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
 </config>

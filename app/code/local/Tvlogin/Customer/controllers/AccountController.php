@@ -9,10 +9,10 @@ require_once 'Mage/Customer/controllers/AccountController.php';
 
 class Tvlogin_Customer_AccountController extends Mage_Customer_AccountController {        
     public function loginAction(){        
-   /*     if (!$this->getRequest()->isAjax()){
+        if (!$this->getRequest()->isAjax()){
             parent::loginAction();            
             return;
-        }*/
+        }
 
         $result = array();
         $session = $this->_getSession();     
