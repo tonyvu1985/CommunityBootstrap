@@ -8,12 +8,12 @@ function ajaxform_reset(){
         jQuery('#ajaxlogin-form')[0].reset();
     });
 }
-/* class bootstrap modal */
+/* class bootstrap modal 
 function ajaxloginModal_close(){
     jQuery('body').removeClass('modal-open');
     jQuery('.modal-backdrop').remove(); 
     jQuery('#ajaxloginModal').remove();
-}
+}*/
 
 /* Make the TopLink always on top */
 function topNav_ontop(){    
@@ -52,8 +52,12 @@ function ajaxform_submit(){
                 jQuery('.smslogin').html('Welcome, ' + json.user + '!');
                 jQuery('#btnajaxlogin').hide();
                 jQuery('#btnlogin').hide();
-                window.setTimeout(function() {ajaxloginModal_close(); }, 1000);
                 
+                /* auto close ajaxlogin modal
+                window.setTimeout(function() {ajaxloginModal_close(); }, 1000); */
+                
+                // redirect to Account Page
+                window.location = 'http://www.community.local/index.php/customer/account/';
             }else{
                 jQuery('.smslogin').html('Your username or password are incorrect !');
             }

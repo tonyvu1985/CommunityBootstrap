@@ -51,6 +51,9 @@
             </div>
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
+        
+        <!-- Ajax login block -->
+        <?php echo $this->getLayout()->createBlock('core/template')->setTemplate('ajaxlogin/quick.phtml')->toHtml(); ?>
     </div>
 </div>
 <?php echo $this->getChildHtml('topMenu') ?>
