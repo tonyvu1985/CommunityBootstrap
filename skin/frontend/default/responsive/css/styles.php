@@ -555,7 +555,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 /*.header h1.logo { margin:0; }*/
 .header .quick-access { /*float:right; width:600px; padding:28px 10px 0 0; */}
-.header .welcome-msg { margin-bottom:0; /*text-align:right; color:#fff; */}
+.header .welcome-msg { margin-bottom:0; /*text-align:right; */ color:#e26703; }
 .header .welcome-msg a { color:#ebbc58; }
 .header .form-search { /*position:absolute; top:0; right:29px; width:315px; height:30px; background:url(../images/bkg_form-search.gif) 0 0 no-repeat; padding:1px 0 0 16px; */}
 .header .form-search label { float:left; width:24px; height:21px; text-align:left; text-indent:-999em; overflow:hidden; }
