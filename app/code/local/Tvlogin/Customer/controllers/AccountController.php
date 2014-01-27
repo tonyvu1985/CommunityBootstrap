@@ -39,6 +39,15 @@ class Tvlogin_Customer_AccountController extends Mage_Customer_AccountController
         }       
         $this->getResponse()->setBody(Mage::helper('core')->jsonEncode($result));
     }
+    
+    public function createPostAction(){
+        if(!$this->getRequest()->isAjax()){
+            parent::createPostAction();
+            return;
+        }
+        
+        
+    }
 }
 
 ?>

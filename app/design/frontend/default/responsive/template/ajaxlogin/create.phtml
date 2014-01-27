@@ -1,0 +1,56 @@
+<?php
+/**
+ * Tvcom
+ * Author: TonyVu
+ * Date: 10.01.2014
+ * Description
+ */
+?>
+<!-- Modal -->
+<div class="modal fade" id="ajaxregisterModal" tabindex="-1" role="dialog" aria-labelledby="Ajax regiter form" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="">CREATE AN ACCOUNT</h4>
+      </div>
+      <form action="<?php echo Mage::getBaseUrl() . 'customer/account/createpost/' ?>" method="post" id="ajaxregister-form">
+          <div class="modal-body">          
+            <p class="smsregister"></p>  
+            <p>Type your details, then <span style="color:#e26703">enter</span>.</p>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <input type="text" id="firstname" name="firstname" value="" title="First Name" class="form-control input-text required-entry" placeholder="First Name" />
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <input type="text" id="lastname" name="lastname" value="" title="Last Name" class="form-control input-text required-entry" placeholder="Last Name" />
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <input type="text" name="email" id="email_address" value="" title="Email Address" class="form-control input-text validate-email required-entry" placeholder="Email" />
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <input type="checkbox" name="is_subscribed" title="Sign Up for Newsletter" value="1" id="is_subscribed" class="checkbox" /><label for="is_subscribed">Sign Up for Newsletter</label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <input type="password" name="password" id="password" title="Password" class="form-control input-text required-entry validate-password" placeholder="Password" />
+                </div>
+                <div class="col-sm-6">
+                    <input type="password" name="confirmation" title="Confirm Password" id="confirmation" class="form-control input-text required-entry validate-cpassword" placeholder="Confirm Password" />
+                </div>
+            </div>
+            
+            <p><button type="button" title="Submit" class="btnajaxregister btn btn-success">Submit</button></p>    
+            
+          </div>
+          <!--<div class="modal-footer">   
+          </div>-->
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

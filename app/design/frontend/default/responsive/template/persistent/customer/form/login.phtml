@@ -43,7 +43,12 @@
                 <div class="content">
                     <h2><?php echo $this->__('New Customers') ?></h2>
                     <p><?php echo $this->__('By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.') ?></p>
-                    <button type="button" title="<?php echo $this->__('Create an Account') ?>" class="button btn btn-default btn-sm" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';"><?php echo $this->__('Create an Account') ?></button>
+                    <?php $ajaxregister_yesno = Mage::getStoreConfig('tvajaxlogin_setting/ajaxregister/yes_no') ; ?>
+                    <?php if ($ajaxregister_yesno == 1): ?>
+                    <button type="button" title="<?php echo $this->__('Create an Account') ?>" data-toggle="modal" data-target="#ajaxregisterModal" class="button btn btn-primary btn-sm"><?php echo $this->__('Create an Account') ?></button>
+                    <?php else: ?>
+                        <button type="button" title="<?php echo $this->__('Create an Account') ?>" class="button btn btn-default btn-sm" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';"><?php echo $this->__('Create an Account') ?></button>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="registered-customer col-md-6 col-sm-12">
@@ -53,7 +58,7 @@
                     <p><?php echo $this->__('If you have an account with us, please log in.') ?></p>
                         
                     <?php if ($ajaxlogin_yesno == 1) : ?>
-                        <button class="loginlink btn btn-danger btn-sm" data-toggle="modal" data-target="#ajaxloginModal" href="" title="Log In">Log In</button>
+                        <a class="btnajaxlogin btn btn-danger btn-sm" data-toggle="modal" data-target="#ajaxloginModal" title="Log In">Log In</a>
                     <?php else : ?>
                             <ul class="form-list">
                                 <li>
