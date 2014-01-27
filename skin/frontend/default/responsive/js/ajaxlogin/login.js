@@ -3,17 +3,17 @@
  */
 
 /* reset ajaxform */
-function ajaxform_reset(){
+function ajaxloginform_reset(){
     jQuery('.loginlink').click(function(){
         jQuery('#ajaxlogin-form')[0].reset();
     });
 }
-/* class bootstrap modal 
+/* class bootstrap modal */
 function ajaxloginModal_close(){
     jQuery('body').removeClass('modal-open');
     jQuery('.modal-backdrop').remove(); 
     jQuery('#ajaxloginModal').remove();
-}*/
+}
 
 /* Make the TopLink always on top */
 function topNav_ontop(){    
@@ -33,8 +33,9 @@ function topNav_ontop(){
     });
 }
 
-/*submit ajaxform */
-function ajaxform_submit(){
+/*submit ajaxlogin_form */
+function ajaxloginform_submit(){
+    
     jQuery.ajax({
         url: jQuery('#ajaxlogin-form').attr('action'),
         type: 'post',
@@ -52,12 +53,10 @@ function ajaxform_submit(){
                 jQuery('.smslogin').html('Welcome, ' + json.user + '!');
                 jQuery('#btnajaxlogin').hide();
                 jQuery('#btnlogin').hide();
+                jQuery('.btnajaxlogin').hide();
+                /* auto close ajaxlogin modal */
+                window.setTimeout(function() {ajaxloginModal_close(); }, 1000); 
                 
-                /* auto close ajaxlogin modal
-                window.setTimeout(function() {ajaxloginModal_close(); }, 1000); */
-                
-                // redirect to Account Page
-                window.location = 'http://www.community.local/index.php/customer/account/';
             }else{
                 jQuery('.smslogin').html('Your username or password are incorrect !');
             }
@@ -68,17 +67,29 @@ function ajaxform_submit(){
         }
     });
 }
-jQuery(document).ready(function() {   
-        /* reset ajax form */
-        ajaxform_reset();  
-    
-        /* press enter */
-        jQuery(document).keypress(function(e){
-            if(e.which == 13){
-               ajaxform_submit(); 
-            }
-        });
-        
-        topNav_ontop();
+
+/*submit ajaxregister_form */
+function ajaxregisterform_submit(){
+    alert();
+}
+
+
+jQuery(document).ready(function() {
+    /* reset ajaxlogin_form */
+    ajaxloginform_reset();  
+
+    /* ajaxlogin_form, press enter */
+    jQuery(document).keypress(function(e){
+        if(e.which == 13){
+           ajaxloginform_submit(); 
+        }
+    });
+
+    /* ajaxregister submit */
+    jQuery('.btnajaxregister').bind('click', function(){
+        ajaxloginform_submit();
+    });
+
+    topNav_ontop();
 
 })
