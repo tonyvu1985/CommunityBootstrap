@@ -7,6 +7,11 @@
     </modules>
     
     <global>
+        <models>
+            <tvlogin_customer>
+                <class>Tvlogin_Customer_Model</class>
+            </tvlogin_customer>
+        </models>
     </global>
     
     <frontend>

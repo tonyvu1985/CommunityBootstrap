@@ -81,7 +81,7 @@ function ajaxloginform_submit(){
                 jQuery('#btnlogin').hide();
                 jQuery('.btnajaxlogin').hide();
                 /* auto close ajaxlogin modal */
-                window.setTimeout(function() {ajaxloginModal_close(); }, 1000); 
+                window.setTimeout(function() {ajaxloginModal_close(); }, 1500); 
                 
             }else{
                 jQuery('.smslogin').html('Your username or password are incorrect !');
@@ -113,15 +113,13 @@ function ajaxregisterform_submit(){
             async: false,
             success: function(data) {
                 json = eval("(" + data + ")");
-                // alert(json.register);
+                // alert(json);
                 if (json.register == 1){
                     jQuery('.smsregister').html('Success, Please login !');
-                    window.setTimeout(function(){ajaxregisterModal_close();}, 1000);
+                    window.setTimeout(function(){ajaxregisterModal_close();}, 1500);
 
-                }else{
-                    jQuery('.smsregister').html('Your password is not the same!');
                 }
-
+                
                  // ajax success
                 window.setTimeout(function(){jQuery('.smsregister').show(); }, 800);
                 window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
