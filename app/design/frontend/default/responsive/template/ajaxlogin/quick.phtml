@@ -11,8 +11,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="">LOGIN</h4>
+          <div class="row">
+              <div class="col-xs-6">
+                <h4 class="modal-title" id="">LOGIN</h4>
+              </div>
+              <div class="col-xs-6" style="text-align: right">
+                  <div class="divspin"><i class="fa fa-spinner fa-spin fa-lg"></i></div>
+              </div>
+          </div>
       </div>
       <form action="<?php echo Mage::getBaseUrl() . 'customer/account/login' ?>" method="post" id="ajaxlogin-form">
           <div class="modal-body">          
@@ -22,8 +28,6 @@
             <p><input type="password" name="login[password]" class="input-text required-entry validate-password form-control" id="pass" title="<?php echo $this->__('Password') ?>" placeholder="Password" /></p>
             <a href="<?php echo Mage::getBaseUrl() . 'customer/account/forgotpassword/' ?>"><?php echo $this->__('Forgot Your Password?') ?></a>
           </div>
-          <!--<div class="modal-footer">   
-          </div>-->
       </form>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

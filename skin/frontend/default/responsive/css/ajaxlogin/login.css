@@ -8,6 +8,7 @@
 #ajaxloginModal{text-align: left}
 #ajaxloginModal .modal-title{color: #e26703}
 #ajaxloginModal .smslogin{display: none; color: #e26703}
+.divspin{display: none}
 
 #ajaxregisterModal{text-align: left}
 #ajaxregisterModal .modal-title{color: #e26703}

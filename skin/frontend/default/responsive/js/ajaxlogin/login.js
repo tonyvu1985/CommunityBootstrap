@@ -56,8 +56,11 @@ function topNav_ontop(){
     });
 }
 
-/*submit ajaxlogin_form */
+/*submit ajaxlogin_form */jQuery('.smslogin').hide();
 function ajaxloginform_submit(){
+    // before ajax submit
+    jQuery('.divspin').show();
+    jQuery('.smslogin').hide();
     
     jQuery.ajax({
         url: jQuery('#ajaxlogin-form').attr('action'),
@@ -83,7 +86,10 @@ function ajaxloginform_submit(){
             }else{
                 jQuery('.smslogin').html('Your username or password are incorrect !');
             }
-            jQuery('.smslogin').show();
+            
+            // ajax success
+            window.setTimeout(function(){jQuery('.smslogin').show(); }, 800);
+            window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
         },
         error: function() {
             alert('There has been an error, please alert us immediately');
@@ -93,7 +99,10 @@ function ajaxloginform_submit(){
 
 /*submit ajaxregister_form */
 function ajaxregisterform_submit(){
-  //  alert();
+    // before ajax submit
+    jQuery('.divspin').show();
+    jQuery('.smsregister').hide();
+    
     jQuery.ajax({
         url: jQuery('#ajaxregister-form').attr('action'),
         type: 'post',
@@ -109,7 +118,10 @@ function ajaxregisterform_submit(){
             }else{
                 jQuery('.smsregister').html('Your password is not the same!');
             }
-            jQuery('.smsregister').show();
+
+             // ajax success
+            window.setTimeout(function(){jQuery('.smsregister').show(); }, 800);
+            window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
         }   
     });
                         
@@ -122,6 +134,7 @@ jQuery(document).ready(function() {
     /* ajaxlogin_form, press enter */
     jQuery(document).keypress(function(e){
         if(e.which == 13){
+            
            ajaxloginform_submit(); 
         }
     });
@@ -133,7 +146,6 @@ jQuery(document).ready(function() {
     jQuery('.btnajaxregister').bind('click', function(){
         ajaxregisterform_submit();
     });
-z
     topNav_ontop();
 
 })
