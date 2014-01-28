@@ -114,10 +114,12 @@ function ajaxregisterform_submit(){
                 json = eval("(" + data + ")");
                 // alert(json);
                 if (json.register == 1){
+                    
                     /* update the toplink */
                     jQuery('#toplink').html(json.toplink);
                     jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
-                    jQuery('.smsregister').html('Success, Please login !');
+                    jQuery('.smsregister').html('Success !');
+                    
                     window.setTimeout(function(){ajaxregisterModal_close();}, 1500);
 
                 }
