@@ -67,6 +67,13 @@ class Tvlogin_Customer_AccountController extends Mage_Customer_AccountController
             $storeId = $customer->getSendemailStoreId();
             $customer->sendNewAccountEmail('registered', '', $storeId);
             
+            $session->login($register['email'], $register['password']);
+            $result['user'] = $session->getCustomer()->getName();
+            /* refresh new content */
+            $this->loadLayout();
+            $toplink = $this->getLayout()->getBlock('top.links')->toHtml();
+            $result['toplink'] = $toplink;
+            
             if($register['is_subscribed'] == 1){
                 $subscriber = Mage::getModel('newsletter/subscriber')->loadByEmail($register['email']);
                 if (!$subscriber->getId()){
