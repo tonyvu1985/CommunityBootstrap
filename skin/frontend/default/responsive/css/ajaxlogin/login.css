@@ -13,7 +13,7 @@
 #ajaxregisterModal{text-align: left}
 #ajaxregisterModal .modal-title{color: #e26703}
 #ajaxregisterModal #is_subscribed{display: inline-block; margin-right: 5px}
-#ajaxregisterModal input{margin-bottom: 10px;}
+#ajaxregisterModal .bottommargin{margin-bottom: 10px;}
 #ajaxregisterModal .smsregister{display: none; color: #e26703}
 
 .btnajaxlogin{text-decoration: none}

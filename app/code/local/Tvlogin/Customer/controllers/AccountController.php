@@ -56,29 +56,40 @@ class Tvlogin_Customer_AccountController extends Mage_Customer_AccountController
         $customer->setPassword($register['password']);
         $customer->setFirstname($register['firstname']);
         $customer->setLastname($register['lastname']);
-        
-        // check password and cofirm password
-        
-        if($register['password'] == $register['confirmation']){
-            try{
-                $customer->save();
-                $customer->setConfirmation(null);
-                $customer->save();
+    
+        try{
+            $customer->save();
+            $customer->setConfirmation(null);
+            $customer->save();
 
-                // success to save a new customer 
-                $result['register'] = 1;
+            // success to save a new customer 
+            $result['register'] = 1;
+            $storeId = $customer->getSendemailStoreId();
+            $customer->sendNewAccountEmail('registered', '', $storeId);
+            
+            if($register['is_subscribed'] == 1){
+                $subscriber = Mage::getModel('newsletter/subscriber')->loadByEmail($register['email']);
+                if (!$subscriber->getId()){
+                    $subscriber->setStatus(Mage_Newsletter_Model_Subscriber::STATUS_SUBSCRIBED);
+                    $subscriber->setSubscriberEmail($register['email']);
+                    $subscriber->setSubscriberConfirmCode($subscriber->RandomSequence());
+                }
 
-                $storeId = $customer->getSendemailStoreId();
-                $customer->sendNewAccountEmail('registered', '', $storeId);
+                $subscriber->setStoreId(Mage::app()->getStore()->getId());
+                $subscriber->setCustomerId($customer->getId());
+
+                try{
+                    $subscriber->save();
+                }
+                catch (Exception $ex){
+                    //throw new Exception($ex->getMessage());
+                }
+            }
 
             }
-            catch (Exception $ex){
+        catch (Exception $ex){
 
-            }
-        }
-        else{
-            $result['register'] = 0;
-        }
+        }  
         $this->getResponse()->setBody(Mage::helper('core')->jsonEncode($result));
     }
 
