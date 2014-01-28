@@ -45,9 +45,42 @@ class Tvlogin_Customer_AccountController extends Mage_Customer_AccountController
             parent::createPostAction();
             return;
         }
+        $result = array();
+        $session = $this->_getSession(); 
+        $register = $this->getRequest()->getPost('register');
         
+        $customer = Mage::getModel('customer/customer');
+        $customer->setWebsiteId(Mage::app()->getWebsite()->getId());
         
-    }
-}
+        $customer->setEmail($register['email']);
+        $customer->setPassword($register['password']);
+        $customer->setFirstname($register['firstname']);
+        $customer->setLastname($register['lastname']);
+        
+        // check password and cofirm password
+        
+        if($register['password'] == $register['confirmation']){
+            try{
+                $customer->save();
+                $customer->setConfirmation(null);
+                $customer->save();
 
+                // success to save a new customer 
+                $result['register'] = 1;
+
+                $storeId = $customer->getSendemailStoreId();
+                $customer->sendNewAccountEmail('registered', '', $storeId);
+
+            }
+            catch (Exception $ex){
+
+            }
+        }
+        else{
+            $result['register'] = 0;
+        }
+        $this->getResponse()->setBody(Mage::helper('core')->jsonEncode($result));
+    }
+
+}
 ?>

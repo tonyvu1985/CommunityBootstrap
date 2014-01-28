@@ -45,7 +45,7 @@
                     <p><?php echo $this->__('By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.') ?></p>
                     <?php $ajaxregister_yesno = Mage::getStoreConfig('tvajaxlogin_setting/ajaxregister/yes_no') ; ?>
                     <?php if ($ajaxregister_yesno == 1): ?>
-                    <button type="button" title="<?php echo $this->__('Create an Account') ?>" data-toggle="modal" data-target="#ajaxregisterModal" class="button btn btn-primary btn-sm"><?php echo $this->__('Create an Account') ?></button>
+                    <button type="button" title="<?php echo $this->__('Create an Account') ?>" data-toggle="modal" data-target="#ajaxregisterModal" class="btn-createaccount btn btn-primary btn-sm"><?php echo $this->__('Create an Account') ?></button>
                     <?php else: ?>
                         <button type="button" title="<?php echo $this->__('Create an Account') ?>" class="button btn btn-default btn-sm" onclick="window.location='<?php echo Mage::helper('persistent')->getCreateAccountUrl($this->getCreateAccountUrl()) ?>';"><?php echo $this->__('Create an Account') ?></button>
                     <?php endif; ?>
