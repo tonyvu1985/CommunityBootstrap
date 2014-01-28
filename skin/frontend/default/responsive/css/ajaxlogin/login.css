@@ -5,6 +5,9 @@
     Description:
         Purpose of the stylesheet follows.
 */
+
+.modal-open{overflow: auto}
+
 #ajaxloginModal{text-align: left}
 #ajaxloginModal .modal-title{color: #e26703}
 #ajaxloginModal .smslogin{display: none; color: #e26703}
