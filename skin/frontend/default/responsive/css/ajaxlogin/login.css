@@ -8,15 +8,16 @@
 #ajaxloginModal{text-align: left}
 #ajaxloginModal .modal-title{color: #e26703}
 #ajaxloginModal .smslogin{display: none; color: #e26703}
-.divspin{display: none}
+#ajaxloginModal .divspin{display: none}
 
 #ajaxregisterModal{text-align: left}
 #ajaxregisterModal .modal-title{color: #e26703}
 #ajaxregisterModal #is_subscribed{display: inline-block; margin-right: 5px}
 #ajaxregisterModal .bottommargin{margin-bottom: 10px;}
 #ajaxregisterModal .smsregister{display: none; color: #e26703}
+#ajaxregisterModal .divspin{display: none}
 
-.btnajaxlogin{text-decoration: none}
+.btnlogin{text-decoration: none}
 
 .header{z-index: 1000;}
-.fixed {position:fixed; top:0; background: #fff; opacity: 0.95; left: 0; padding: 10px 20px}
+.fixed {position:fixed; top:0; background: #fff; opacity: 0.95; left: 0; padding: 10px 20px; z-index: 1031}

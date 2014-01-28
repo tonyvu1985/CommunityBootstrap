@@ -8,7 +8,7 @@ function ajaxloginform_reset(){
         jQuery('#ajaxlogin-form')[0].reset();
     });
     
-    jQuery('.btnajaxlogin').click(function(){
+    jQuery('.btnlogin').click(function(){
         jQuery('#ajaxlogin-form')[0].reset();
     });
 }
@@ -35,7 +35,7 @@ function ajaxloginModal_close(){
 function ajaxregisterModal_close(){
     jQuery('body').removeClass('modal-open');
     jQuery('.modal-backdrop').remove(); 
-    jQuery('#ajaxregisterModal').remove();
+    jQuery('#ajaxregisterModal').hide();
 }
 
 /* Make the TopLink always on top */
@@ -70,16 +70,15 @@ function ajaxloginform_submit(){
         beforeSend: function(){},
         success: function(data) {               
             json = eval("(" + data + ")");
-           // alert(json.user);
             if (json.logined == 1){                                                                               
                 /* update the toplink */
                 jQuery('#toplink').html(json.toplink);
                 /* username */
                 jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
                 jQuery('.smslogin').html('Welcome, ' + json.user + '!');
-                jQuery('#btnajaxlogin').hide();
-                jQuery('#btnlogin').hide();
-                jQuery('.btnajaxlogin').hide();
+              //  jQuery('#btnajaxlogin').hide();
+                jQuery('.btnlogin').hide();
+              //  jQuery('.btnajaxlogin').hide();
                 /* auto close ajaxlogin modal */
                 window.setTimeout(function() {ajaxloginModal_close(); }, 1500); 
                 
@@ -115,6 +114,9 @@ function ajaxregisterform_submit(){
                 json = eval("(" + data + ")");
                 // alert(json);
                 if (json.register == 1){
+                    /* update the toplink */
+                    jQuery('#toplink').html(json.toplink);
+                    jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
                     jQuery('.smsregister').html('Success, Please login !');
                     window.setTimeout(function(){ajaxregisterModal_close();}, 1500);
 
@@ -134,11 +136,8 @@ jQuery(document).ready(function() {
     ajaxloginform_reset();  
 
     /* ajaxlogin_form, press enter */
-    jQuery(document).keypress(function(e){
-        if(e.which == 13){
-            
+    jQuery('.btnajaxlogin').bind('click', function(){  
            ajaxloginform_submit(); 
-        }
     });
     
     /* reset ajax register form */
@@ -148,6 +147,7 @@ jQuery(document).ready(function() {
     jQuery('.btnajaxregister').bind('click', function(){
         ajaxregisterform_submit();
     });
+    
     topNav_ontop();
 
 })
