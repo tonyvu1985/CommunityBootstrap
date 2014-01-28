@@ -99,32 +99,36 @@ function ajaxloginform_submit(){
 
 /*submit ajaxregister_form */
 function ajaxregisterform_submit(){
-    // before ajax submit
-    jQuery('.divspin').show();
-    jQuery('.smsregister').hide();
     
-    jQuery.ajax({
-        url: jQuery('#ajaxregister-form').attr('action'),
-        type: 'post',
-        data: jQuery('#ajaxregister-form').serialize(),
-        async: false,
-        success: function(data) {
-            json = eval("(" + data + ")");
-            // alert(json.register);
-            if (json.register == 1){
-                jQuery('.smsregister').html('Success, Please login !');
-                window.setTimeout(function(){ajaxregisterModal_close();}, 1000);
-                
-            }else{
-                jQuery('.smsregister').html('Your password is not the same!');
-            }
+    var ajaxregisterForm = new Validation('ajaxregister-form'); 
+    if(ajaxregisterForm.validate()) { 
+     // before ajax submit
+        jQuery('.divspin').show();
+        jQuery('.smsregister').hide();
 
-             // ajax success
-            window.setTimeout(function(){jQuery('.smsregister').show(); }, 800);
-            window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
-        }   
-    });
-                        
+        jQuery.ajax({
+            url: jQuery('#ajaxregister-form').attr('action'),
+            type: 'post',
+            data: jQuery('#ajaxregister-form').serialize(),
+            async: false,
+            success: function(data) {
+                json = eval("(" + data + ")");
+                // alert(json.register);
+                if (json.register == 1){
+                    jQuery('.smsregister').html('Success, Please login !');
+                    window.setTimeout(function(){ajaxregisterModal_close();}, 1000);
+
+                }else{
+                    jQuery('.smsregister').html('Your password is not the same!');
+                }
+
+                 // ajax success
+                window.setTimeout(function(){jQuery('.smsregister').show(); }, 800);
+                window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
+            }   
+        });
+
+    }                        
 }
 
 jQuery(document).ready(function() {
