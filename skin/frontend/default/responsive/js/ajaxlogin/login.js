@@ -2,17 +2,40 @@
  * Ajax login
  */
 
-/* reset ajaxform */
+/* reset ajaxloginform */
 function ajaxloginform_reset(){
     jQuery('.loginlink').click(function(){
         jQuery('#ajaxlogin-form')[0].reset();
     });
+    
+    jQuery('.btnajaxlogin').click(function(){
+        jQuery('#ajaxlogin-form')[0].reset();
+    });
 }
-/* class bootstrap modal */
+
+/* reset ajaxloginform */
+function ajaxregisterform_reset(){
+    jQuery('.btn-createaccount').click(function(){
+         jQuery('#ajaxregister-form')[0].reset();
+    });
+    
+    jQuery('.registerlink').click(function(){
+        jQuery('#ajaxregister-form')[0].reset();
+    });
+}
+
+/* auto close ajaxlogin modal */
 function ajaxloginModal_close(){
     jQuery('body').removeClass('modal-open');
     jQuery('.modal-backdrop').remove(); 
     jQuery('#ajaxloginModal').remove();
+}
+
+/* auto close ajaxregister modal */
+function ajaxregisterModal_close(){
+    jQuery('body').removeClass('modal-open');
+    jQuery('.modal-backdrop').remove(); 
+    jQuery('#ajaxregisterModal').remove();
 }
 
 /* Make the TopLink always on top */
@@ -65,14 +88,32 @@ function ajaxloginform_submit(){
         error: function() {
             alert('There has been an error, please alert us immediately');
         }
-    });
+    });            
 }
 
 /*submit ajaxregister_form */
 function ajaxregisterform_submit(){
-    alert();
+  //  alert();
+    jQuery.ajax({
+        url: jQuery('#ajaxregister-form').attr('action'),
+        type: 'post',
+        data: jQuery('#ajaxregister-form').serialize(),
+        async: false,
+        success: function(data) {
+            json = eval("(" + data + ")");
+            // alert(json.register);
+            if (json.register == 1){
+                jQuery('.smsregister').html('Success, Please login !');
+                window.setTimeout(function(){ajaxregisterModal_close();}, 1000);
+                
+            }else{
+                jQuery('.smsregister').html('Your password is not the same!');
+            }
+            jQuery('.smsregister').show();
+        }   
+    });
+                        
 }
-
 
 jQuery(document).ready(function() {
     /* reset ajaxlogin_form */
@@ -84,12 +125,15 @@ jQuery(document).ready(function() {
            ajaxloginform_submit(); 
         }
     });
-
+    
+    /* reset ajax register form */
+    ajaxregisterform_reset()
+    
     /* ajaxregister submit */
     jQuery('.btnajaxregister').bind('click', function(){
-        ajaxloginform_submit();
+        ajaxregisterform_submit();
     });
-
+z
     topNav_ontop();
 
 })

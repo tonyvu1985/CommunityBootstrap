@@ -35,4 +35,15 @@
             </resources>
         </acl>
     </adminhtml>
+    
+
+    <layout> <!-- layout upadte -->
+        <updates>
+            <tvlogin_ajax>
+                <file>ajaxlogin.xml</file>
+            </tvlogin_ajax>
+        </updates>
+    </layout>
+
+    
 </config>
