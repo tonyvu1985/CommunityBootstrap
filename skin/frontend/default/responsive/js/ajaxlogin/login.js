@@ -6,10 +6,12 @@
 function ajaxloginform_reset(){
     jQuery('.loginlink').click(function(){
         jQuery('#ajaxlogin-form')[0].reset();
+        jQuery('.smslogin').hide();
     });
     
     jQuery('.btnlogin').click(function(){
         jQuery('#ajaxlogin-form')[0].reset();
+        jQuery('.smslogin').hide();
     });
 }
 
@@ -80,10 +82,10 @@ function ajaxloginform_submit(){
                 jQuery('.btnlogin').hide();
               //  jQuery('.btnajaxlogin').hide();
                 /* auto close ajaxlogin modal */
-                window.setTimeout(function() {ajaxloginModal_close(); }, 1500); 
+                window.setTimeout(function() {ajaxloginModal_close(); }, 1700); 
                 
             }else{
-                jQuery('.smslogin').html('Your username or password are incorrect !');
+                jQuery('.smslogin').html('Your email or password are incorrect !');
             }
             
             // ajax success
@@ -120,7 +122,7 @@ function ajaxregisterform_submit(){
                     jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
                     jQuery('.smsregister').html('Success !');
                     
-                    window.setTimeout(function(){ajaxregisterModal_close();}, 1500);
+                    window.setTimeout(function(){ajaxregisterModal_close();}, 1700);
 
                 }
                 
