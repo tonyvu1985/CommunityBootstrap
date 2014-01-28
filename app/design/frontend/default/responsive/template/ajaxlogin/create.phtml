@@ -11,12 +11,17 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="">CREATE AN ACCOUNT</h4>
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4 class="modal-title" id="">REGISTER ACCOUNT</h4>
+                </div>
+                <div class="col-xs-6" style="text-align: right">
+                      <div class="divspin"><i class="fa fa-spinner fa-spin fa-lg"></i></div>
+                </div>
+            </div>
       </div>
       <form action="<?php echo Mage::getBaseUrl() . 'customer/account/createpost/' ?>" method="post" id="ajaxregister-form">
           <div class="modal-body">          
-            <p class="smsregister"></p>  
             <p>Type your details, then <span style="color:#e26703">enter</span>.</p>
             <div class="row">
                 <div class="col-sm-6 col-xs-12">
@@ -44,12 +49,16 @@
                     <input type="password" name="register[confirmation]" title="Confirm Password" id="confirmation" class="form-control input-text required-entry validate-cpassword" placeholder="Confirm Password" />
                 </div>
             </div>
-            
-            <p><button type="button" title="Submit" class="btnajaxregister btn btn-success">Submit</button></p>    
-            
           </div>
-          <!--<div class="modal-footer">   
-          </div>-->
+          <div class="modal-footer">  
+              <div class="row">
+                  <div class="col-xs-6" style="text-align: left">
+                        <p class="smsregister"></p>  
+                  </div>
+                  <div class="col-xs-6">
+                        <button type="button" title="Submit" class="btnajaxregister btn btn-success">Submit</button>
+                  </div>
+            </div>
       </form>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
