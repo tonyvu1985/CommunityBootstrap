@@ -5,4 +5,14 @@
             <version>0.0.1</version>
         </Tvcarousel_Slider>
     </modules>
+    
+    <frontend>
+        <layout>
+            <updates>
+                <tvcarousel_slider>
+                    <file>carousel.xml</file>
+                </tvcarousel_slider>
+            </updates>
+        </layout>
+    </frontend>
 </config>
