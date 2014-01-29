@@ -6,19 +6,21 @@
         Purpose of the stylesheet follows.
 */
 
-.modal-open{overflow: auto}
+/*.modal-open{overflow: auto}*/
 
 #ajaxloginModal{text-align: left}
 #ajaxloginModal .modal-title{color: #e26703}
-#ajaxloginModal .smslogin{display: none; color: #e26703}
+#ajaxloginModal .smslogin{display: none;}
 #ajaxloginModal .divspin{display: none}
+#ajaxloginModal .alert-success{margin-bottom: 0; padding: 7px}
 
 #ajaxregisterModal{text-align: left}
 #ajaxregisterModal .modal-title{color: #e26703}
 #ajaxregisterModal #is_subscribed{display: inline-block; margin-right: 5px}
 #ajaxregisterModal .bottommargin{margin-bottom: 10px;}
-#ajaxregisterModal .smsregister{display: none; color: #e26703}
+#ajaxregisterModal .smsregister{display: none; }
 #ajaxregisterModal .divspin{display: none}
+#ajaxregisterModal .alert-success{margin-bottom: 0; padding: 7px}
 
 .btnlogin{text-decoration: none}
 
