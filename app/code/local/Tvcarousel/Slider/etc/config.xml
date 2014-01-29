@@ -15,4 +15,13 @@
             </updates>
         </layout>
     </frontend>
+    
+    <global>
+        <helpers>
+            <slider>
+                <class>Tvcarousel_Slider_Helper</class>
+            </slider>
+        </helpers>
+    </global>
+    
 </config>
