@@ -309,10 +309,20 @@
                              <comment><![CDATA[Example: https://www.youtube.com/user/username]]></comment>
                         </youtube>
                         
+                        <bgcolor translate="label"> <!-- header background color -->
+                            <label>Background color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>                             
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>  
+                        </bgcolor>
+                        
                         <link translate="label">
                             <label><![CDATA[<span style="color:red">a link</span>]]></label>
                             <frontend_type>label</frontend_type>
-                            <sort_order>8</sort_order>
+                            <sort_order>9</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                
@@ -322,7 +332,7 @@
                             <label>Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                  
-                            <sort_order>9</sort_order>
+                            <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -331,7 +341,7 @@
                         <link_size> <!-- header link color -->
                             <label>Font size</label>
                             <frontend_type>text</frontend_type>                            
-                            <sort_order>10</sort_order>
+                            <sort_order>11</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -341,7 +351,7 @@
                         <text translate="label"> <!-- text style -->
                             <label><![CDATA[<span style="color:red">text</span>]]></label>
                             <frontend_type>label</frontend_type>
-                            <sort_order>11</sort_order>
+                            <sort_order>12</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                
@@ -351,7 +361,7 @@
                             <label>color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                  
-                            <sort_order>12</sort_order>
+                            <sort_order>13</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -360,7 +370,7 @@
                         <text_size> <!-- footer link color -->
                             <label>font size</label>
                             <frontend_type>text</frontend_type>                            
-                            <sort_order>13</sort_order>
+                            <sort_order>14</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
@@ -439,6 +449,16 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>0</show_in_store>    
                     <fields>
+                        <bgcolor translate="label">
+                            <label>Background color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>                             
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bgcolor>
+                        
                         <link translate="label">
                             <label><![CDATA[<span style="color:red">a link</span>]]></label>
                             <frontend_type>label</frontend_type>
@@ -497,14 +517,14 @@
                             <comment>If empty, It will take the default font size</comment>
                         </text_size>                  
                         
-                        <text translate="label"> <!-- line style -->
+                        <line translate="label"> <!-- line style -->
                             <label><![CDATA[<span style="color:red">line</span>]]></label>
                             <frontend_type>label</frontend_type>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                
-                        </text>
+                        </line>
                         
                         <line_color> <!-- line color -->
                             <label>color</label>

@@ -27,6 +27,7 @@
     $textcolor = '#' . Mage::getStoreConfig('setting/themefont/textcolor');
     
     /* header */
+    $header_bgcolor = '#' . Mage::getStoreConfig('setting/header/bgcolor'); 
     $header_link_color = '#' . Mage::getStoreConfig('setting/header/link_color');
     $header_link_size = Mage::getStoreConfig('setting/header/link_size');
     
@@ -38,8 +39,10 @@
     $container_bgpositionrepeat = Mage::getStoreConfig('setting/body/bgrepeat');
     
     /* footer */
+    $footer_bgcolor = '#' . Mage::getStoreConfig('setting/footer/bgcolor');
     $footer_link_color = '#' . Mage::getStoreConfig('setting/footer/link_color');
     $footer_link_size = Mage::getStoreConfig('setting/footer/link_size');
+    
     // get default size 
     if ($footer_link_size == ''){
         $footer_link_size = $fontsize;
@@ -548,8 +551,8 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Header ================================================================================ */
 .logo { float:left; }
-.header{padding: 15px 0}
-/*.header-container { border-top:5px solid #0d2131; border-bottom:1px solid #415966; background:url(../images/bkg_header.jpg) 50% 0 repeat; }*/
+.header{padding: 15px 0 7px 0; background: <?php echo $header_bgcolor ?>}
+.header-container { margin-bottom:10px; /*border-top:5px solid #0d2131; border-bottom:1px solid #415966; background:url(../images/bkg_header.jpg) 50% 0 repeat; */ }
 /*.header { width:930px; margin:0 auto; padding:10px; text-align:right; position:relative; z-index:10; }*/
 /*.header .logo { float:left; margin:3px 0 10px 12px; text-decoration:none !important; }*/
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
@@ -1757,8 +1760,8 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Footer ================================================================================ */
-.footer-container { border-top:<?php echo $footer_line_size ?> solid <?php echo $footer_line_color ?>; }
-.footer { /*width:930px;*/ margin:0 auto; padding:10px 10px 50px; color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>}
+.footer-container { }
+.footer { /*width:930px; margin:0 auto; */padding:10px 10px 50px; background: <?php echo $footer_bgcolor ?>; color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>; border-top:<?php echo $footer_line_size ?> solid <?php echo $footer_line_color ?>; }
 .footer .store-switcher { display:inline; margin:0 5px 0 0; color:#fff; }
 .footer .store-switcher label { font-weight:bold; vertical-align:middle; }
 .footer .store-switcher select { padding:0; vertical-align:middle; }
