@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layout>
+    <cms_index_index>
+        <reference name="content">
+            <block type="core/template" name="carousel" before="" template="carousel/slider.phtml" />
+        </reference>
+    </cms_index_index>
+</layout>
