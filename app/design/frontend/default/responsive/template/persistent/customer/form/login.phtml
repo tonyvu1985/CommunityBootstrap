@@ -43,7 +43,7 @@
                 <div class="content">
                     <h2><?php echo $this->__('New Customers') ?></h2>
                     <p><?php echo $this->__('By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.') ?></p>
-                    <?php $ajaxregister_yesno = Mage::getStoreConfig('tvajaxlogin_setting/ajaxregister/yes_no') ; ?>
+                    <?php $ajaxregister_yesno = Mage::getStoreConfig('ajax/setting/is_register') ; ?>
                     <?php if ($ajaxregister_yesno == 1): ?>
                     <button type="button" title="<?php echo $this->__('Create an Account') ?>" data-toggle="modal" data-target="#ajaxregisterModal" class="btn-createaccount btn btn-primary btn-sm"><?php echo $this->__('Create an Account') ?></button>
                     <?php else: ?>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="registered-customer col-md-6 col-sm-12">
-                <?php $ajaxlogin_yesno = Mage::getStoreConfig('tvajaxlogin_setting/ajaxlogin/yes_no') ; ?>
+                <?php $ajaxlogin_yesno = Mage::getStoreConfig('ajax/setting/is_login') ; ?>
                 <div class="content">
                     <h2><?php echo $this->__('Registered Customers') ?></h2>
                     <p><?php echo $this->__('If you have an account with us, please log in.') ?></p>

@@ -1,0 +1,44 @@
+<?php
+/**
+ * Tvcom
+ * Author: TonyVu
+ * Date: 10.01.2014
+ * Description
+ */
+?>
+<!-- Modal -->
+<div class="modal fade" id="ajaxcontactModal" tabindex="-1" role="dialog" aria-labelledby="Ajax regiter form" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4 class="modal-title" id="">CONTACT US</h4>
+                </div>
+                <div class="col-xs-6" style="text-align: right">
+                      <div class="divspin"><i class="fa fa-spinner fa-spin fa-lg"></i></div>
+                </div>
+            </div>
+      </div>
+      <form action="<?php echo Mage::getBaseUrl() . 'contacts/index/post/' ?>" method="post" id="ajaxcontact-form">
+          <div class="modal-body">          
+            <p>Type your request.</p>
+            <p><input name="name" id="name" title="Name" value="" class="input-text required-entry form-control form-control" type="text" placeholder="Your Name"></p>
+            <p><input name="email" id="email" title="Email" value="" class="input-text required-entry validate-email form-control" type="text" placeholder="Email"></p>
+            <p><input name="telephone" id="telephone" title="Telephone" value="" class="input-text form-control" type="text" placeholder="Phone Number"></p>
+            <p><textarea name="comment" id="comment" title="Comment" class="required-entry input-text form-control" rows="3" placeholder="Comment"></textarea></p>                
+          </div>
+          <div class="modal-footer">  
+              <div class="row">
+                  <div class="col-xs-6" style="text-align: left">
+                        <p class="smscontact alert alert-success"></p>  
+                  </div>
+                  <div class="col-xs-6">
+                        <button type="button" title="Submit" class="btnajaxcontact btn btn-success">Submit</button>
+                  </div>
+              </div>
+          </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
