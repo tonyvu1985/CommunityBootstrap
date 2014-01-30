@@ -22,6 +22,12 @@
                 <class>Tvcarousel_Slider_Helper</class>
             </slider>
         </helpers>
+        
+        <models>
+            <slider>
+                <class>Tvcarousel_Slider_Model</class>
+            </slider>
+        </models>
     </global>
     
     <adminhtml>
