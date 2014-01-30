@@ -24,4 +24,25 @@
         </helpers>
     </global>
     
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <carousel translate="label" module="slider"> <!-- setting section -->
+                                            <title>Carousel Section</title>
+                                        </carousel>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
 </config>
