@@ -2,6 +2,9 @@
 
 <layout>
     <cms_index_index>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/carousel/slider.css</stylesheet></action>
+        </reference>
         <reference name="content">
             <block type="core/template" name="carousel" before="" template="carousel/slider.phtml" />
         </reference>
