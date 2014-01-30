@@ -40,6 +40,13 @@ function ajaxregisterModal_close(){
     jQuery('#ajaxregisterModal').hide();
 }
 
+/* auto close ajaxcontact modal */
+function ajaxcontactModal_close(){
+    jQuery('body').removeClass('modal-open');
+    jQuery('.modal-backdrop').remove(); 
+    jQuery('#ajaxcontactModal').hide();
+}
+
 /* Make the TopLink always on top */
 function topNav_ontop(){    
     var num = 50; //number of pixels before modifying styles
@@ -122,7 +129,7 @@ function ajaxregisterform_submit(){
                     jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
                     jQuery('.smsregister').html('Success !');
                     
-                    window.setTimeout(function(){ajaxregisterModal_close();}, 1700);
+                    window.setTimeout(function(){ajaxcontactModal_close();}, 1700);
 
                 }
                 
@@ -151,19 +158,18 @@ function ajaxcontactform_submit(){
             async: false,
             success: function(data) {
                 json = eval("(" + data + ")");
-                 alert(json);
-              //  if (json.register == 1){
-                    
+               //  alert(json);
+                if (json == 1){  
                     /* update the toplink */
-                 //   jQuery('.smscontact').html('Success !');
+                    jQuery('.smscontact').html('Your inquiry was submitted.');
                     
-                  //  window.setTimeout(function(){ajaxregisterModal_close();}, 1700);
+                    window.setTimeout(function(){ajaxregisterModal_close();}, 1700);
 
-               // }
+                }
                 
-                 // ajax success
-              //  window.setTimeout(function(){jQuery('.smscontact').show(); }, 800);
-              //  window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
+                //  ajax success
+                window.setTimeout(function(){jQuery('.smscontact').show(); }, 800);
+                window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
             }   
         });
 
