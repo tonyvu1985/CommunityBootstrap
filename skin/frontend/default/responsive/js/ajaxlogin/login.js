@@ -138,7 +138,7 @@ function ajaxregisterform_submit(){
 /* submit ajaxcontact_form */
 function ajaxcontactform_submit(){
     
-    var ajaxcontactForm = new Validation('ajaxregister-form'); 
+    var ajaxcontactForm = new Validation('ajaxcontact-form'); 
     if(ajaxcontactForm.validate()) { 
      // before ajax submit
         jQuery('.divspin').show();
@@ -151,19 +151,19 @@ function ajaxcontactform_submit(){
             async: false,
             success: function(data) {
                 json = eval("(" + data + ")");
-                // alert(json);
-                if (json.register == 1){
+                 alert(json);
+              //  if (json.register == 1){
                     
                     /* update the toplink */
-                    jQuery('.smscontact').html('Success !');
+                 //   jQuery('.smscontact').html('Success !');
                     
-                    window.setTimeout(function(){ajaxregisterModal_close();}, 1700);
+                  //  window.setTimeout(function(){ajaxregisterModal_close();}, 1700);
 
-                }
+               // }
                 
                  // ajax success
-                window.setTimeout(function(){jQuery('.smscontact').show(); }, 800);
-                window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
+              //  window.setTimeout(function(){jQuery('.smscontact').show(); }, 800);
+              //  window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
             }   
         });
 

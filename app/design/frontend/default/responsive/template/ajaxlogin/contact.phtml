@@ -23,10 +23,10 @@
       <form action="<?php echo Mage::getBaseUrl() . 'contacts/index/post/' ?>" method="post" id="ajaxcontact-form">
           <div class="modal-body">          
             <p>Type your request.</p>
-            <p><input name="name" id="name" title="Name" value="" class="input-text required-entry form-control form-control" type="text" placeholder="Your Name"></p>
-            <p><input name="email" id="email" title="Email" value="" class="input-text required-entry validate-email form-control" type="text" placeholder="Email"></p>
-            <p><input name="telephone" id="telephone" title="Telephone" value="" class="input-text form-control" type="text" placeholder="Phone Number"></p>
-            <p><textarea name="comment" id="comment" title="Comment" class="required-entry input-text form-control" rows="3" placeholder="Comment"></textarea></p>                
+            <p><input name="contact[name]" id="name" class="input-text required-entry form-control" type="text" placeholder="Your Name"></p>
+            <p><input name="contact[email]" id="email" class="input-text required-entry validate-email form-control" type="text" placeholder="Email"></p>
+            <p><input name="contact[telephone]" id="telephone" class="input-text form-control" type="text" placeholder="Phone Number"></p>
+            <p><textarea name="contact[comment]" id="comment" class="required-entry input-text form-control" rows="3" placeholder="Comment"></textarea></p>                
           </div>
           <div class="modal-footer">  
               <div class="row">

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Tvlogin_Contacts>
+            <version>0.0.1</version>
+        </Tvlogin_Contacts>
+    </modules>
+    
+    <global>
+        <models>
+            <tvlogin_contacts>
+                <class>Tvlogin_Contact_Model</class>
+            </tvlogin_contacts>
+        </models>
+    </global>
+    
+    <frontend>
+        <routers>
+            <contacts>
+                <args>
+                    <modules>
+                        <Tvlogin_Contacts before="Mage_Contacts">Tvlogin_Contacts</Tvlogin_Contacts>
+                    </modules>
+                </args>
+            </contacts>
+        </routers>
+    </frontend>
+</config>
