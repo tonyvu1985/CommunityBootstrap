@@ -22,6 +22,14 @@
 #ajaxregisterModal .divspin{display: none}
 #ajaxregisterModal .alert-success{margin-bottom: 0; padding: 7px}
 
+#ajaxcontactModal{text-align: left}
+#ajaxcontactModal .modal-title{color: #e26703}
+#ajaxcontactModal .smscontact{display: none;}
+#ajaxcontactModal .divspin{display: none}
+#ajaxcontactModal .alert-success{margin-bottom: 0; padding: 7px}
+
+
+
 .btnlogin{text-decoration: none}
 
 .header{z-index: 1000;}

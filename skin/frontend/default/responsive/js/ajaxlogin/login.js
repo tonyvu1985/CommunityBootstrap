@@ -1,5 +1,5 @@
 /* 
- * Ajax login
+ * Ajax login Module
  */
 
 /* reset ajaxloginform */
@@ -58,7 +58,7 @@ function topNav_ontop(){
     });
 }
 
-/*submit ajaxlogin_form */jQuery('.smslogin').hide();
+/*submit ajaxlogin_form */
 function ajaxloginform_submit(){
     // before ajax submit
     jQuery('.divspin').show();
@@ -135,6 +135,41 @@ function ajaxregisterform_submit(){
     }                        
 }
 
+/* submit ajaxcontact_form */
+function ajaxcontactform_submit(){
+    
+    var ajaxcontactForm = new Validation('ajaxregister-form'); 
+    if(ajaxcontactForm.validate()) { 
+     // before ajax submit
+        jQuery('.divspin').show();
+        jQuery('.smscontact').hide();
+
+        jQuery.ajax({
+            url: jQuery('#ajaxcontact-form').attr('action'),
+            type: 'post',
+            data: jQuery('#ajaxcontact-form').serialize(),
+            async: false,
+            success: function(data) {
+                json = eval("(" + data + ")");
+                // alert(json);
+                if (json.register == 1){
+                    
+                    /* update the toplink */
+                    jQuery('.smscontact').html('Success !');
+                    
+                    window.setTimeout(function(){ajaxregisterModal_close();}, 1700);
+
+                }
+                
+                 // ajax success
+                window.setTimeout(function(){jQuery('.smscontact').show(); }, 800);
+                window.setTimeout(function(){jQuery('.divspin').hide(); }, 700);
+            }   
+        });
+
+    }                        
+}
+
 jQuery(document).ready(function() {
     /* reset ajaxlogin_form */
     ajaxloginform_reset();  
@@ -150,6 +185,11 @@ jQuery(document).ready(function() {
     /* ajaxregister submit */
     jQuery('.btnajaxregister').bind('click', function(){
         ajaxregisterform_submit();
+    });
+    
+    /* ajaxcontact submit */
+    jQuery('.btnajaxcontact').bind('click', function(){
+        ajaxcontactform_submit();
     });
     
     topNav_ontop();

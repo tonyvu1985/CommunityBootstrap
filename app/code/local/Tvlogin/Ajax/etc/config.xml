@@ -23,9 +23,9 @@
                             <children>
                                 <config>
                                     <children>
-                                        <tvajaxlogin_setting translate="label" module="ajax">
-                                            <title>Setting</title>
-                                        </tvajaxlogin_setting>
+                                        <ajax translate="label" module="ajax">
+                                            <title>Ajax Setting</title>
+                                        </ajax>
                                     </children>
                                 </config>
                             </children>

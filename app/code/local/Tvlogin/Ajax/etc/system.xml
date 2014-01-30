@@ -1,65 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <config>
-    <tabs> 
-        <tvajaxlogin translate="label" module="ajax">
-            <label>Tv Ajax Login</label>
-            <sort_order>2</sort_order>
-        </tvajaxlogin>
-    </tabs>
-    
     <sections>
-        <tvajaxlogin_setting translate="label" module="ajax">
-            <label>Setting</label>
-            <tab>tvajaxlogin</tab>
+        <ajax translate="label" module="ajax">
+            <label>Ajax config</label>
+            <tab>tvcomthemecustom</tab>
             <frontend_type>text</frontend_type>
             <sort_order>0</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>
             <show_in_store>1</show_in_store>
             <groups>
-                <ajaxlogin translate="label">
-                    <label>Ajax Login</label>
+                <setting translate="label">
+                    <label>Setting</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>2</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <yes_no translate="label">
-                            <label>Use Ajax Login ?</label>
+                        <is_login translate="label">
+                            <label>Ajax Login</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </is_login>
+                        
+                        <is_register translate="label">
+                            <label>Ajax Register</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </is_register>
+                        
+                        <is_contact translate="label">
+                            <label>Ajax Contact</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <comment>yes for use ajax login</comment>
-                        </yes_no>
+                        </is_contact>
                     </fields>    
-                </ajaxlogin>
-                   
-                <ajaxregister translate="label">
-                    <label>Ajax Register</label>
-                    <frontend_type>text</frontend_type>
-                    <sort_order>1</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
-                    <fields>
-                        <yes_no translate="label">
-                            <label>Use Ajax Register ?</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>
-                            <sort_order>1</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <comment>yes for use ajax register</comment>
-                        </yes_no>
-                    </fields>
-                </ajaxregister>
+                </setting> 
             </groups>
-        </tvajaxlogin_setting>
+        </ajax>
     </sections>
 </config>
