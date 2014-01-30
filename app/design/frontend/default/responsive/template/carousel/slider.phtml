@@ -7,8 +7,8 @@
 ?>
 
 <?php 
-    $i = 1;
-    $j = 1;
+    $i = 0;
+    $j = 0;
     
     /*Magento Config*/
     $is_carousel = Mage::getStoreConfig('carousel/setting/yes_no');
@@ -23,18 +23,24 @@
     $path_folder = "media/" . Mage::getStoreConfig('carousel/setting/path') . "/*.*" ;
     $TotalImages = count(glob($path_folder));
     
-    // Transition time
+    // transition option
+    $transition  = Mage::getStoreConfig('carousel/setting/transition');
+    if($transition == null){
+        $transition = 'slide';
+    }
+    
+    // transition time
     $interval = Mage::getStoreConfig('carousel/setting/interval');
     if($interval == null || $interval == 0){
         $interval = 5000;
     }
 ?>
-<div id="tvcarousel" data-interval="<?php echo $interval ?>" data-wrap="<?php echo $is_loop ?>" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px;">
+<div id="tvcarousel" data-interval="<?php echo $interval ?>" data-wrap="<?php echo $is_loop ?>" class="carousel <?php echo $transition ?>" data-ride="carousel" style="margin-bottom: 20px;">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php 
-        while ($i <= $TotalImages) {
-            if($i == 1){
+        while ($i < $TotalImages) {
+            if($i == 0){
                 echo '<li data-target="#tvcarousel" data-slide-to="' . $i . '" class="active"></li>';
             }else{
                 echo '<li data-target="#tvcarousel" data-slide-to="' . $i . '"></li>';
@@ -48,7 +54,7 @@
   <div class="carousel-inner">
     <?php
         foreach (glob($path_folder) as $filename) {
-            if($j == 1){
+            if($j == 0){
                echo '<div class="item active"><img src="' . Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . $filename . '" /><div class="carousel-caption"></div></div>' ;
             }else{
                echo '<div class="item"><img src="' . Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . $filename . '" /><div class="carousel-caption"></div></div>' ;
