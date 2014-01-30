@@ -5,51 +5,63 @@
  * 29.01.2014
  */
 ?>
-<div id="carousel-example-generic" data-interval="2000" data-wrap="false" data-pause="hover" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px;">
+
+<?php 
+    $i = 1;
+    $j = 1;
+    
+    /*Magento Config*/
+    $is_carousel = Mage::getStoreConfig('carousel/setting/yes_no');
+    if($is_carousel == 0 || $is_carousel == 0){
+        return;
+    }
+    
+    // auto loop carousel
+    $is_loop = Mage::getStoreConfig('carousel/setting/wrap');
+    
+    // path folder contains images
+    $path_folder = "media/" . Mage::getStoreConfig('carousel/setting/path') . "/*.*" ;
+    $TotalImages = count(glob($path_folder));
+    
+    // Transition time
+    $interval = Mage::getStoreConfig('carousel/setting/interval');
+    if($interval == null || $interval == 0){
+        $interval = 5000;
+    }
+?>
+<div id="tvcarousel" data-interval="<?php echo $interval ?>" data-wrap="<?php echo $is_loop ?>" class="carousel slide" data-ride="carousel" style="margin-bottom: 20px;">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <?php 
+        while ($i <= $TotalImages) {
+            if($i == 1){
+                echo '<li data-target="#tvcarousel" data-slide-to="' . $i . '" class="active"></li>';
+            }else{
+                echo '<li data-target="#tvcarousel" data-slide-to="' . $i . '"></li>';
+            }   
+            $i++;
+        } 
+     ?>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="item active"> <!-- product 1 -->
-      <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'carousel/shoes/1.jpg' ; ?>" alt="...">
-      <div class="carousel-caption">
-        shoe 1
-      </div>
-    </div>
-    
-    <div class="item"> <!-- product 2 -->
-      <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'carousel/shoes/2.jpg' ; ?>" alt="...">
-      <div class="carousel-caption">
-        shoe 2
-      </div>
-     </div>
-      
-     <div class="item">
-      <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'carousel/shoes/3.jpg' ; ?>" alt="...">
-      <div class="carousel-caption">
-        shoe 3
-      </div>
-    </div>
-      
-     <div class="item">
-      <img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'carousel/shoes/4.jpg' ; ?>" alt="...">
-      <div class="carousel-caption">
-        show 1
-      </div>
-    </div>
+    <?php
+        foreach (glob($path_folder) as $filename) {
+            if($j == 1){
+               echo '<div class="item active"><img src="' . Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . $filename . '" /><div class="carousel-caption"></div></div>' ;
+            }else{
+               echo '<div class="item"><img src="' . Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB) . $filename . '" /><div class="carousel-caption"></div></div>' ;
+            }   
+            $j++;
+        }
+    ?>  
   </div>
-
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+  <a class="left carousel-control" href="#tvcarousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+  <a class="right carousel-control" href="#tvcarousel" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
