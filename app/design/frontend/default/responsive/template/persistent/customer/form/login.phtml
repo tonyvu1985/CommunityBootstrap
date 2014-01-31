@@ -36,7 +36,8 @@
     <div class="page-title">
         <h1><?php echo $this->__('Login or Create an Account') ?></h1>
     </div>
-    <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+    <div class="alert alert-info">Please <strong>Login</strong> or <strong>Create an account</strong> on Top right navigation links</div>
+  <!--  <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
     <form action="<?php echo $this->getPostActionUrl() ?>" method="post" id="login-form">
         <div class="customer-login col-md-12 col-xs-12">
             <div class="new-customer col-md-6 col-sm-12">
@@ -94,7 +95,7 @@
         <?php if (Mage::helper('checkout')->isContextCheckout()): ?>
             <input name="context" type="hidden" value="checkout" />
         <?php endif; ?>
-    </form>
+    </form> -->
     <script type="text/javascript">
     //<![CDATA[
         var dataForm = new VarienForm('login-form', true);

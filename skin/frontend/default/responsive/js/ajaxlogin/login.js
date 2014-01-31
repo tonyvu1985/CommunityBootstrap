@@ -2,38 +2,6 @@
  * Ajax login Module
  */
 
-/* reset ajaxloginform */
-function ajaxloginform_reset(){
-    jQuery('.loginlink').click(function(){
-        jQuery('#ajaxlogin-form')[0].reset();
-        jQuery('.smslogin').hide();
-    });
-    
-    jQuery('.btnlogin').click(function(){
-        jQuery('#ajaxlogin-form')[0].reset();
-        jQuery('.smslogin').hide();
-    });
-}
-
-/* reset ajaxloginform */
-function ajaxregisterform_reset(){
-    jQuery('.btn-createaccount').click(function(){
-         jQuery('#ajaxregister-form')[0].reset();
-    });
-    
-    jQuery('.registerlink').click(function(){
-        jQuery('#ajaxregister-form')[0].reset();
-    });
-}
-
-
-/* reset ajaxloginform */
-function ajaxcontactform_reset(){
-    jQuery('.contactlink').click(function(){
-            jQuery('.smscontact').hide();
-        jQuery('#ajaxcontact-form')[0].reset();
-    });
-}
 
 /* auto close ajaxlogin modal 
 function ajaxloginModal_close(){
@@ -55,6 +23,40 @@ function ajaxcontactModal_close(){
     jQuery('.modal-backdrop').hide(); 
     jQuery('#ajaxcontactModal').hide(); 
 }*/
+
+/* reset ajaxloginform */
+function ajaxloginform_reset(){
+    jQuery('.loginlink').click(function(){
+        jQuery('#ajaxlogin-form')[0].reset();
+        jQuery('.smslogin').hide();
+        
+        jQuery('.btnlogin-cancel').hide();
+        jQuery('.btnajaxlogin').show();
+    });
+    
+}
+
+/* reset ajaxloginform */
+function ajaxregisterform_reset(){
+    jQuery('.registerlink').click(function(){
+        jQuery('#ajaxregister-form')[0].reset();
+        
+        jQuery('.btnregister-cancel').hide();
+        jQuery('.btnajaxregister').show();
+    });
+}
+
+
+/* reset ajaxloginform */
+function ajaxcontactform_reset(){
+    jQuery('.contactlink').click(function(){
+        jQuery('.smscontact').hide();
+        jQuery('#ajaxcontact-form')[0].reset();
+        
+        jQuery('.btncontact-cancel').hide();
+        jQuery('.btnajaxcontact').show();
+    });
+}
 
 /* Make the TopLink always on top */
 function topNav_ontop(){    
@@ -94,9 +96,10 @@ function ajaxloginform_submit(){
                 /* username */
                 jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
                 jQuery('.smslogin').html('Welcome, ' + json.user + '!');
-                jQuery('.btnlogin').hide();
 
-                
+                jQuery('.btnlogin-cancel').show();
+                jQuery('.btnajaxlogin').hide();
+        
             }else{
                 jQuery('.smslogin').html('Your email or password are incorrect !');
             }
@@ -134,7 +137,9 @@ function ajaxregisterform_submit(){
                     jQuery('#toplink').html(json.toplink);
                     jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
                     jQuery('.smsregister').html('Success !');
-
+                    
+                    jQuery('.btnregister-cancel').show();
+                    jQuery('.btnajaxregister').hide();
                 }
                 
                  // ajax success
@@ -167,7 +172,8 @@ function ajaxcontactform_submit(){
                     /* update the toplink */
                     jQuery('.smscontact').html('Your inquiry was submitted.');
                     
-                    window.setTimeout(function(){ajaxcontactModal_close();}, 1700);
+                    jQuery('.btncontact-cancel').show();
+                    jQuery('.btnajaxcontact').hide();
 
                 }
                 
@@ -189,12 +195,14 @@ jQuery(document).ready(function() {
     });
     
     /* reset ajax register form */
-    ajaxregisterform_reset()
+    ajaxregisterform_reset();
+    jQuery('.btnregister-cancel').hide();
     jQuery('.btnajaxregister').bind('click', function(){
         ajaxregisterform_submit();
     });
     
     ajaxcontactform_reset();
+    jQuery('.btncontact-cancel').hide();
     jQuery('.btnajaxcontact').bind('click', function(){
         ajaxcontactform_submit();
     });
