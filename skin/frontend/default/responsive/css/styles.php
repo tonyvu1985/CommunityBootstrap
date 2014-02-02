@@ -47,12 +47,21 @@
     if ($footer_link_size == ''){
         $footer_link_size = $fontsize;
     }
+    
+    $footer_title_color = '#' . Mage::getStoreConfig('setting/footer/title_color');
+    $footer_title_size = Mage::getStoreConfig('setting/footer/title_size');
+    // get default size 
+    if ($footer_title_size == ''){
+        $footer_title_size = $fontsize;
+    }
+    
     $footer_text_color = '#' . Mage::getStoreConfig('setting/footer/text_color');
     $footer_text_size = Mage::getStoreConfig('setting/footer/text_size');
     // get default size 
     if ($footer_text_size == ''){
         $footer_text_size = $fontsize;
     }
+    
     $footer_line_color = '#' . Mage::getStoreConfig('setting/footer/line_color');
     $footer_line_size = Mage::getStoreConfig('setting/footer/line_size');
     // get default size 10px
@@ -806,8 +815,9 @@ tr.summary-details-excluded { font-style:italic; }
 .block-tags .actions a { float:none; }
 
 /* Block: Subscribe */
-.block-subscribe .block-content { padding:5px 10px; }
-/*.block-subscribe .block-title strong { background-image:url(../images/i_block-subscribe.gif); }*/
+.block-subscribe{border:0; text-align:left}
+.block-subscribe .block-content { padding:5px 10px; background:none}
+.block-subscribe .block-title {border-bottom:0}
 .block-subscribe label { font-weight:bold; color:#666; }
 .block-subscribe input.input-text {/* display:block; width:167px; margin:3px 0;*/ }
 .block-subscribe .actions { /*background:none; padding:0; margin:3px 0 0; text-align:left; */}
@@ -1761,20 +1771,19 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Footer ================================================================================ */
 .footer-container { }
-.footer { /*width:930px; margin:0 auto; */padding:10px 10px 50px; background: <?php echo $footer_bgcolor ?>; color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>; border-top:<?php echo $footer_line_size ?> solid <?php echo $footer_line_color ?>; }
+.footer { /*width:930px; margin:0 auto; */padding:10px 10px 50px; background: <?php echo $footer_bgcolor ?>; color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>; border-top:<?php echo $footer_line_size ?> solid <?php echo $footer_line_color ?>; text-align:left}
 .footer .store-switcher { display:inline; margin:0 5px 0 0; color:#fff; }
 .footer .store-switcher label { font-weight:bold; vertical-align:middle; }
 .footer .store-switcher select { padding:0; vertical-align:middle; }
 .footer a { color:<?php echo $footer_link_color ?>; text-decoration:none; font-size: <?php echo $footer_link_size ?>}
 .footer a:hover { text-decoration:underline;}
+.footer .title{color:<?php echo $footer_title_color ?>; font-size: <?php echo $footer_title_size ?>; font-weight:bold; text-transform: uppercase; padding: 2px 0}
 /*.footer .bugs { margin:13px 0 0; color:<?php echo $footer_link_color ?>;}
 .footer .bugs a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}
 .footer .bugs a:hover { text-decoration:none; } */
 .footer address { margin:0 0 20px;}
 .footer address a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}
 .footer address a:hover { text-decoration:none; }
-.footer .footer-left{text-align: left}
-.footer .footer-right{text-align: right}
 .footer ul { display:inline; }
 .footer ul.links { display:block; }
 .footer li { display:inline;/* background:url(../images/bkg_pipe2.gif) 100% 60% no-repeat;*/ padding:0 10px 0 0px; }
@@ -1914,9 +1923,8 @@ tr.summary-details-excluded { font-style:italic; }
 #checkout-step-shipping input[type="checkbox"] {display:inline-block}
 
 /* social network block */
-#divnetworkshare{margin-top: 10px; text-align: left}
-#divnetworkshare a{color: <?php echo $header_link_color ?>}
-.followus{/*color: #fff; */vertical-align: top; padding: 10px 10px 0px 0px; display: inline-block;}
+#divnetworkshare{margin-bottom: 10px; }
+
 
 /* popup cart page */
 #popupcart{position: absolute; right: 0; z-index: 2; margin: 25px 14px 0px 0px; background:#fff; text-align: left; display: none; width: 250px}

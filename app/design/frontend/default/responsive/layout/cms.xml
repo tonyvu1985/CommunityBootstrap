@@ -38,7 +38,12 @@ Default layout, loads most of the pages
                     You can manage it in admin CMS -> Static Blocks
                 -->
                 <action method="setBlockId"><block_id>footer_links</block_id></action>
+                
             </block>
+           
+            <!-- social network share -->
+            <block type="core/template" name="social.network" template="customblock/socialnetwork/networkshare.phtml" />
+                
         </reference>
     </default>
     

@@ -8,37 +8,7 @@
         </tvcomthemecustom>
     </tabs>
     
-    <sections> <!-- create a new sections -->
-        <layout translate="label" module="themecustom"> <!-- layout section -->
-            <label>Layout</label>
-            <tab>tvcomthemecustom</tab>
-            <frontend_type>text</frontend_type>
-            <sort_order>0</sort_order>
-            <show_in_default>1</show_in_default>
-            <show_in_website>1</show_in_website>
-            <show_in_store>1</show_in_store>
-            <groups>
-                <footer translate="label"> <!-- theme background -->
-                    <label>Footer</label>
-                    <frontend_type>text</frontend_type>
-                    <sort_order>1</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>
-                    <fields>
-                        <layout translate="label">
-                            <label>Layout Update</label>
-                            <frontend_type>select</frontend_type>
-                            <source_model>themecustom/option_footerlayout</source_model>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>    
-                        </layout>
-                    </fields>
-                </footer>
-            </groups>
-        </layout>
-        
+   <sections>        
         <setting translate="label" module="themecustom"> <!-- setting section -->
             <label>Setting</label>
             <tab>tvcomthemecustom</tab>
@@ -459,45 +429,45 @@
                             <show_in_store>1</show_in_store>
                         </bgcolor>
                         
-                        <link translate="label">
-                            <label><![CDATA[<span style="color:red">a link</span>]]></label>
+                        <title translate="label">
+                            <label><![CDATA[<span style="color:red">title</span>]]></label>
                             <frontend_type>label</frontend_type>
-                            <sort_order>1</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                
-                        </link>
-                        
-                        <link_color> <!-- footer link color -->
-                            <label>color</label>
-                            <frontend_type>text</frontend_type>
-                            <validate>color</validate>                  
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </link_color>                        
+                            <show_in_store>1</show_in_store>                
+                        </title>
                         
-                        <link_size> <!-- footer link color -->
-                            <label>font size</label>
-                            <frontend_type>text</frontend_type>                            
+                        <title_color translate="label"> <!-- footer title color -->
+                            <label>color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>                  
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>If empty, It will take the default font size</comment>
-                        </link_size>                        
+                        </title_color>                        
                         
-                        <text translate="label"> <!-- text style -->
-                            <label><![CDATA[<span style="color:red">text</span>]]></label>
+                        <title_size translate="label"> <!-- footer title color -->
+                            <label>font size</label>
+                            <frontend_type>text</frontend_type>                            
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If empty, It will take the default font size</comment>
+                        </title_size>  
+                        
+                        <link translate="label">
+                            <label><![CDATA[<span style="color:red">a link</span>]]></label>
                             <frontend_type>label</frontend_type>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                
-                        </text>
+                        </link>
                         
-                        <text_color> <!-- footer text color -->
+                        <link_color translate="label"> <!-- footer link color -->
                             <label>color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                  
@@ -505,46 +475,83 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </text_color>                        
+                        </link_color>                        
                         
-                        <text_size> <!-- footer link color -->
+                        <link_size translate="label"> <!-- footer link color -->
                             <label>font size</label>
                             <frontend_type>text</frontend_type>                            
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment>If empty, It will take the default font size</comment>
-                        </text_size>                  
+                        </link_size>                        
                         
-                        <line translate="label"> <!-- line style -->
-                            <label><![CDATA[<span style="color:red">line</span>]]></label>
+                        <text translate="label"> <!-- text style -->
+                            <label><![CDATA[<span style="color:red">text</span>]]></label>
                             <frontend_type>label</frontend_type>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                
+                        </text>
+                        
+                        <text_color translate="label"> <!-- footer text color -->
+                            <label>color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>                  
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>                        
+                        
+                        <text_size translate="label"> <!-- footer link color -->
+                            <label>font size</label>
+                            <frontend_type>text</frontend_type>                            
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_size>                  
+                        
+                        <line translate="label"> <!-- line style -->
+                            <label><![CDATA[<span style="color:red">line</span>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                
                         </line>
                         
-                        <line_color> <!-- line color -->
+                        <line_color translate="label"> <!-- line color -->
                             <label>color</label>
                             <frontend_type>text</frontend_type>                            
                             <validate>color</validate>                  
-                            <sort_order>8</sort_order>
+                            <sort_order>14</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                            
                         </line_color>                  
                         
-                        <line_size> <!-- footer line size -->
+                        <line_size translate="label"> <!-- footer line size -->
                             <label>size</label>
                             <frontend_type>text</frontend_type>                            
-                            <sort_order>9</sort_order>
+                            <sort_order>15</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                             <comment>If empty, It will take 10px as default line size</comment>
                         </line_size>                  
+                        
+                        <contact translate="label">
+                            <label>Contact Details</label>
+                            <frontend_type>textarea</frontend_type>                            
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Information about Address, Phone number and Email</comment>
+                        </contact>
                         
                     </fields>
                 </footer>
