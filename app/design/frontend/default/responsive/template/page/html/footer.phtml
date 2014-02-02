@@ -43,9 +43,25 @@
                
             <div class="col-md-3 col-sm-6 col-xs-12"> <!-- col 4 -->
                 <p class="title">Useful links</p>
-                <?php echo $this->getChildHtml('cms_footer_links') ?>
-                <?php echo $this->getChildHtml('footer_links') ?>
-                <address><?php echo $this->getCopyright() ?></address>
+                <table class="table">
+                    <tr><!-- row 1 -->
+                        <td>
+                            <?php echo $this->getChildHtml('cms_footer_links') ?>
+                        </td>
+                    </tr>
+                    
+                    <tr><!-- row 2 -->
+                        <td>
+                            <?php echo $this->getChildHtml('footer_links') ?>
+                        </td>
+                    </tr>
+                    
+                    <tr><!-- row 3 -->
+                        <td>
+                            <address><?php echo $this->getCopyright() ?></address>
+                        </td>
+                    </tr>
+                </table>
             </div>    
     </div>
 </div>
