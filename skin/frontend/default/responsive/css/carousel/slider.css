@@ -29,3 +29,8 @@
 .carousel-fade .carousel-control {
   z-index: 2;
 }
+
+/* horizontal block on homepage */
+.horizontalblk h3{text-transform: uppercase; color: #E26703}
+.horizontalblk a{text-decoration: none;}
+.horizontalblk a:hover{color:#444}
