@@ -42,7 +42,7 @@ Default layout, loads most of the pages
             </block>
            
             <!-- social network share -->
-            <block type="core/template" name="social.network" template="customblock/socialnetwork/networkshare.phtml" />
+            <block type="core/template" name="social.network" template="tvtheme/networkshare.phtml" />
                 
         </reference>
     </default>
