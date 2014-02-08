@@ -1076,7 +1076,8 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .box-up-sell .products-grid td.empty { border-right:0; background:#f1ecdb; } */
 .product-view .box-up-sell .products-grid .ratings .rating-box { float:none; display:block; margin:0 0 3px; }
 .product-view .box-up-sell .products-grid .upsell-product{width: 185px; margin-right:10px}
-
+.box-up-sell .jcarousel-prev, .box-up-sell .jcarousel-next{cursor: pointer; text-decoration: none; color: #203548;}
+.box-up-sell .jcarousel-prev:hover, .box-up-sell .jcarousel-next:hover{color:#c76200}
 /* Block: Tags */
 .product-view .box-tags { margin:0; }
 .product-view .box-tags h3 { font-size:13px; }
