@@ -107,4 +107,7 @@
     .cart .title-buttons .checkout-types{float:left; margin-top: 10px;}
     .order-review .buttons-set button.button{float: left; margin-left: 0}
     
+    /* product review */
+    #product-review-table th{padding: 3px}
+    #product-review-table input[type="radio"]{margin:0; }
 }
