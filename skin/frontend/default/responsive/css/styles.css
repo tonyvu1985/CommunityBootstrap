@@ -2,8 +2,8 @@
 
 img           { border:0; vertical-align:top; }
 
-a             { color:#1e7ec8; text-decoration:underline; }
-a:hover       { text-decoration:none; }d
+a             { color:#1e7ec8; text-decoration:none; }
+a:hover       { color:#434343 }
 :focus        { outline:0; }
 
 /* Headings */
@@ -1124,8 +1124,8 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Content Styles ================================================================= */
 .product-name { margin:0; font-size:1em; font-weight:normal; }
-.product-name a { color:#1e7ec8; }
-
+.product-name a { color:#1e7ec8; text-decoration: none}
+.product-name a:hover{color: #434343} 
 /* Product Tags */
 .tags-list { display:block; font-size:13px; border:1px solid #c1c4bc; background:#f8f7f5; padding:10px; }
 .tags-list li { display:inline !important; margin:0 4px 0 0; }
