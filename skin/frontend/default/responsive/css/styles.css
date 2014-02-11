@@ -3,7 +3,7 @@
 img           { border:0; vertical-align:top; }
 
 a             { color:#1e7ec8; text-decoration:none; }
-a:hover       { color:#434343 }
+a:hover       { color:#434343; text-decoration:none; }
 :focus        { outline:0; }
 
 /* Headings */
@@ -729,7 +729,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Block: Tags */
 .block-tags .block-title strong {/* background-image:url(../images/i_block-tags.gif); */}
-.block-tags .block-content .tags-list { background:none; border:0; font-size:12px; }
+.block-tags .block-content .tags-list { background:none; border:0;/* font-size:12px; */}
 .block-tags .block-content a { color:#1b2d3b; }
 .block-tags .actions { text-align:right; }
 .block-tags .actions a { float:none; }
