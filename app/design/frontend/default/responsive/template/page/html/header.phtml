@@ -31,7 +31,9 @@
     <div class="header row">    
         <div class="col-sm-5">
             <?php echo $this->getChildHtml('topSearch') ?>
-            <?php echo Mage::getStoreConfig('setting/header/usp')?>
+            <div class="usp">
+                <?php echo Mage::getStoreConfig('setting/header/usp')?>
+            </div>
         </div>
         
         <div class="quick-access col-sm-7">            
