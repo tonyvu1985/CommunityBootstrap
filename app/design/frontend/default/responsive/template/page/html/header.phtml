@@ -35,9 +35,15 @@
         </div>
         
         <div class="quick-access col-sm-7">            
-            <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
-            <?php echo $this->getChildHtml('topLinks') ?>
-            <?php echo $this->getChildHtml('store_language') ?>
+            <div class="row">
+                <div class="welcome-box col-sm-12 col-xs-4">
+                    <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+                </div>
+                <div class="toplink-div col-sm-12 col-xs-8">
+                    <?php echo $this->getChildHtml('topLinks') ?>
+                    <?php echo $this->getChildHtml('store_language') ?>
+                </div>
+            </div>
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
