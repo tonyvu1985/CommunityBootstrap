@@ -37,9 +37,9 @@
             <?php echo $_link->toHtml() ?>
         <?php else: ?>
              <!-- check if item is My Cart -->
-             <?php if (strstr($_link->getLabel(), 'My Cart') != '') :?>
+             <?php if (strstr($_link->getTitle(), 'My Cart') != '') :?>
                 <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo '<i class="cart-icon fa fa-shopping-cart"></i>' . $_link->getLabel() ?><i class="fa fa-sort-asc showminicart"></i></a><?php echo $_link->getAfterText() ?></li>
-            <?php elseif (strstr($_link->getLabel(), 'Checkout') != '') :?>
+            <?php elseif (strstr($_link->getTitle(), 'Checkout') != '') :?>
                 <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo '<i class="checkout-icon fa fa-check-square"></i> <span class="checkout-text">' . $_link->getLabel() . '</span>' ?></a><?php echo $_link->getAfterText() ?></li>
              <?php else: ?>
                 <li<?php if($_link->getIsFirst()||$_link->getIsLast()): ?> class="<?php if($_link->getIsFirst()): ?>first<?php endif; ?><?php if($_link->getIsLast()): ?> last<?php endif; ?>"<?php endif; ?> <?php echo $_link->getLiParams() ?>><?php echo $_link->getBeforeText() ?><a href="<?php echo $_link->getUrl() ?>" title="<?php echo $_link->getTitle() ?>" <?php echo $_link->getAParams() ?>><?php echo $_link->getLabel() ?></a><?php echo $_link->getAfterText() ?></li>
