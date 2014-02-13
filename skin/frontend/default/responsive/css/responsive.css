@@ -47,7 +47,8 @@
     /* quick access nav */
     .quick-access{text-align: left; padding-top: 15px; clear: both}
     .header .links{float:left}
-    
+    .header .links .myaccount-text, .header .links .logout-text, .header .links .login-text, .header .links .cart-text, .header .links .checkout-text, .header .links .wishlist-text{display: none}
+    .header .links .myaccount-icon, .header .links .logout-icon, .header .links .login-icon, .header .links .cart-icon, .header .links .checkout-icon, .header .links .wishlist-icon{font-size: 2em}
     /* custoner login */
     .registered-customer .required{text-align: left; margin-top: 10px}    
     
