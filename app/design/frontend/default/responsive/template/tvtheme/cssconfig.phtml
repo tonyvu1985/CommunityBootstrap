@@ -34,7 +34,8 @@
     $header_bgcolor = '#' . Mage::getStoreConfig('setting/header/bgcolor'); 
     $header_link_color = '#' . Mage::getStoreConfig('setting/header/link_color');
     $header_link_size = Mage::getStoreConfig('setting/header/link_size');
-    
+    $header_hoverlink_color = '#' . Mage::getStoreConfig('setting/header/hoverlink_color');
+    $header_hoverlink_size = Mage::getStoreConfig('setting/header/hoverlink_size');
     /* body */
     $container_bgcolor = '#' . Mage::getStoreConfig('setting/body/bgcolor');
     $container_bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/body/bgimage');
@@ -82,7 +83,8 @@ body{ background:<?php echo $theme_bgcolor ?> url(<?php echo $theme_bgimage ?>) 
 
 .header{padding: 15px 0 0px 0; background: <?php echo $header_bgcolor ?>}
 .header .links a { color:<?php echo $header_link_color ?>; font-size: <?php echo $header_link_size ?>;}
-.header .links .top-link-cart i{margin-left: 5px; color: <?php echo $header_link_color ?>}
+.header .links a:hover { color:<?php echo $header_hoverlink_color ?>; font-size: <?php echo $header_hoverlink_size ?>;}
+.header .links .top-link-cart i{margin-left: 5px;}
 
 .main-container { background:<?php echo $container_bgcolor ?> url(<?php echo $container_bgimage ?>) <?php echo $container_bgpositionx ?> <?php echo $container_bgpositiony ?> <?php echo $container_bgpositionrepeat ?>;  }
 .footer { /*width:930px; margin:0 auto; */padding:10px 10px 50px; background: <?php echo $footer_bgcolor ?>; color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>; border-top:<?php echo $footer_line_size ?> solid <?php echo $footer_line_color ?>; text-align:left}
