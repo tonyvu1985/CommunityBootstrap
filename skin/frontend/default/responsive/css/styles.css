@@ -1036,7 +1036,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options .options-list input.checkbox {/* float:left; margin-top:3px; */ display: inline-block}
 .product-options .validation-failed { padding:0 7px; }
 .product-options p.note { margin:0; font-size:11px; }
-.product-options p.required { position:absolute; right:20px; top:20px; }
+.product-options p.required { position:absolute; right:10px; top:4px; }
 
 .product-options-bottom { background-color:#fffada; padding:15px 20px; border:1px solid #e4e4e4; border-top:0; }
 .product-options-bottom .product-pricing,
