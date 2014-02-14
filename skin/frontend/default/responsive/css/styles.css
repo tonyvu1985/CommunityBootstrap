@@ -1052,7 +1052,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-options-bottom .price-tax { float:left; }
 .product-options-bottom .add-to-cart { float:right; }
 .product-shop .product-options-bottom { margin:0 0 10px; }
-.product-shop .product-options-bottom .price-box { float:none; margin:0 0 5px; }
+.product-shop .product-options-bottom .price-box { float:left; margin:0 0 5px; }
 .product-shop .product-options-bottom .price-label { float:none; padding-right:0; }
 .product-shop .product-options-bottom .price-tax { float:none; }
 .product-shop .product-options-bottom .add-to-cart-box { clear:both; float:left; padding-top:12px; }
