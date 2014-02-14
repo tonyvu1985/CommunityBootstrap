@@ -34,3 +34,9 @@
 
 .header{z-index: 1000;}
 .fixed {position:fixed; top:0; background: #fff; opacity: 0.95; left: 0; padding: 10px 20px; z-index: 1031}
+
+
+@media (max-width: 767px) {   
+    .header .links .register-text{display: none}
+    .header .links .register-icon{font-size: 1.5em}
+}
