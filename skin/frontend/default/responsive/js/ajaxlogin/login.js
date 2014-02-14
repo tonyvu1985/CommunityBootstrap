@@ -94,8 +94,8 @@ function ajaxloginform_submit(){
                 /* update the toplink */
                 jQuery('#toplink').html(json.toplink);
                 /* username */
-                jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
-                jQuery('.smslogin').html('Welcome, ' + json.user + '!');
+                jQuery('.welcome-msg').html('Hi, ' + json.user + '!'); 
+                jQuery('.smslogin').html('Hi, ' + json.user + '!');
 
                 jQuery('.btnlogin-cancel').show();
                 jQuery('.btnajaxlogin').hide();
@@ -135,7 +135,7 @@ function ajaxregisterform_submit(){
                     
                     /* update the toplink */
                     jQuery('#toplink').html(json.toplink);
-                    jQuery('.welcome-msg').html('Welcome, ' + json.user + '!'); 
+                    jQuery('.welcome-msg').html('Hi, ' + json.user + '!'); 
                     jQuery('.smsregister').html('Success !');
                     
                     jQuery('.btnregister-cancel').show();
