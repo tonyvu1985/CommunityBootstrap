@@ -59,12 +59,10 @@
     /*.title-buttons{text-align: left}*/
     /* checkout /cart */
     .cart .totals{margin-top: 20px}
-    #shopping-cart-table .item-editable{display: none}
-    #shopping-cart-table .item-image{display: none}
-    #shopping-cart-table .col-wishlist{display: none}
+    #shopping-cart-table .item-editable, #shopping-cart-table .item-image, #shopping-cart-table .col-wishlist{display: none}
+   
     /* catalog category */
-    .pager-responsive .amount{display: none}
-    .pager-responsive .limiter label{display: none}
+    .pager-responsive .amount, .pager-responsive .limiter label{display: none}
     .pager-responsive .pagination{text-align: left}    
     .sorter .view-mode{padding-left:0}
     
@@ -92,6 +90,7 @@
     /* My downloadable product */
     #my-downloadable-products-table .orderid, #my-downloadable-products-table .date{display: none}
     
+    .usp i{font-size: 1.5em}
 }
  
 /* Landscape phones and down */
@@ -117,4 +116,6 @@
     /* product review */
     #product-review-table th{padding: 3px}
     #product-review-table input[type="radio"]{margin:0; }
+    
+    
 }
