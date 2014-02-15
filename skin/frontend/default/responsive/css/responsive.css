@@ -61,7 +61,7 @@
     .cart .totals{margin-top: 20px}
     #shopping-cart-table .item-editable{display: none}
     #shopping-cart-table .item-image{display: none}
-    .data-table .col-wishlist{display: none}
+    #shopping-cart-table .col-wishlist{display: none}
     /* catalog category */
     .pager-responsive .amount{display: none}
     .pager-responsive .limiter label{display: none}
@@ -88,6 +88,10 @@
     .footer .footer-right{text-align: left}
     
     #popupcart{left: 15px;}
+    
+    /* My downloadable product */
+    #my-downloadable-products-table .orderid, #my-downloadable-products-table .date{display: none}
+    
 }
  
 /* Landscape phones and down */
