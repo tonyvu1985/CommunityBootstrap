@@ -678,7 +678,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-wishlist .actions a { float:none; }
 
 /* Block: Related */
-.block-related .block-title strong { background-image:url(../images/i_block-related.gif); background-position:0 1px; }
+.block-related .block-title strong {/* background-image:url(../images/i_block-related.gif); background-position:0 1px; */}
 .block-related input.checkbox { float:left; }
 .block-related .product { margin-left:20px; }
 

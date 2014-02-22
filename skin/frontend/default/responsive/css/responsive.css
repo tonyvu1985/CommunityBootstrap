@@ -91,13 +91,15 @@
     #my-downloadable-products-table .orderid, #my-downloadable-products-table .date{display: none}
     
     .usp i{font-size: 1.5em}
+    
+    .block-tags{display: none}
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
     
     /* catalog category */
-    .block-subscribe, .block-compare, .block-poll, .block-viewed, .block-tags, .paypal-logo, .block-wishlist{display: none}
+    .block-subscribe, .block-compare, .block-poll, .block-viewed, .paypal-logo, .block-wishlist{display: none}
     .col-main .category-image{display: none}
     
     /* catalog product view */
