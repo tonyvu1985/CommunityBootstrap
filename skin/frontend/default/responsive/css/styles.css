@@ -1857,3 +1857,7 @@ tr.summary-details-excluded { font-style:italic; }
 #product-attribute-specs-table .label{font-size:90%; font-weight:normal; text-align:left}
 /* cart page */
 .cart-left, .crosselldiv{padding-left:0; padding-right:0}
+
+/* scroll up */
+#scroll-div{display: none; position:fixed; bottom:20px; right:5%; z-index: 100}
+#scroll-div a:hover{color: #ccc; cursor:pointer}
