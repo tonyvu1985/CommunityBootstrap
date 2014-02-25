@@ -6,7 +6,7 @@
             <action method="addCss"><stylesheet>css/yamm.css</stylesheet></action>
         </reference>
         
-        <reference name="content">
+        <reference name="top.menu">
             <block type="core/template" name="mega.menu" template="tvtheme/yamm.phtml" />
         </reference>
     </default>
