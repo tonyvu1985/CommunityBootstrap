@@ -38,6 +38,8 @@
         // navbar-default is an option in the setting/header/navbar
         $narbar_style = 'navbar-default';
     } 
+    
+    $logotext = Mage::getStoreConfig('setting/header/logotext');
 ?>
 <?php if($_menu): ?>
 <nav id="default-nav" class="navbar <?php echo $narbar_style ?>" role="navigation">
@@ -52,7 +54,7 @@
         <?php if(Mage::getStoreConfig('setting/header/logo') != ''): ?>
         <a class="navbar-brand" href="<?php echo $this->getBaseUrl(); ?>"><img height="50px" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'logo/' . Mage::getStoreConfig('setting/header/logo') ?>" alt="<?php echo Mage::getStoreConfig('setting/header/logoalt') ?>"></a>
         <?php else: ?>
-            <a class="navbar-brand" href="<?php echo $this->getBaseUrl(); ?>">Companylogo</a>
+            <a class="navbar-brand" href="<?php echo $this->getBaseUrl(); ?>"><?php echo $logotext ?></a>
         <?php endif; ?>
   </div>    
   <div class="nav-container collapse navbar-collapse" id="bs-example-navbar-collapse-1">

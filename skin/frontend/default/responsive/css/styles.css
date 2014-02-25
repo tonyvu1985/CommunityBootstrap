@@ -521,7 +521,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav li a{text-decoration: none; text-transform: uppercase; text-align: left}
 #nav li ul li a{text-transform: none; text-align: left}
 #nav-parentlink{color: #e26703}
-.navbar-header .navbar-brand{text-decoration: none; color: #e26703; padding: 0}
+.navbar-header .navbar-brand{text-decoration: none;}
 /* All Levels */ /* Style consistent throughout all nav levels */
 /*#nav li { position:relative; text-align:left; }
 #nav li.over { z-index:998; }
