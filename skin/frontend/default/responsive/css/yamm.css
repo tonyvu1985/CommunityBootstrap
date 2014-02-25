@@ -11,3 +11,8 @@
 .yamm .yamm-content {padding: 20px 30px;}
 .yamm .dropdown.yamm-fw .dropdown-menu {left: 0;right: 0;}
 
+
+.yamm .navbar-nav li .dropdown-toggle{text-transform: uppercase}
+.yamm .navbar-nav li .title{text-transform: uppercase}
+
+.yamm .navbar-nav li ul{padding-left: 7px;}

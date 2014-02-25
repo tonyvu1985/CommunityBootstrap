@@ -5,131 +5,172 @@
  * Description  Mega Menu 
  */
 ?>
-<div class="navbar yamm navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Companylogo</a>
-        </div>
-        <div id="navbar-collapse-1" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <!-- Classic list -->
-            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">List<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <!-- Content container to add padding -->
-                  <div class="yamm-content">
-                    <div class="row">
-                      <ul class="col-sm-3 list-unstyled">
-                        <li>
-                          <p><strong>Section Title</strong></p>
-                        </li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                      </ul>
-                      <ul class="col-sm-3 list-unstyled">
-                        <li>
-                          <p><strong>Links Title</strong></p>
-                        </li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                        <li><a href="#"> Link Item </a></li>
-                      </ul>
-                      <ul class="col-sm-3 list-unstyled">
-                        <li>
-                          <p><strong>Section Title</strong></p>
-                        </li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                      </ul>
-                      <ul class="col-sm-3 list-unstyled">
-                        <li>
-                          <p><strong>Section Title</strong></p>
-                        </li>
-                        <li>List Item</li>
-                        <li>List Item</li>
-                        <li>
-                          <ul>
-                            <li><a href="#"> Link Item </a></li>
-                            <li><a href="#"> Link Item </a></li>
-                            <li><a href="#"> Link Item </a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <!-- Accordion demo -->
-            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Accordion<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <div class="yamm-content">
-                    <div class="row">
 
+<?php
+    // get storeconfig
+     $is_Megamenu = Mage::getStoreConfig('yamm/setting/yes_no');
+     // if Megamenu is yes
+     if($is_Megamenu  == 1){
+         // unset the default menu
+        
+         
+        $narbar_style = Mage::getStoreConfig('yamm/setting/navbar'); 
+        if ($narbar_style ==''){
+           // navbar-default is an option in the setting/header/navbar
+           $narbar_style = 'navbar-default';
+        } 
+?>
 
-                      <div id="accordion" class="panel-group">
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible Group Item #1</a></h4>
-                          </div>
-                          <div id="collapseOne" class="panel-collapse collapse in">
-                            <div class="panel-body">Ut consectetur ullamcorper purus a rutrum. Etiam dui nisi, hendrerit feugiat scelerisque et, cursus eu magna. </div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible Group Item #2</a></h4>
-                          </div>
-                          <div id="collapseTwo" class="panel-collapse collapse">
-                            <div class="panel-body">Nullam pretium fermentum sapien ut convallis. Suspendisse vehicula, magna non tristique tincidunt, massa nisi luctus tellus, vel laoreet sem lectus ut nibh. </div>
-                          </div>
-                        </div>
-                        <div class="panel panel-default">
-                          <div class="panel-heading">
-                            <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible Group Item #3</a></h4>
-                          </div>
-                          <div id="collapseThree" class="panel-collapse collapse">
-                            <div class="panel-body">Praesent leo quam, faucibus at facilisis id, rhoncus sit amet metus. Sed vitae ipsum non nibh mattis congue eget id augue. </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>           
-            <!-- Pictures -->
-            <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Pictures<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <div class="yamm-content">
-                    <div class="row">
-                      <div class="col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                      <div class="col-sm-2"><a href="#" class="thumbnail"><img alt="150x190" src="http://placekitten.com/150/190/"></a></div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+<div class="navbar yamm <?php echo $narbar_style ?>">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Companylogo</a>
       </div>
+      <div id="navbar-collapse-1" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <!-- Classic list -->
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Categories<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <!-- Content container to add padding -->
+                <div class="yamm-content">
+                  <div class="row">
+                    <ul class="col-md-3 col-sm-6 col-xs-12">
+                      <li><span class="title">Categories Title</span></li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                    </ul>
+                      
+                    <ul class="col-md-3 col-sm-6 col-xs-12">
+                      <li><span class="title">Categories Title</span></li>
+                      <li><a href="#"> Link Item </a></li>
+                      <li><a href="#"> Link Item </a></li>
+                      <li><a href="#"> Link Item </a></li>
+                      <li><a href="#"> Link Item </a></li>
+                      <li><a href="#"> Link Item </a></li>
+                      <li><a href="#"> Link Item </a></li>
+                    </ul>
+                      
+                    <ul class="col-md-3 col-sm-6 col-xs-12">
+                      <li><span class="title">Categories Title</span></li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                    </ul>
+                      
+                    <ul class="col-md-3 col-sm-6 col-xs-12">
+                      <li><span class="title">Categories Title</span></li>
+                      <li>List Item</li>
+                      <li>List Item</li>
+                      <li>
+                        <ul>
+                          <li><a href="#"> Link Item </a></li>
+                          <li><a href="#"> Link Item </a></li>
+                          <li><a href="#"> Link Item </a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- show all categories -->
+                  <div class="row">
+                      <p style="text-align: right"><a href="">View all</a></p>
+                  </div>     
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- New Arrival-->
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">New Arrival<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="yamm-content">
+                      <div class="row">
+                      <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="thumbnail">
+                      <img data-src="holder.js/200x200" alt="...">
+                      <div class="caption">
+                      <h3>Thumbnail label</h3>
+                      <p>...</p>
+                      <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+                      </div>
+                      </div>
+                      </div>
+
+                      <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="thumbnail">
+                      <img data-src="holder.js/200x200" alt="...">
+                      <div class="caption">
+                      <h3>Thumbnail label</h3>
+                      <p>...</p>
+                      <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+                      </div>
+                      </div>
+                      </div>    
+
+                       <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="thumbnail">
+                      <img data-src="holder.js/200x200" alt="...">
+                      <div class="caption">
+                      <h3>Thumbnail label</h3>
+                      <p>...</p>
+                      <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+                      </div>
+                      </div>
+                      </div>
+
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                      <div class="thumbnail">
+                      <img data-src="holder.js/200x200" alt="...">
+                      <div class="caption">
+                      <h3>Thumbnail label</h3>
+                      <p>...</p>
+                      <p><a href="#" class="btn btn-default" role="button">Button</a></p>
+                      </div>
+                      </div>
+                      </div>
+
+
+                      </div>
+
+                      <!-- show all New Arrivals -->
+                  <div class="row">
+                      <p style="text-align: right"><a href="">View all</a></p>
+                  </div> 
+                </div>
+              </li>
+            </ul>
+          </li>           
+          <!-- Sales -->
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Sales<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="yamm-content">
+                      <ul class="media-list">
+                        <li class="media"><a href="#" class="pull-right"><img src="http://placekitten.com/64/64/" alt="64x64" class="media-object"></a>
+                          <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante.
+                          </div>
+                        </li>
+                        <li class="media"><a href="#" class="pull-right"><img src="http://placekitten.com/64/64/" alt="64x64" class="media-object"></a>
+                          <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque.
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+        </li>
+      </div>
+    </div>
 </div>
 
 <script type='text/javascript' defer>     
@@ -137,3 +178,5 @@
        e.stopPropagation();
      });
  </script>
+ 
+ <?php } ?>
