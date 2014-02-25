@@ -43,13 +43,17 @@
               <li>
                 <!-- Content container to add padding -->
                 <div class="yamm-categories yamm-content">
+                 <!-- banner for promotion -->   
+                 <div class="row">
+                     <a href="" alt=""><img data-src="holder.js/650x50" class="img-responsive" alt="..."></a>
+                 </div>
                  <?php 
                     $categories = Mage::helper('mega/data')->getCatergorybyLevel(3);    
                     echo $categories;
                  ?>
                   <!-- show all categories -->
-                  <div class="row">
-                      <p style="text-align: right"><a href="">View all</a></p>
+                  <div class="row showall" >
+                      <p><a href="">View all</a></p>
                   </div>     
                 </div>
               </li>
