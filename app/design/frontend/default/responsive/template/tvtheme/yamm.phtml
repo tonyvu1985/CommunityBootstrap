@@ -6,79 +6,47 @@
  */
 ?>
 
-<?php
+<?php        
     // get storeconfig
      $is_Megamenu = Mage::getStoreConfig('yamm/setting/yes_no');
      // if Megamenu is yes
-     if($is_Megamenu  == 1){
-         // unset the default menu
-        
-         
+     if($is_Megamenu  == 1){ 
         $narbar_style = Mage::getStoreConfig('yamm/setting/navbar'); 
         if ($narbar_style ==''){
            // navbar-default is an option in the setting/header/navbar
            $narbar_style = 'navbar-default';
         } 
+        
+     $yam_logo_text = Mage::getStoreConfig('yamm/setting/logotext');    
 ?>
 
 <div class="navbar yamm <?php echo $narbar_style ?>">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Companylogo</a>
+        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- company logo -->
+        <?php if(Mage::getStoreConfig('yamm/setting/logo') != ''): ?>
+            <a class="navbar-brand" href="<?php echo $this->getBaseUrl(); ?>"><img height="50px" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'logo/' . Mage::getStoreConfig('yamm/setting/logo') ?>" alt="<?php echo Mage::getStoreConfig('yamm/setting/logoalt') ?>"></a>
+        <?php else: ?>
+            <a href="#" class="navbar-brand"><?php echo $yam_logo_text ?></a>
+        <?php endif; ?>
       </div>
       <div id="navbar-collapse-1" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <!-- Classic list -->
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Categories<b class="caret"></b></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Categories <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li>
                 <!-- Content container to add padding -->
-                <div class="yamm-content">
-                  <div class="row">
-                    <ul class="col-md-3 col-sm-6 col-xs-12">
-                      <li><span class="title">Categories Title</span></li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                    </ul>
-                      
-                    <ul class="col-md-3 col-sm-6 col-xs-12">
-                      <li><span class="title">Categories Title</span></li>
-                      <li><a href="#"> Link Item </a></li>
-                      <li><a href="#"> Link Item </a></li>
-                      <li><a href="#"> Link Item </a></li>
-                      <li><a href="#"> Link Item </a></li>
-                      <li><a href="#"> Link Item </a></li>
-                      <li><a href="#"> Link Item </a></li>
-                    </ul>
-                      
-                    <ul class="col-md-3 col-sm-6 col-xs-12">
-                      <li><span class="title">Categories Title</span></li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                    </ul>
-                      
-                    <ul class="col-md-3 col-sm-6 col-xs-12">
-                      <li><span class="title">Categories Title</span></li>
-                      <li>List Item</li>
-                      <li>List Item</li>
-                      <li>
-                        <ul>
-                          <li><a href="#"> Link Item </a></li>
-                          <li><a href="#"> Link Item </a></li>
-                          <li><a href="#"> Link Item </a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-
+                <div class="yamm-categories yamm-content">
+                 <?php 
+                    $categories = Mage::helper('mega/data')->getCatergorybyLevel(3);    
+                    echo $categories;
+                 ?>
                   <!-- show all categories -->
                   <div class="row">
                       <p style="text-align: right"><a href="">View all</a></p>
