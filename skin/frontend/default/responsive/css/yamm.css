@@ -14,10 +14,12 @@
 
 .yamm .navbar-nav li .dropdown-toggle{text-transform: uppercase}
 
-.yamm .navbar-nav li .title{text-transform: uppercase; color: #1e7ec8}
+.yamm .navbar-nav li .title{text-transform: uppercase; color: #1e7ec8; border-bottom: 1px dashed #ccc; width: 100%; display: inline-block; padding: 10px 0; margin-bottom: 10px}
 
 .yamm .navbar-nav li ul{padding-left: 7px;}
 .yamm .navbar-nav li ul li a{color: #777 }
+.yamm .navbar-nav .showall{text-align: right; border-top: 1px dashed #ccc; margin-top: 10px}
+.yamm .navbar-nav .showall a{padding-top: 10px; display: inline-block}
 @media (min-width:768px){
     .yamm-categories{width: 700px;}
 }
