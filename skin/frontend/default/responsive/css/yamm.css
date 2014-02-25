@@ -4,7 +4,7 @@
     Author     : tony vu
     Description: Mega menu
 */
-.yamm .nav, .yamm .collapse, .yamm .dropup, .yamm .dropdown{position: static;}
+.yamm .nav, .yamm .collapse, .yamm .dropup, .yamm .dropdown{position: static; text-align: left}
 .yamm .container{position: relative;}
 .yamm .dropdown-menu{left: auto;}
 .yamm .nav.navbar-right .dropdown-menu {left: auto;right: 0;}
@@ -13,6 +13,15 @@
 
 
 .yamm .navbar-nav li .dropdown-toggle{text-transform: uppercase}
-.yamm .navbar-nav li .title{text-transform: uppercase}
+
+.yamm .navbar-nav li .title{text-transform: uppercase; color: #1e7ec8}
 
 .yamm .navbar-nav li ul{padding-left: 7px;}
+.yamm .navbar-nav li ul li a{color: #777 }
+@media (min-width:768px){
+    .yamm-categories{width: 700px;}
+}
+
+@media (max-width: 767px) and  (min-width: 480px){
+    .yamm-categories{width: 550px;}
+}
