@@ -42,10 +42,10 @@
             <ul class="dropdown-menu">
               <li>
                 <!-- Content container to add padding -->
-                <div class="yamm-categories yamm-content">
+                <div class="yamm-categories yamm-content megamenu_cat_1">
                  <!-- banner for promotion -->   
                  <div class="row">
-                     <a href="" alt=""><img data-src="holder.js/650x50" class="img-responsive" alt="..."></a>
+                     <a href="" alt=""><img data-src="holder.js/650x50" class="img-responsive" alt="ad"></a>
                  </div>
                  <?php 
                     $categories = Mage::helper('mega/data')->getCatergorybyLevel(3);    
@@ -53,69 +53,32 @@
                  ?>
                   <!-- show all categories -->
                   <div class="row showall" >
-                      <p><a href="">View all</a></p>
+                      <button class="btn btn-default btnviewall">View all</button>
                   </div>     
                 </div>
               </li>
             </ul>
           </li>
-          <!-- New Arrival-->
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">New Arrival<b class="caret"></b></a>
+          <!-- Feature Products -->
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Feature Products<b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li>
-                <div class="yamm-content">
-                      <div class="row">
-                      <div class="col-md-3 col-sm-6 col-xs-12">
-                      <div class="thumbnail">
-                      <img data-src="holder.js/200x200" alt="...">
-                      <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>...</p>
-                      <p><a href="#" class="btn btn-default" role="button">Button</a></p>
-                      </div>
-                      </div>
-                      </div>
-
-                      <div class="col-md-3 col-sm-6 col-xs-12">
-                      <div class="thumbnail">
-                      <img data-src="holder.js/200x200" alt="...">
-                      <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>...</p>
-                      <p><a href="#" class="btn btn-default" role="button">Button</a></p>
-                      </div>
-                      </div>
-                      </div>    
-
-                       <div class="col-md-3 col-sm-6 col-xs-12">
-                      <div class="thumbnail">
-                      <img data-src="holder.js/200x200" alt="...">
-                      <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>...</p>
-                      <p><a href="#" class="btn btn-default" role="button">Button</a></p>
-                      </div>
-                      </div>
-                      </div>
-
-                           <div class="col-md-3 col-sm-6 col-xs-12">
-                      <div class="thumbnail">
-                      <img data-src="holder.js/200x200" alt="...">
-                      <div class="caption">
-                      <h3>Thumbnail label</h3>
-                      <p>...</p>
-                      <p><a href="#" class="btn btn-default" role="button">Button</a></p>
-                      </div>
-                      </div>
-                      </div>
-
-
-                      </div>
-
-                      <!-- show all New Arrivals -->
-                  <div class="row">
-                      <p style="text-align: right"><a href="">View all</a></p>
-                  </div> 
+                <div class="yamm-content megamenu_cat_2">                                
+                    <?php 
+                        //get feature products from getstoreconfig
+                        $product_sku_1 = trim(Mage::getStoreConfig('yamm/feature/product1'));
+                        $product_sku_2 = trim(Mage::getStoreConfig('yamm/feature/product2'));
+                        $product_sku_3 = trim(Mage::getStoreConfig('yamm/feature/product3'));
+                        $product_sku_4 = trim(Mage::getStoreConfig('yamm/feature/product4'));                       
+                        $arr_product_sku = array($product_sku_1, $product_sku_2, $product_sku_3, $product_sku_4) ;
+                        
+                        $feature_product_list = Mage::helper('mega/data')->getFeaturedProducts($arr_product_sku);    
+                        echo $feature_product_list;
+                    ?>
+                <!-- banner for promotion -->   
+                <div class="row">
+                     <a href="" alt=""><img data-src="holder.js/850x50" class="img-responsive" alt="ad"></a>
+                </div> 
                 </div>
               </li>
             </ul>
@@ -124,19 +87,17 @@
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Sales<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li>
-                    <div class="yamm-content">
-                      <ul class="media-list">
-                        <li class="media"><a href="#" class="pull-right"><img src="http://placekitten.com/64/64/" alt="64x64" class="media-object"></a>
-                          <div class="media-body">
-                            <h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante.
-                          </div>
-                        </li>
-                        <li class="media"><a href="#" class="pull-right"><img src="http://placekitten.com/64/64/" alt="64x64" class="media-object"></a>
-                          <div class="media-body">
-                            <h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque.
-                          </div>
-                        </li>
-                      </ul>
+                    <div class="yamm-content megamenu_cat_3"> 
+                      <?php 
+                        //get feature products from getstoreconfig
+                        $product_sku_1 = trim(Mage::getStoreConfig('yamm/sale/product1'));
+                        $product_sku_2 = trim(Mage::getStoreConfig('yamm/sale/product2'));
+                        $product_sku_3 = trim(Mage::getStoreConfig('yamm/sale/product3'));
+                        $product_sku_4 = trim(Mage::getStoreConfig('yamm/sale/product4'));                       
+                        $arr_product_sku = array($product_sku_1, $product_sku_2, $product_sku_3, $product_sku_4) ;
+                        $sale_product_list = Mage::helper('mega/data')->getSaleProducts($arr_product_sku);                            
+                        echo $sale_product_list;
+                    ?>
                     </div>
                   </li>
                 </ul>

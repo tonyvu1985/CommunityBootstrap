@@ -19,7 +19,9 @@
 .yamm .navbar-nav li ul{padding-left: 7px;}
 .yamm .navbar-nav li ul li a{color: #777 }
 .yamm .navbar-nav .showall{text-align: right; border-top: 1px dashed #ccc; margin-top: 10px}
-.yamm .navbar-nav .showall a{padding-top: 10px; display: inline-block}
+.yamm .navbar-nav .showall .btnviewall{margin-top: 20px; text-transform: uppercase}
+.yamm .price{color: #1e7ec8}
+.yamm .description{font-size: 12px;}
 @media (min-width:768px){
     .yamm-categories{width: 700px;}
 }
