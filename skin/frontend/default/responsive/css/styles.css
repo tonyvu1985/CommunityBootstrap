@@ -1861,3 +1861,5 @@ tr.summary-details-excluded { font-style:italic; }
 /* scroll up */
 #scroll-div{display: none; position:fixed; bottom:20px; right:5%; z-index: 100}
 #scroll-div a:hover{color: #ccc; cursor:pointer}
+
+.dropdown-menu.pull-right i{padding-right: 10px;}

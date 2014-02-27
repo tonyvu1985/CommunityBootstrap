@@ -38,8 +38,9 @@ $catalogSearchHelper =  $this->helper('catalogsearch');
                 <button type="button" title="<?php echo $this->__('More Options') ?>" class="btn btn-info dropdown-toggle" data-toggle="dropdown"> 
                     <?php echo $this->__('More Options') ?><span class="caret"></span></button>
                 <ul class="dropdown-menu pull-right" role="menu">
-                    <li><a href="<?php echo Mage::getBaseUrl() . 'catalogsearch/advanced/' ?>">Advanced Search</a></li>
-                    <li><a href="<?php echo Mage::getBaseUrl() . 'catalogsearch/term/popular/' ?>">Search Terms</a></li>
+                    <li><a href="<?php echo Mage::getBaseUrl() . 'catalogsearch/advanced/' ?>"><i class="fa fa-search"></i>Advanced Search</a></li>
+                    <li class="divider"></li>
+                    <li><a href="<?php echo Mage::getBaseUrl() . 'catalogsearch/term/popular/' ?>"><i class="fa fa-search-plus"></i>Terms Search</a></li>
                 </ul>
             </div>
         </div>
