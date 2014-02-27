@@ -81,7 +81,123 @@
                         </navbar>
                         
                     </fields>
-                </setting>             
+                </setting>    
+                
+                <feature translate="label">
+                    <label>Feature Product List</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>87</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>    
+                    <fields>
+                        
+                        <description translate="label">
+                            <label><![CDATA[<span style="color:red">Product sku</span>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                
+                        </description>
+                        
+                        <product1 translate="label">
+                                <label>Product 1</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>10</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                
+                        </product1>
+                        
+                        <product2 translate="label">
+                                <label>Product 2</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>40</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                
+                        </product2>
+                        
+                        <product3 translate="label">
+                                <label>Product 3</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>60</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                
+                        </product3>
+                        
+                        <product4 translate="label">
+                                <label>Product 4</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>90</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>           
+                                <comment>Example: VAIO1</comment>                     
+                        </product4>
+                    </fields>
+                </feature>    
+                
+                                      
+                <sale translate="label">
+                    <label>Sale Product List</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>    
+                    <fields>
+                        
+                        <description translate="label">
+                            <label><![CDATA[<span style="color:red">Product sku</span>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                
+                        </description>
+                        
+                        <product1 translate="label">
+                                <label>Product 1</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>10</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                
+                        </product1>
+                        
+                        <product2 translate="label">
+                                <label>Product 2</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>40</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                
+                        </product2>
+                        
+                        <product3 translate="label">
+                                <label>Product 3</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>60</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                
+                        </product3>
+                        
+                        <product4 translate="label">
+                                <label>Product 4</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>90</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>           
+                                <comment>Example: VAIO1</comment>                     
+                        </product4>
+                    </fields>
+                </sale>    
+                                                                                  
               </groups>
         </yamm>
     </sections>
