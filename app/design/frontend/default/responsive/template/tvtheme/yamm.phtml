@@ -43,10 +43,12 @@
               <li>
                 <!-- Content container to add padding -->
                 <div class="yamm-categories yamm-content megamenu_cat_1">
-                 <!-- banner for promotion -->   
-                 <div class="row">
-                     <a href="" alt=""><img data-src="holder.js/650x50" class="img-responsive" alt="ad"></a>
-                 </div>
+                 <!-- banner for promotion -->                    
+                 <?php if(Mage::getStoreConfig('yamm/category/ad') != null): ?>
+                    <div class="row">
+                        <a href="<?php echo Mage::getStoreConfig('yamm/category/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/category/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/category/alt') ?>"></a>
+                    </div>
+                 <?php endif; ?>
                  <?php 
                     $categories = Mage::helper('mega/data')->getCatergorybyLevel(3);    
                     echo $categories;
@@ -76,28 +78,40 @@
                         echo $feature_product_list;
                     ?>
                 <!-- banner for promotion -->   
-                <div class="row">
-                     <a href="" alt=""><img data-src="holder.js/850x50" class="img-responsive" alt="ad"></a>
-                </div> 
+                <!-- banner for promotion -->                    
+                 <?php if(Mage::getStoreConfig('yamm/feature/ad') != null): ?>
+                    <div class="row">
+                        <a href="<?php echo Mage::getStoreConfig('yamm/feature/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/feature/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/feature/alt') ?>"></a>
+                    </div> 
+                <?php endif;?>
                 </div>
               </li>
             </ul>
           </li>           
           <!-- Sales -->
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Sales<b class="caret"></b></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Sales<b class="caret"></b></a>              
                 <ul class="dropdown-menu">
                   <li>
-                    <div class="yamm-content megamenu_cat_3"> 
-                      <?php 
-                        //get feature products from getstoreconfig
-                        $product_sku_1 = trim(Mage::getStoreConfig('yamm/sale/product1'));
-                        $product_sku_2 = trim(Mage::getStoreConfig('yamm/sale/product2'));
-                        $product_sku_3 = trim(Mage::getStoreConfig('yamm/sale/product3'));
-                        $product_sku_4 = trim(Mage::getStoreConfig('yamm/sale/product4'));                       
-                        $arr_product_sku = array($product_sku_1, $product_sku_2, $product_sku_3, $product_sku_4) ;
-                        $sale_product_list = Mage::helper('mega/data')->getSaleProducts($arr_product_sku);                            
-                        echo $sale_product_list;
-                    ?>
+                    <div class="yamm-content megamenu_cat_3 col-xs-12"> 
+                        <div class='row'>
+                            <?php if(Mage::getStoreConfig('yamm/sale/ad') != null): ?>
+                                <div class='col-md-3 banner'>
+                                    <a href="<?php echo Mage::getStoreConfig('yamm/sale/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/sale/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/sale/alt') ?>"></a>
+                                </div>
+                            <?php endif; ?>
+                            <div class='col-md-9 col-sm-12'>
+                                <?php 
+                                    //get feature products from getstoreconfig
+                                    $product_sku_1 = trim(Mage::getStoreConfig('yamm/sale/product1'));
+                                    $product_sku_2 = trim(Mage::getStoreConfig('yamm/sale/product2'));
+                                    $product_sku_3 = trim(Mage::getStoreConfig('yamm/sale/product3'));
+                                    $product_sku_4 = trim(Mage::getStoreConfig('yamm/sale/product4'));                       
+                                    $arr_product_sku = array($product_sku_1, $product_sku_2, $product_sku_3, $product_sku_4) ;
+                                    $sale_product_list = Mage::helper('mega/data')->getSaleProducts($arr_product_sku);                            
+                                    echo $sale_product_list;
+                                ?>
+                            </div>
+                        </div>
                     </div>
                   </li>
                 </ul>
