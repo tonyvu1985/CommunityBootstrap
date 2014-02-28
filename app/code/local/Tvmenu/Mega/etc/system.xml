@@ -83,6 +83,49 @@
                     </fields>
                 </setting>    
                 
+                <category translate="label">
+                    <label>Category List</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <ad translate="label">
+                                <label>Top Banner</label>
+                                <frontend_type>image</frontend_type>
+                                <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                <upload_dir config="system/filesystem/media" scope_info="1">ad_banner</upload_dir>
+                                <base_url type="media" scope_info="1">ad_banner</base_url>
+                                <sort_order>40</sort_order>
+                                <show_in_default>1</show_in_default>    
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                                           
+                        </ad>
+
+                        <alt translate="label">
+                                <label>Banner alt</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>60</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>    
+                        </alt>    
+                        
+                        <link translate="label">
+                                <label>Banner link</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>70</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>    
+                                <comment>Example: http://www.example.com/banner.html</comment>
+                        </link> 
+                        
+                    </fields>
+                </category>
+                
+                
                 <feature translate="label">
                     <label>Feature Product List</label>
                     <frontend_type>text</frontend_type>
@@ -91,7 +134,6 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>    
                     <fields>
-                        
                         <description translate="label">
                             <label><![CDATA[<span style="color:red">Product sku</span>]]></label>
                             <frontend_type>label</frontend_type>
@@ -137,6 +179,37 @@
                                 <show_in_store>1</show_in_store>           
                                 <comment>Example: VAIO1</comment>                     
                         </product4>
+                        
+                        <ad translate="label">
+                                <label>Bottom Banner</label>
+                                <frontend_type>image</frontend_type>
+                                <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                <upload_dir config="system/filesystem/media" scope_info="1">ad_banner</upload_dir>
+                                <base_url type="media" scope_info="1">ad_banner</base_url>
+                                <sort_order>100</sort_order>
+                                <show_in_default>1</show_in_default>    
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                                       
+                        </ad>
+
+                        <alt translate="label">
+                                <label>Banner alt</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>110</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>    
+                        </alt>    
+                        
+                        <link translate="label">
+                                <label>Banner link</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>120</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                    
+                        </link> 
+                        
                     </fields>
                 </feature>    
                 
@@ -149,7 +222,6 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>    
                     <fields>
-                        
                         <description translate="label">
                             <label><![CDATA[<span style="color:red">Product sku</span>]]></label>
                             <frontend_type>label</frontend_type>
@@ -195,6 +267,37 @@
                                 <show_in_store>1</show_in_store>           
                                 <comment>Example: VAIO1</comment>                     
                         </product4>
+                        
+                        <ad translate="label">
+                                <label>Left Banner</label>
+                                <frontend_type>image</frontend_type>
+                                <backend_model>adminhtml/system_config_backend_image</backend_model>
+                                <upload_dir config="system/filesystem/media" scope_info="1">ad_banner</upload_dir>
+                                <base_url type="media" scope_info="1">ad_banner</base_url>
+                                <sort_order>100</sort_order>
+                                <show_in_default>1</show_in_default>    
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                            
+                        </ad>
+
+                        <alt translate="label">
+                                <label>Banner alt</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>110</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>    
+                        </alt>    
+                        
+                        <link translate="label">
+                                <label>Banner link</label>
+                                <frontend_type>text</frontend_type>
+                                <sort_order>120</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>                                    
+                        </link> 
+                        
                     </fields>
                 </sale>    
                                                                                   
