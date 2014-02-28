@@ -29,3 +29,7 @@
 @media (max-width: 767px) and  (min-width: 480px){
     .yamm-categories{width: 550px;}
 }
+
+@media (max-width:990px){
+   .yamm .megamenu_cat_3 .banner{display: none}
+}
