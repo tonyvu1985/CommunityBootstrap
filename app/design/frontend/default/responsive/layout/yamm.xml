@@ -7,7 +7,8 @@
         </reference>
         
         <reference name="top.menu">
-            <block type="core/template" name="mega.menu" template="tvtheme/yamm.phtml" />
+            <block type="core/template" name="mega.menu" template="tvtheme/yamm.phtml" />                
+            <action method="unsetChild" ifconfig="yamm/setting/yes_no"><name>catalog.topnav</name></action>
         </reference>
     </default>
 </layout>
