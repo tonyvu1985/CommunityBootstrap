@@ -27,7 +27,6 @@
                                 <show_in_default>1</show_in_default>
                                 <show_in_website>1</show_in_website>
                                 <show_in_store>1</show_in_store>
-                                <comment>yes to use Mage menu</comment>
                         </yes_no>
                         
                         <logo translate="label">
