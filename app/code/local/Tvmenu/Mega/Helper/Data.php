@@ -45,6 +45,7 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
             ->addAttributeToSelect('name')
             ->addAttributeToSelect('url_path')      
             ->addAttributeToSelect('price')    
+            ->addAttributeToSelect('small_image')
             ->addAttributeToFilter('status', 1)
             ->addAttributeToFilter('sku', array('in'=> $arry_product_sku));
         //echo $products->getSelect(); exit;
