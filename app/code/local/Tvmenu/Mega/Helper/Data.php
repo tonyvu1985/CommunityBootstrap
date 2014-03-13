@@ -16,6 +16,18 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
     	->load();
     }
     
+    public function getProductBySku($arry_product_sku){        
+         return Mage::getModel("catalog/product")
+            ->getCollection()
+            ->addAttributeToSelect('name')
+            ->addAttributeToSelect('url_path')      
+            ->addAttributeToSelect('price')    
+            ->addAttributeToSelect('small_image')
+            ->addAttributeToFilter('status', 1)
+            ->addAttributeToFilter('sku', array('in'=> $arry_product_sku))
+                ->load();
+    }
+    
     public function getCatergorybyLevel($rootid) {
     	//load only location category
     	$categories = $this->getSubCategories($rootid);
@@ -40,16 +52,7 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
     
     /* get feature product list from their sku */
     public function getFeaturedProducts($arry_product_sku){        
-        $products = Mage::getModel("catalog/product")
-            ->getCollection()
-            ->addAttributeToSelect('name')
-            ->addAttributeToSelect('url_path')      
-            ->addAttributeToSelect('price')    
-            ->addAttributeToSelect('small_image')
-            ->addAttributeToFilter('status', 1)
-            ->addAttributeToFilter('sku', array('in'=> $arry_product_sku));
-        //echo $products->getSelect(); exit;
-        $products = $products->load();            
+        $products = $this->getProductBySku($arry_product_sku);            
         $html .= '<div class="row">';
         // it s collection so we have to do foreach to get result
         foreach($products as $product){
@@ -67,15 +70,7 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
     
         /* get feature product list from their sku */
     public function getSaleProducts($arry_product_sku){        
-        $products = Mage::getModel("catalog/product")
-            ->getCollection()
-            ->addAttributeToSelect('name')
-            ->addAttributeToSelect('url_path')      
-            ->addAttributeToSelect('price')    
-            ->addAttributeToSelect('short_description')    
-            ->addAttributeToFilter('status', 1)
-            ->addAttributeToFilter('sku', array('in'=> $arry_product_sku));
-        $products = $products->load();            
+        $products = $this->getProductBySku($arry_product_sku);        
         $html .= '<ul class="media-list">';            
         foreach($products as $product){
            $html .= '<li class="media"><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '" class="pull-right"><img src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(135) . '" alt="" class="media-object"></a>';                             
