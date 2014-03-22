@@ -28,47 +28,7 @@
                                 <show_in_website>1</show_in_website>
                                 <show_in_store>1</show_in_store>
                         </yes_no>
-                        
-                        <logo translate="label">
-                            <label>Company Logo</label>
-                            <frontend_type>image</frontend_type>
-                            <backend_model>adminhtml/system_config_backend_image</backend_model>
-                            <upload_dir config="system/filesystem/media" scope_info="1">logo</upload_dir>
-                            <base_url type="media" scope_info="1">logo</base_url>
-                            <sort_order>1</sort_order>
-                            <show_in_default>1</show_in_default>    
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                            
-                        </logo>
-                        
-                        <logoalt translate="label">
-                            <label>Logo Alt</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>2</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>    
-                        </logoalt>
-                        
-                        <or translate="label">
-                            <label><![CDATA[<span style="color:red">Or</span>]]></label>
-                            <frontend_type>label</frontend_type>
-                            <sort_order>20</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                
-                        </or>
-                        
-                        <logotext translate="label">
-                            <label>Logo by text</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>30</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>    
-                            <comment>Logo is just normal text</comment>
-                        </logotext>                       
-                        
+ 
                         <navbar translate="label">
                             <label>Navigation Bar</label>
                             <frontend_type>select</frontend_type>
