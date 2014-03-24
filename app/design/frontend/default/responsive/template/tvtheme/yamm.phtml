@@ -50,7 +50,10 @@
                     </div>
                  <?php endif; ?>
                  <?php 
-                    $categories = Mage::helper('mega/data')->getCatergorybyLevel(3);    
+                    // back end config 
+                    $subcat = Mage::getStoreConfig('yamm/category/catid');
+                    
+                    $categories = Mage::helper('mega/data')->getCatergorybyLevel($subcat);    
                     echo $categories;
                  ?>
                   <!-- show all categories -->
