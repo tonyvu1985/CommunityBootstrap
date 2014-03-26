@@ -27,7 +27,7 @@
                     <show_in_store>0</show_in_store>
                     <fields>
                         <bgcolor translate="label">
-                            <label>Background color</label>
+                            <label>Bg color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                             
                             <sort_order>1</sort_order>
@@ -37,7 +37,7 @@
                         </bgcolor>     
                         
                         <bgimage translate="label"> <!-- body background image -->
-                            <label>Background image</label>                           
+                            <label>Bg image</label>                           
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">bgimage</upload_dir>
@@ -49,7 +49,7 @@
                         </bgimage>    
                                     
                         <bgpositionx translate="label"> <!-- background position x -->
-                            <label>Background position x</label>
+                            <label>Bg position x</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -58,7 +58,7 @@
                         </bgpositionx>
                                                
                         <bgpositiony translate="label"> <!-- background position y -->
-                            <label>Background position y</label>
+                            <label>Bg position y</label>
                             <fronend_type>text</fronend_type>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
@@ -67,7 +67,7 @@
                         </bgpositiony>
                         
                         <bgrepeat translate="label"> <!-- background repeat -->
-                            <label>Background repeat</label>
+                            <label>Bg repeat</label>
                             <frontend_type>select</frontend_type>
                             <source_model>themecustom/option_repeat</source_model>
                             <sort_order>5</sort_order>
@@ -89,7 +89,7 @@
                     <fields>
                         
                         <transparent translate="label"> <!-- page transparent background -->
-                            <label>Is transparent background</label>
+                            <label>Is transparent bg</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>0</sort_order>
@@ -100,7 +100,7 @@
                         </transparent>
 
                         <bgcolor translate="label">
-                            <label>Background color</label>
+                            <label>Bg color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                             
                             <sort_order>1</sort_order>
@@ -110,7 +110,7 @@
                         </bgcolor>     
                         
                         <bgimage translate="label"> <!-- body background image -->
-                            <label>Background image</label>                           
+                            <label>Bg image</label>                           
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">bgimage</upload_dir>
@@ -122,7 +122,7 @@
                         </bgimage>    
                                     
                         <bgpositionx translate="label"> <!-- background position x -->
-                            <label>Background position x</label>
+                            <label>Bg position x</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -131,7 +131,7 @@
                         </bgpositionx>
                                                
                         <bgpositiony translate="label"> <!-- background position y -->
-                            <label>Background position y</label>
+                            <label>Bg position y</label>
                             <fronend_type>text</fronend_type>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
@@ -140,7 +140,7 @@
                         </bgpositiony>
                         
                         <bgrepeat translate="label"> <!-- background repeat -->
-                            <label>Background repeat</label>
+                            <label>Bg repeat</label>
                             <frontend_type>select</frontend_type>
                             <source_model>themecustom/option_repeat</source_model>
                             <sort_order>5</sort_order>
@@ -189,7 +189,7 @@
                         </fontsize>
                         
                          <textcolor translate="label">
-                            <label>Text color</label>
+                            <label>Font color</label>
                             <font_type>text</font_type>
                             <validate>color</validate> 
                             <sort_order>3</sort_order>
@@ -209,7 +209,7 @@
                     <show_in_store>0</show_in_store>
                     <fields>
                         <logo translate="label">
-                            <label>Company Logo</label>
+                            <label>Company logo</label>
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">logo</upload_dir>
@@ -221,7 +221,7 @@
                         </logo>
                         
                         <logoalt translate="label">
-                            <label>Logo Alt</label>
+                            <label>Logo alt</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
@@ -239,7 +239,7 @@
                         </or>
                         
                         <logotext translate="label">
-                            <label>Logo by text</label>
+                            <label>Logo text</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
@@ -249,7 +249,7 @@
                         </logotext>
                         
                         <logocolor translate="label">
-                            <label>logo color</label>
+                            <label>Logo color</label>
                             <font_type>text</font_type>
                             <validate>color</validate> 
                             <sort_order>5</sort_order>
@@ -269,7 +269,7 @@
                         </logopadding>
 
                         <navbar translate="label">
-                            <label>Navigation Bar</label>
+                            <label>Navigation bar</label>
                             <frontend_type>select</frontend_type>
                             <source_model>themecustom/option_narbar</source_model>
                             <sort_order>7</sort_order>
@@ -318,7 +318,7 @@
                         </youtube>
                         
                         <bgcolor translate="label"> <!-- header background color -->
-                            <label>Background color</label>
+                            <label>Bg color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                             
                             <sort_order>50</sort_order>
@@ -386,7 +386,7 @@
                         
                         
                         <text translate="label"> <!-- text style -->
-                            <label><![CDATA[<span style="color:red">text</span>]]></label>
+                            <label><![CDATA[<span style="color:red">Text</span>]]></label>
                             <frontend_type>label</frontend_type>
                             <sort_order>150</sort_order>
                             <show_in_default>1</show_in_default>
@@ -395,7 +395,7 @@
                         </text>
                         
                         <text_color translate="label"> <!-- footer text color -->
-                            <label>color</label>
+                            <label>Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                  
                             <sort_order>160</sort_order>
@@ -405,7 +405,7 @@
                         </text_color>                        
                         
                         <text_size translate="label"> <!-- footer link color -->
-                            <label>font size</label>
+                            <label>Font size</label>
                             <frontend_type>text</frontend_type>                            
                             <sort_order>170</sort_order>
                             <show_in_default>1</show_in_default>
@@ -434,7 +434,7 @@
                     <show_in_store>1</show_in_store>    
                     <fields>
                         <bgcolor translate="label">
-                            <label>Background color</label>
+                            <label>Bg color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                             
                             <sort_order>1</sort_order>
@@ -444,7 +444,7 @@
                         </bgcolor>
                         
                         <bgimage translate="label"> <!-- body background image -->
-                            <label>Background image</label>                           
+                            <label>Bg image</label>                           
                             <frontend_type>image</frontend_type>
                             <backend_model>adminhtml/system_config_backend_image</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">bgimage</upload_dir>
@@ -456,7 +456,7 @@
                         </bgimage>    
                                     
                         <bgpositionx translate="label"> <!-- background position x -->
-                            <label>Background position x</label>
+                            <label>Bg position x</label>
                             <frontend_type>text</frontend_type>
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
@@ -465,7 +465,7 @@
                         </bgpositionx>
 
                         <bgpositiony translate="label"> <!-- background position y -->
-                            <label>Background position y</label>
+                            <label>Bg position y</label>
                             <fronend_type>text</fronend_type>
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
@@ -474,7 +474,7 @@
                         </bgpositiony>
 
                         <bgrepeat translate="label"> <!-- background repeat -->
-                            <label>Background repeat</label>
+                            <label>Bg repeat</label>
                             <frontend_type>select</frontend_type>
                             <source_model>themecustom/option_repeat</source_model>
                             <sort_order>5</sort_order>
@@ -495,7 +495,7 @@
                     <show_in_store>0</show_in_store>    
                     <fields>
                         <bgcolor translate="label">
-                            <label>Background color</label>
+                            <label>Bg color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                             
                             <sort_order>0</sort_order>
@@ -505,7 +505,7 @@
                         </bgcolor>
                         
                         <title translate="label">
-                            <label><![CDATA[<span style="color:red">title</span>]]></label>
+                            <label><![CDATA[<span style="color:red">Title</span>]]></label>
                             <frontend_type>label</frontend_type>
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
@@ -514,7 +514,7 @@
                         </title>
                         
                         <title_color translate="label"> <!-- footer title color -->
-                            <label>color</label>
+                            <label>Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                  
                             <sort_order>3</sort_order>
@@ -524,7 +524,7 @@
                         </title_color>                        
                         
                         <title_size translate="label"> <!-- footer title color -->
-                            <label>font size</label>
+                            <label>Font size</label>
                             <frontend_type>text</frontend_type>                            
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
@@ -543,7 +543,7 @@
                         </link>
                         
                         <link_color translate="label"> <!-- footer link color -->
-                            <label>color</label>
+                            <label>Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                  
                             <sort_order>5</sort_order>
@@ -553,7 +553,7 @@
                         </link_color>                        
                         
                         <link_size translate="label"> <!-- footer link color -->
-                            <label>font size</label>
+                            <label>Font size</label>
                             <frontend_type>text</frontend_type>                            
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
@@ -562,7 +562,7 @@
                         </link_size>                        
                         
                         <text translate="label"> <!-- text style -->
-                            <label><![CDATA[<span style="color:red">text</span>]]></label>
+                            <label><![CDATA[<span style="color:red">Text</span>]]></label>
                             <frontend_type>label</frontend_type>
                             <sort_order>7</sort_order>
                             <show_in_default>1</show_in_default>
@@ -571,7 +571,7 @@
                         </text>
                         
                         <text_color translate="label"> <!-- footer text color -->
-                            <label>color</label>
+                            <label>Color</label>
                             <frontend_type>text</frontend_type>
                             <validate>color</validate>                  
                             <sort_order>8</sort_order>
@@ -581,7 +581,7 @@
                         </text_color>                        
                         
                         <text_size translate="label"> <!-- footer link color -->
-                            <label>font size</label>
+                            <label>Font size</label>
                             <frontend_type>text</frontend_type>                            
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
@@ -590,7 +590,7 @@
                         </text_size>                  
                         
                         <line translate="label"> <!-- line style -->
-                            <label><![CDATA[<span style="color:red">line</span>]]></label>
+                            <label><![CDATA[<span style="color:red">Line</span>]]></label>
                             <frontend_type>label</frontend_type>
                             <sort_order>12</sort_order>
                             <show_in_default>1</show_in_default>
@@ -599,7 +599,7 @@
                         </line>
                         
                         <line_color translate="label"> <!-- line color -->
-                            <label>color</label>
+                            <label>Color</label>
                             <frontend_type>text</frontend_type>                            
                             <validate>color</validate>                  
                             <sort_order>14</sort_order>
@@ -609,7 +609,7 @@
                         </line_color>                  
                         
                         <line_size translate="label"> <!-- footer line size -->
-                            <label>size</label>
+                            <label>Size</label>
                             <frontend_type>text</frontend_type>                            
                             <sort_order>15</sort_order>
                             <show_in_default>1</show_in_default>
@@ -619,7 +619,7 @@
                         </line_size>                  
                         
                         <contact translate="label">
-                            <label>Contact Details</label>
+                            <label>Contact details</label>
                             <frontend_type>textarea</frontend_type>                            
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
