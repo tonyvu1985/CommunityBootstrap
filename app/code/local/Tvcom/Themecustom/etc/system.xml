@@ -424,7 +424,7 @@
                         </usp_label>         
                         
                         <usp_yesno translate="label"> 
-                            <label>Use Usp</label>
+                            <label>Enable</label>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>190</sort_order>
@@ -434,7 +434,7 @@
                         </usp_yesno>
                         
                         <usp translate="label">
-                            <label>Usp code</label>
+                            <label>Code</label>
                             <frontend_type>textarea</frontend_type>                 
                             <sort_order>200</sort_order>
                             <show_in_default>1</show_in_default>
