@@ -99,7 +99,7 @@
 @media (max-width: 480px) {
     
     /* catalog category */
-    .block-subscribe, .block-compare, .block-poll, .block-viewed, .paypal-logo, .block-wishlist{display: none}
+    .block-compare, .block-poll, .block-viewed, .paypal-logo, .block-wishlist{display: none}
     .col-main .category-image{display: none}
     
     /* catalog product view */
