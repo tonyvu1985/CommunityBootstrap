@@ -278,45 +278,6 @@
                             <show_in_store>1</show_in_store>                        
                         </navbar>
                         
-                        <socialshare translate="label">
-                            <label><![CDATA[<span style="color:red">Social share</span>]]></label>
-                            <frontend_type>label</frontend_type>
-                            <sort_order>10</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                
-                        </socialshare>
-                        
-                        <facebook translate="label"> <!-- facebook link -->
-                            <label>Facebook link</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>22</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>    
-                             <comment><![CDATA[Example: https://www.facebook.com/username]]></comment>
-                        </facebook>
-                        
-                        <twitter translate="label"> <!-- twitter link -->
-                            <label>Twitter link</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>30</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>    
-                             <comment><![CDATA[Example: https://www.twitter.com/username]]></comment>
-                        </twitter>
-                        
-                        <youtube translate="label"> <!-- youtube link -->
-                            <label>Youtube link</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>40</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>    
-                             <comment><![CDATA[Example: https://www.youtube.com/user/username]]></comment>
-                        </youtube>
-                        
                         <bgcolor translate="label"> <!-- header background color -->
                             <label>Bg color</label>
                             <frontend_type>text</frontend_type>
@@ -647,6 +608,45 @@
                             <show_in_store>1</show_in_store>
                             <comment>Information about Address, Phone and Email</comment>
                         </contact>
+                        
+                        <socialshare translate="label">
+                            <label><![CDATA[<span style="color:red">Social share</span>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>                
+                        </socialshare>
+                        
+                        <facebook translate="label"> <!-- facebook link -->
+                            <label>Facebook link</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>    
+                             <comment><![CDATA[Example: https://www.facebook.com/username]]></comment>
+                        </facebook>
+                        
+                        <twitter translate="label"> <!-- twitter link -->
+                            <label>Twitter link</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>    
+                             <comment><![CDATA[Example: https://www.twitter.com/username]]></comment>
+                        </twitter>
+                        
+                        <youtube translate="label"> <!-- youtube link -->
+                            <label>Youtube link</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>    
+                             <comment><![CDATA[Example: https://www.youtube.com/user/username]]></comment>
+                        </youtube>
                         
                     </fields>
                 </footer>

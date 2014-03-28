@@ -1845,7 +1845,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* social network block */
 #divnetworkshare{margin-bottom: 10px; }
-
+#divnetworkshare i{margin-right: 5px}
 
 /* popup cart page */
 #popupcart{position: absolute; right: 0; z-index: 2; margin: 25px 14px 0px 0px; background:#fff; text-align: left; display: none; width: 250px}
