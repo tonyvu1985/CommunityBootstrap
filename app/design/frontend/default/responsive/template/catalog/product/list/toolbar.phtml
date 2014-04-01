@@ -46,6 +46,7 @@
             <?php echo $this->getPagerHtml() ?>
         </div>
         
+    <!-- hide the show items / page 
         <div class="limiter col-sm-4 col-xs-6">
             <?php echo $this->__('Show') ?>
             <select onchange="setLocation(this.value)">
@@ -55,7 +56,7 @@
                 </option>
             <?php endforeach; ?>
             </select> <?php echo $this->__('/ page') ?>
-        </div>
+        </div> -->
     </div>
 
     <?php if( $this->isExpanded() ): ?>

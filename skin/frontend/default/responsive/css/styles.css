@@ -331,6 +331,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .pager .pages .current {}
 .pager .amount{text-align: left; float:left}
 .pager .pages{text-align: right; float:right}
+.pager li>a, .pager li>span{border-radius: 0}
 /* Sorter */
 .sorter { font-size:11px; /*background:#fff url(../images/bkg_toolbar.gif) 0 100% repeat-x; padding:3px 8px; border-top:1px solid #e2e2e2; */}
 .sorter .view-mode {/* float:left; margin:0; */ text-align: left}
