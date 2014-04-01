@@ -35,10 +35,10 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
         $html .= '<div class="row">';
     	foreach ($categories as $cat) {
             $html .= '<ul class="col-md-3 col-sm-6 col-xs-12">';
-            $html .= '<li><a href="' . $cat->getUrlpath() . '" class="title">' . $cat->getName() . '</a></li>';
+            $html .= '<li><a href="' . Mage::getBaseurl() . $cat->getUrlpath() . '" class="title">' . $cat->getName() . '</a></li>';
             $children = $this->getSubCategories($cat->getEntityId());
             foreach ($children as $child) {
-                    $html .= '<li><a href="' . $child->getUrlpath() . '">' . $child->getName() . '</a></li>';
+                    $html .= '<li><a href="' . Mage::getBaseurl() . $child->getUrlpath() . '">' . $child->getName() . '</a></li>';
             }
             $html .= '</ul>';
             $i++;
