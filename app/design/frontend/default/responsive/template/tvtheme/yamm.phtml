@@ -37,21 +37,21 @@
       </div>
       <div id="navbar-collapse-1" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <!-- Classic list -->
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Categories <b class="caret"></b></a>
+          <!-- fist menu item -->
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo Mage::getStoreConfig('yamm/first_menu_item/title') ?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li>
                 <!-- Content container to add padding -->
                 <div class="yamm-categories yamm-content megamenu_cat_1">
                  <!-- banner for promotion -->                    
-                 <?php if(Mage::getStoreConfig('yamm/category/ad') != null): ?>
+                 <?php if(Mage::getStoreConfig('yamm/fist_menu_item/ad') != null): ?>
                     <div class="row">
-                        <a href="<?php echo Mage::getStoreConfig('yamm/category/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/category/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/category/alt') ?>"></a>
+                        <a href="<?php echo Mage::getStoreConfig('yamm/first_menu_item/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/category/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/first_menu_item/alt') ?>"></a>
                     </div>
                  <?php endif; ?>
                  <?php 
                     // back end config 
-                    $subcat = Mage::getStoreConfig('yamm/category/catid');
+                    $subcat = Mage::getStoreConfig('yamm/first_menu_item/catid');
                     
                     $categories = Mage::helper('mega/data')->getCatergorybyLevel($subcat);    
                     echo $categories;
