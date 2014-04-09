@@ -64,24 +64,19 @@
               </li>
             </ul>
           </li>
-          <!-- Feature Products -->
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Feature Products<b class="caret"></b></a>
+          <!-- Second Menu Item -->
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo Mage::getStoreConfig('yamm/second_menu_item/title') ?><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li>
                 <div class="yamm-content megamenu_cat_2">                                
                     <?php 
-                        //get feature products from getstoreconfig
-                        $product_sku_1 = trim(Mage::getStoreConfig('yamm/feature/product1'));
-                        $product_sku_2 = trim(Mage::getStoreConfig('yamm/feature/product2'));
-                        $product_sku_3 = trim(Mage::getStoreConfig('yamm/feature/product3'));
-                        $product_sku_4 = trim(Mage::getStoreConfig('yamm/feature/product4'));                       
-                        $arr_product_sku = array($product_sku_1, $product_sku_2, $product_sku_3, $product_sku_4) ;
-                        
-                        $feature_product_list = Mage::helper('mega/data')->getFeaturedProducts($arr_product_sku);    
-                        echo $feature_product_list;
+                        $catid = Mage::getStoreConfig('yamm/second_menu_item/catid');
+                        //echo $catid;
+                        $featured_category = Mage::helper('mega/data')->getFeaturedCategory($catid);    
+                        echo $featured_category;
                     ?>
+                    
                 <!-- banner for promotion -->   
-                <!-- banner for promotion -->                    
                  <?php if(Mage::getStoreConfig('yamm/feature/ad') != null): ?>
                     <div class="row">
                         <a href="<?php echo Mage::getStoreConfig('yamm/feature/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/feature/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/feature/alt') ?>"></a>
