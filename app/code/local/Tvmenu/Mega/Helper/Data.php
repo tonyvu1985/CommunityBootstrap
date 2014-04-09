@@ -16,6 +16,16 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
     	->load();
     }
     
+    public function getCategory($catId){
+        return Mage::getModel('catalog/category')
+                ->getCollection()
+                ->addAttributeToSelect('name')
+                ->addAttributeToSelect('url_path')
+                ->addAttributeToSelect('description')
+                ->addFieldToFilter('entity_id', array('eq' => $catId))
+                ->load();
+    }
+    
     public function getProductBySku($arry_product_sku){        
          return Mage::getModel("catalog/product")
             ->getCollection()
@@ -51,16 +61,17 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
     }
     
     /* get feature product list from their sku */
-    public function getFeaturedProducts($arry_product_sku){        
-        $products = $this->getProductBySku($arry_product_sku);            
+    public function getFeaturedCategory($catId){ 
+        $cats = $this->getCategory($catId);     
         $html .= '<div class="row">';
         // it s collection so we have to do foreach to get result
-        foreach($products as $product){
-           $html .= '<div class="col-md-3 col-sm-6 col-xs-12">';               
-           $html .= '<img  alt="' . $product->getName() . '" src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(135) . '">';
-           $html .= '<div class="caption">';
-           $html .= '<p><a href="' . Mage::getBaseUrl(). $product->getUrl_path(). '" alt="' . $product->getName() . '">' . $product->getName() . '</a></p>';      
-           $html .= '<p class="price">' . Mage::helper('core')->currency($product->getPrice()) . '</p>';               
+        foreach($cats as $cat){
+           $html .= '<div class="col-sm-6 col-xs-12">';
+           
+           $html .= '</div>';
+           $html .= '<div class="col-sm-6 col-xs-12">';
+           $html .= '<p><a href="' . Mage::getBaseUrl(). $cat->getUrl_path(). '" alt="' . $cat->getName() . '">' . $cat->getName() . '</a></p>';      
+           $html .= '<p>' . $cat->getDescription() . '</p>';    
            $html .= '</div>';
            $html .= '</div>';
         }            
