@@ -24,6 +24,7 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
                 ->addAttributeToSelect('description')
                 ->addAttributeToSelect('image')
                 ->addFieldToFilter('entity_id', array('eq' => $catId))
+                ->addAttributeToFilter('is_active', 1)
                 ->load();
     }
     
@@ -83,17 +84,22 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
         /* get feature product list from their sku */
     public function getSaleProducts($arry_product_sku){        
         $products = $this->getProductBySku($arry_product_sku);        
-        $html .= '<ul class="media-list">';            
+        $html .= '<table class="table table-hover">';   
+        $html .= '<thead>';
+        $html .= '<tr>';
+        $html .= '<th colspan="3">Sale Product List</th>';
+        $html .= '</tr>';
+        $html .= '</thead>';
+        $html .= '<tbody>';
         foreach($products as $product){
-           $html .= '<li class="media"><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '" class="pull-right"><img src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(135) . '" alt="" class="media-object"></a>';                             
-           $html .= '<div class="media-body">';
-           $html .= '<p class="media-heading"><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '">' . $product->getName() . '</a></p>';
-           $html .= '<p class="description">' . $product->getShort_description() . '</p>';
-           $html .= '<p class="price">' . Mage::helper('core')->currency($product->getPrice()) . '</p>';               
-           $html .= '</div>';
-           $html .= '</li>';
+           $html .= '<tr>';
+           $html .= '<td><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '" class="pull-right"><img src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(40) . '" alt=""></a></td>';                             
+           $html .= '<td><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '">' . $product->getName() . '</a></td>';
+           $html .= '<td>' . Mage::helper('core')->currency($product->getPrice()) . '</td>';               
+           $html .= '</tr>';
         }            
-        $html .= '</ul>';
+        $html .= '</tbody>';
+        $html .= '</table>';
         return $html;
     }
     
