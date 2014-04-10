@@ -75,13 +75,6 @@
                         $featured_category = Mage::helper('mega/data')->getFeaturedCategory($catid);    
                         echo $featured_category;
                     ?>
-                    
-                <!-- banner for promotion -->   
-                 <?php if(Mage::getStoreConfig('yamm/feature/ad') != null): ?>
-                    <div class="row">
-                        <a href="<?php echo Mage::getStoreConfig('yamm/feature/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/feature/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/feature/alt') ?>"></a>
-                    </div> 
-                <?php endif;?>
                 </div>
               </li>
             </ul>
