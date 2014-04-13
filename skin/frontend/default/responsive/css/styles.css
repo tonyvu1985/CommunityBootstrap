@@ -1864,3 +1864,4 @@ tr.summary-details-excluded { font-style:italic; }
 #scroll-div a:hover{color: #ccc; cursor:pointer}
 
 .dropdown-menu.pull-right i{padding-right: 10px;}
+.usp .table td{border-top: 0}
