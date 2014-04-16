@@ -28,7 +28,7 @@
     <div class="footer row">
             <div class="col-md-3 col-sm-6 col-xs-12"> <!-- col 1 -->
                  <p class="title">Contact Details</p>
-                <?php echo Mage::getStoreConfig('setting/footer/contact'); ?>
+                <?php echo Mage::getStoreConfig('setting/footer/contact', Mage::app()->getStore()->getId()); ?>
             </div>
          
             <div class="col-md-3 col-sm-6 col-xs-12"> <!-- col 2 -->

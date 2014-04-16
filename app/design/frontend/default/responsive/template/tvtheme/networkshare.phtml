@@ -8,9 +8,9 @@
 
 <?php
 // get the config
-$facebook = Mage::getStoreConfig('setting/footer/facebook');
-$twitter = Mage::getStoreConfig('setting/footer/twitter');
-$youtube = Mage::getStoreConfig('setting/footer/youtube');
+$facebook = Mage::getStoreConfig('setting/footer/facebook', Mage::app()->getStore()->getId());
+$twitter = Mage::getStoreConfig('setting/footer/twitter', Mage::app()->getStore()->getId());
+$youtube = Mage::getStoreConfig('setting/footer/youtube', Mage::app()->getStore()->getId());
 ?>
 <div id="divnetworkshare" class="">
     <?php if($facebook != '' || $twitter !=='' || $youtube !=''): ?>

@@ -55,7 +55,7 @@
     
 <!-- google font -->
 <?php 
-    $goofont = Mage::getStoreConfig('setting/themefont/goofont');
+    $goofont = Mage::getStoreConfig('setting/themefont/goofont', Mage::app()->getStore()->getId());
     if (trim($goofont) != ""){
         echo $goofont;
     }
@@ -63,7 +63,7 @@
 
 <!-- Google Analytics -->
 <?php
-    $oogleanalytics = Mage::getStoreConfig('setting/general/googleanalytics');
+    $oogleanalytics = Mage::getStoreConfig('setting/general/googleanalytics', Mage::app()->getStore()->getId());
     echo $oogleanalytics;
 ?>
 

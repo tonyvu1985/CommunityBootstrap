@@ -32,9 +32,9 @@
         <div class="col-sm-5">
             <?php echo $this->getChildHtml('topSearch') ?>
             
-            <?php if(Mage::getStoreConfig('setting/header/usp_yesno') == 1): ?>
+            <?php if(Mage::getStoreConfig('setting/header/usp_yesno', Mage::app()->getStore()->getId()) == 1): ?>
                 <div class="usp">
-                    <?php echo Mage::getStoreConfig('setting/header/usp')?>
+                    <?php echo Mage::getStoreConfig('setting/header/usp', Mage::app()->getStore()->getId())?>
                 </div>
             <?php endif; ?>
         </div>

@@ -33,13 +33,13 @@
 ?>
 <?php $_menu = $this->getHtml('level-top') ;?>
 <?php 
-    $narbar_style = Mage::getStoreConfig('setting/header/navbar'); 
+    $narbar_style = Mage::getStoreConfig('setting/header/navbar', Mage::app()->getStore()->getId()); 
     if ($narbar_style ==''){
         // navbar-default is an option in the setting/header/navbar
         $narbar_style = 'navbar-default';
     } 
     
-    $logotext = Mage::getStoreConfig('setting/header/logotext');
+    $logotext = Mage::getStoreConfig('setting/header/logotext', Mage::app()->getStore()->getId());
 ?>
 <?php if($_menu): ?>
 <nav id="default-nav" class="navbar <?php echo $narbar_style ?>" role="navigation">
@@ -51,7 +51,7 @@
           <span class="icon-bar"></span>
         </button>
         <!-- company logo -->
-        <?php if(Mage::getStoreConfig('setting/header/logo') != ''): ?>
+        <?php if(Mage::getStoreConfig('setting/header/logo', Mage::app()->getStore()->getId()) != ''): ?>
         <a class="navbar-brand" href="<?php echo $this->getBaseUrl(); ?>"><img height="50px" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'logo/' . Mage::getStoreConfig('setting/header/logo') ?>" alt="<?php echo Mage::getStoreConfig('setting/header/logoalt') ?>"></a>
         <?php else: ?>
             <a class="navbar-brand" href="<?php echo $this->getBaseUrl(); ?>"><?php echo $logotext ?></a>
