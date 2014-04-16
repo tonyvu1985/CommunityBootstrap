@@ -24,7 +24,7 @@
                     <sort_order>0</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
-                    <show_in_store>0</show_in_store>
+                    <show_in_store>1</show_in_store>
                     <fields>
                         <bgcolor translate="label">
                             <label>Bg color</label>
@@ -85,7 +85,7 @@
                     <sort_order>1</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
-                    <show_in_store>0</show_in_store>
+                    <show_in_store>1</show_in_store>
                     <fields>
                         
                         <transparent translate="label"> <!-- page transparent background -->
@@ -206,7 +206,7 @@
                     <sort_order>3</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
-                    <show_in_store>0</show_in_store>
+                    <show_in_store>1</show_in_store>
                     <fields>
                         <logo translate="label">
                             <label>Company logo</label>
@@ -473,7 +473,7 @@
                     <sort_order>5</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
-                    <show_in_store>0</show_in_store>    
+                    <show_in_store>1</show_in_store>    
                     <fields>
                         <bgcolor translate="label">
                             <label>Bg color</label>
