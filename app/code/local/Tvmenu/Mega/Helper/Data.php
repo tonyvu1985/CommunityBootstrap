@@ -68,10 +68,10 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
         $html .= '<div class="row">';
         // it s collection so we have to do foreach to get result
         foreach($cats as $cat){
-           $html .= '<div class="col-sm-6 col-xs-12">';
+           $html .= '<div class="col-md-6 col-sm-12">';
            $html .= '<img class="img-responsive" src="' . Mage::getStoreConfig('web/unsecure/base_url') . 'media/catalog/category/' . $cat->getImage() . '">';
            $html .= '</div>';
-           $html .= '<div class="col-sm-6 col-xs-12">';
+           $html .= '<div class="col-md-6 col-sm-12">';
            $html .=     '<p><a href="' . Mage::getBaseUrl(). $cat->getUrl_path(). '" class="title" alt="' . $cat->getName() . '">' . $cat->getName() . '</a></p>';      
            $html .=     '<p>' . $cat->getDescription() . '</p>';    
            $html .=     '<p><a href="' . $cat->getUrl_path() . '" class="btn btn-default" alt="' . $cat->getName() . '">View Category</a></p>';    
