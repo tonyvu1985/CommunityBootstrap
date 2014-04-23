@@ -22,6 +22,7 @@
 .yamm .navbar-nav .showall .btnviewall{margin-top: 20px; text-transform: uppercase}
 .yamm .price{color: #1e7ec8}
 .yamm .description{font-size: 12px;}
+.yamm .salelists{text-transform: uppercase; color: #1e7ec8;}
 @media (min-width:768px){
     .yamm-categories{width: 700px;}
 }
