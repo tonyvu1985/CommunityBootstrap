@@ -43,10 +43,10 @@
               <li>
                 <!-- Content container to add padding -->
                 <div class="yamm-categories yamm-content megamenu_cat_1">
-                 <!-- banner for promotion -->                    
-                 <?php if(Mage::getStoreConfig('yamm/fist_menu_item/ad') != null): ?>
+                 <!-- banner for promotion -->          
+                 <?php if(Mage::getStoreConfig('yamm/first_menu_item/ad') != null): ?>
                     <div class="row">
-                        <a href="<?php echo Mage::getStoreConfig('yamm/first_menu_item/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/category/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/first_menu_item/alt') ?>"></a>
+                        <a href="<?php echo Mage::getStoreConfig('yamm/first_menu_item/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/first_menu_item/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/first_menu_item/alt') ?>"></a>
                     </div>
                  <?php endif; ?>
                  <?php 
@@ -56,10 +56,7 @@
                     $categories = Mage::helper('mega/data')->getCatergorybyLevel($subcat);    
                     echo $categories;
                  ?>
-                  <!-- show all categories -->
-               <!--   <div class="row showall" >
-                      <a class="btn btn-default btnviewall">View all</a>
-                  </div>     -->
+
                 </div>
               </li>
             </ul>

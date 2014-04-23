@@ -87,13 +87,13 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
         $html .= '<table class="table table-hover">';   
         $html .= '<thead>';
         $html .= '<tr>';
-        $html .= '<th colspan="3">Sale Product List</th>';
+        $html .= '<th colspan="3" class="salelists">Sale Product List</th>';
         $html .= '</tr>';
         $html .= '</thead>';
         $html .= '<tbody>';
         foreach($products as $product){
            $html .= '<tr>';
-           $html .= '<td><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '" class="pull-right"><img src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(40) . '" alt=""></a></td>';                             
+           $html .= '<td align="left"><img src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(40) . '" alt=""></td>';                             
            $html .= '<td><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '">' . $product->getName() . '</a></td>';
            $html .= '<td>' . Mage::helper('core')->currency($product->getPrice()) . '</td>';               
            $html .= '</tr>';
