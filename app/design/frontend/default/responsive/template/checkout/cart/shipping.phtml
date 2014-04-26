@@ -86,7 +86,7 @@
                     <dd>
                         <ul>
                         <?php foreach ($_rates as $_rate): ?>
-                            <li<?php if ($_rate->getErrorMessage()) echo ' class="error-msg"';?>>
+                            <li<?php if ($_rate->getErrorMessage()) echo ' class="error-msg alert alert-danger"';?>>
                                <?php if ($_rate->getErrorMessage()): ?>
                                     <?php echo $this->escapeHtml($_rate->getErrorMessage()) ?>
                                <?php else: ?>
