@@ -960,7 +960,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Add to Links + Add to Cart */
 .add-to-box { margin:10px 0; }
-.add-to-box .add-to-cart { float:left; }
+.add-to-box .add-to-cart { float:left; padding-bottom: 15px;}
 .add-to-box .or { float:left; font-weight:bold; margin:0 7px; color:#666; }
 .add-to-box .add-to-links { float:left; margin:0; font-size:12px !important; line-height:1.25 !important; text-align:left !important; }
 .add-to-box .add-to-links li { display:block !important; }
