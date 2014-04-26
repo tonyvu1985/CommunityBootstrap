@@ -151,7 +151,7 @@ input.input-text:focus,select:focus,textarea:focus { background-color:#edf7fd; }
 .form-list .field { /*float:left; width:275px; */}
 .form-list input.input-text {/* width:254px; */}
 .form-list textarea { /*width:254px; */height:10em; }
-.form-list select {/* width:260px; */}
+.form-list select {/* width:260px; */ width: 100%}
 .cart-collaterals  .form-list select{width: 80%}
 .form-list li.wide .input-box { /*width:535px; */}
 .form-list li.wide input.input-text {/* width:529px; */}
@@ -1139,7 +1139,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Advanced Search */
 .advanced-search .form-list label { width:160px; padding-right:10px; }
 .advanced-search .form-list .input-box,
-.advanced-search .form-list .input-range { float:left; clear:none; }
+.advanced-search .form-list .input-range {/* float:left; clear:none; */}
 .advanced-search-amount { margin:0 0 10px; }
 .advanced-search-summary { margin:10px 0; border:1px solid #e9d7c9; background:#fff6f1; padding:10px; }
 .advanced-search-summary ul { float:left; width:49%; }
