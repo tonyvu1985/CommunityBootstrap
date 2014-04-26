@@ -15,9 +15,7 @@
         if ($narbar_style ==''){
            // navbar-default is an option in the setting/header/navbar
            $narbar_style = 'navbar-default';
-        } 
-        
-     $yam_logo_text = Mage::getStoreConfig('setting/header/logotext');    
+        }    
 ?>
 
 <div class="navbar yamm <?php echo $narbar_style ?>">
@@ -29,11 +27,7 @@
             <span class="icon-bar"></span>
         </button>
         <!-- company logo -->
-        <?php if(Mage::getStoreConfig('setting/header/logo') != ''): ?>
-            <a class="navbar-brand" href="<?php echo $this->getBaseUrl(); ?>"><img height="50px" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'logo/' . Mage::getStoreConfig('setting/header/logo') ?>" alt="<?php echo Mage::getStoreConfig('setting/header/logoalt') ?>"></a>
-        <?php else: ?>
-            <a href="#" class="navbar-brand"><?php echo $yam_logo_text ?></a>
-        <?php endif; ?>
+        <a href="#" class="navbar-brand">Menu</a>
       </div>
       <div id="navbar-collapse-1" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
