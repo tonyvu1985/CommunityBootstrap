@@ -32,12 +32,12 @@
 
 ?>
 <?php if ($this->getIsNeedToDisplaySideBar()):?>
-<div class="block block-cart">
+<div class="block block-cart panel panel-default">
     <?php $_cartQty = $this->getSummaryCount() ?>
-    <div class="block-title">
-        <strong><span><?php echo $this->__('My Cart') ?></span></strong>
+    <div class="block-title panel-heading">
+        <?php echo $this->__('My Cart') ?>
     </div>
-    <div class="block-content">
+    <div class="block-content panel-body">
     <?php if ($_cartQty>0): ?>
         <div class="summary">
             <?php if ($_cartQty==1): ?>
