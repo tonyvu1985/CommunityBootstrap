@@ -74,7 +74,7 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
            $html .= '<div class="col-md-6 col-sm-12">';
            $html .=     '<p><a href="' . Mage::getBaseUrl(). $cat->getUrl_path(). '" class="title" alt="' . $cat->getName() . '">' . $cat->getName() . '</a></p>';      
            $html .=     '<p>' . $cat->getDescription() . '</p>';    
-           $html .=     '<p><a href="' . $cat->getUrl_path() . '" class="btn btn-default" alt="' . $cat->getName() . '">View Category</a></p>';    
+           $html .=     '<p><a href="' . Mage::getBaseUrl(). $cat->getUrl_path() . '" class="btn btn-default" alt="' . $cat->getName() . '">View Category</a></p>';    
            $html .= '</div>';
         }            
         $html .= '</div>';
