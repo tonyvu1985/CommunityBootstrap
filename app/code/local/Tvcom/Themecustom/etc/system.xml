@@ -228,45 +228,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>    
                         </logoalt>
-                        
-                        <or translate="label">
-                            <label><![CDATA[<span style="color:red">Or</span>]]></label>
-                            <frontend_type>label</frontend_type>
-                            <sort_order>3</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                
-                        </or>
-                        
-                        <logotext translate="label">
-                            <label>Logo text</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>4</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>    
-                            <comment>Logo is just normal text</comment>
-                        </logotext>
-                        
-                        <logocolor translate="label">
-                            <label>Logo color</label>
-                            <font_type>text</font_type>
-                            <validate>color</validate> 
-                            <sort_order>5</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </logocolor>
-                        
-                        <logopadding translate="label">
-                            <label>Logo padding</label>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>6</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>    
-                            <comment>Example: 10px 10px 10px 10px</comment>
-                        </logopadding>
 
                         <navbar translate="label">
                             <label>Navigation bar</label>

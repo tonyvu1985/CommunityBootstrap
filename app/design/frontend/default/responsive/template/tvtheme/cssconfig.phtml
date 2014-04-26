@@ -35,9 +35,7 @@
     $header_link_size = Mage::getStoreConfig('setting/header/link_size', Mage::app()->getStore()->getId());
     $header_hoverlink_color = '#' . Mage::getStoreConfig('setting/header/hoverlink_color', Mage::app()->getStore()->getId());
     $header_hoverlink_size = Mage::getStoreConfig('setting/header/hoverlink_size', Mage::app()->getStore()->getId());
-    $logo_padding = Mage::getStoreConfig('setting/header/logopadding', Mage::app()->getStore()->getId());
-    $logo_color= '#' . Mage::getStoreConfig('setting/header/logocolor', Mage::app()->getStore()->getId());
-    
+ 
     /* body */
     $container_bgcolor = '#' . Mage::getStoreConfig('setting/body/bgcolor', Mage::app()->getStore()->getId());
     $container_bgimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'bgimage/' . Mage::getStoreConfig('setting/body/bgimage', Mage::app()->getStore()->getId());
@@ -87,7 +85,7 @@ body{ background:<?php echo $theme_bgcolor ?> url(<?php echo $theme_bgimage ?>) 
 .header .links a { color:<?php echo $header_link_color ?>; font-size: <?php echo $header_link_size ?>;}
 .header .links a:hover { color:<?php echo $header_hoverlink_color ?>; font-size: <?php echo $header_hoverlink_size ?>;}
 .header .links .top-link-cart i{margin-left: 5px;}
-.navbar-header .navbar-brand{padding: <?php echo $logo_padding?>; color:<?php echo $logo_color?>}
+.navbar-header .navbar-brand{text-transform: uppercase}
 .main-container {background:<?php echo $container_bgcolor ?> url(<?php echo $container_bgimage ?>) <?php echo $container_bgpositionx ?> <?php echo $container_bgpositiony ?> <?php echo $container_bgpositionrepeat ?>;  }
 .footer { /*width:930px; margin:0 auto; */padding:10px 10px 50px; background: <?php echo $footer_bgcolor ?>; color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>; border-top:<?php echo $footer_line_size ?> solid <?php echo $footer_line_color ?>; text-align:left}
 .footer a { color:<?php echo $footer_link_color ?>; text-decoration:none; font-size: <?php echo $footer_link_size ?>}

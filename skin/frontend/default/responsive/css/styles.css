@@ -490,8 +490,10 @@ tr.summary-details-excluded { font-style:italic; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 /*.header h1.logo { margin:0; }*/
 .header .quick-access { /*float:right; width:600px; padding:28px 10px 0 0; */}
+.header .quick-link{margin-top: 15px;}
 .header .welcome-msg { margin-bottom:0; /*text-align:right; */ color:#888; }
 .header .welcome-msg a { color:#ebbc58; }
+.header .usp{margin-top: 15px;}
 .header .form-search { /*position:absolute; top:0; right:29px; width:315px; height:30px; background:url(../images/bkg_form-search.gif) 0 0 no-repeat; padding:1px 0 0 16px; */}
 .header .form-search label { float:left; width:24px; height:21px; text-align:left; text-indent:-999em; overflow:hidden; }
 .header .form-search input.input-text {/* float:left; padding: 10px; width: 98%; margin-top: 15px; border-color:#5c7989; width:209px; margin-right:4px; */}

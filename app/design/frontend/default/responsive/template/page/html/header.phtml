@@ -30,8 +30,13 @@
 <div class="header-container">
     <div class="header row">    
         <div class="col-sm-5">
-            <?php echo $this->getChildHtml('topSearch') ?>
-            
+            <!-- company logo -->
+            <?php if(Mage::getStoreConfig('setting/header/logo', Mage::app()->getStore()->getId()) != ''): ?>
+            <a href="<?php echo $this->getBaseUrl(); ?>"><img class="img-responsive" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'logo/' . Mage::getStoreConfig('setting/header/logo') ?>" alt="<?php echo Mage::getStoreConfig('setting/header/logoalt') ?>"></a>
+            <?php else: ?>
+                <a class="navbar-brand" href="<?php echo $this->getBaseUrl(); ?>">Logo Example Here</a>
+            <?php endif; ?>
+            <div style="clear: both"></div>
             <?php if(Mage::getStoreConfig('setting/header/usp_yesno', Mage::app()->getStore()->getId()) == 1): ?>
                 <div class="usp">
                     <?php echo Mage::getStoreConfig('setting/header/usp', Mage::app()->getStore()->getId())?>
@@ -39,8 +44,9 @@
             <?php endif; ?>
         </div>
         
-        <div class="quick-access col-sm-7">            
-            <div class="row">
+        <div class="quick-access col-sm-7">      
+            <?php echo $this->getChildHtml('topSearch') ?>
+            <div class="row quick-link">
                 <div class="welcome-box col-sm-12 col-xs-4">
                     <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
                 </div>
