@@ -296,7 +296,9 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .success-msg { border-color:#446423; background-color:#eff5ea; color:#3d6611; }
 .note-msg,
 .notice-msg { border-color:#fcd344; background-color:#fafaec; color:#3d6611; }*/
-
+.success-msg{background-color: #dff0d8; border-color: #d6e9c6; color: #3c763d; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;}
+.error-msg{background-color: #fcf8e3; border-color: #faebcc; color: #8a6d3b; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;}
+.notice-msg, .note-msg{background-color: #d9edf7; border-color: #bce8f1; color: #31708f; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;}
 /* BreadCrumbs */
 .breadcrumbs { font-size:11px; line-height:1.25; margin:0 0 13px; }
 .breadcrumbs li { display:inline; }
@@ -446,7 +448,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 .link-cart { color:#dc6809 !important; font-weight:bold; }
 .link-wishlist { color:#dc6809 !important; font-weight:bold; }
-.link-reorder { font-weight:bold; color:#dc6809 !important; }
+.link-reorder { color:#dc6809 !important; }
 .link-compare { font-weight:bold; }
 .link-print { /*background:url(../images/i_print.gif) 0 2px no-repeat; padding:2px 0 2px 25px;*/ font-weight:bold; color:#dc6809; }
 .link-rss {/* background:url(../images/i_rss.gif) 0 2px no-repeat; */ padding-left:18px; line-height:14px; white-space:nowrap; }
@@ -628,11 +630,11 @@ tr.summary-details-excluded { font-style:italic; }
 .block-cart .mini-products-list .product-details .nobr small { word-wrap:break-word; }
 .block-cart .mini-products-list .product-details .nobr { white-space:normal !important; }
 
-/* Block: Account */
+/* Block: Account 
 .block-account { border:1px solid #bbb; margin-bottom:20px}
 .block-account .block-title { background:#fc9d36; border:0; padding:3px 10px; }
 .block-account .block-title strong { font-size:13px; color:#fff; }
-.block-account .block-content { background:#fbfaf6; padding:7px 10px 7px; }
+.block-account .block-content { background:#fbfaf6; padding:7px 10px 7px; }*/
 .block-account .block-content li a { display:block; border-bottom:1px solid #ddd; padding:3px 0; color:#5f5d5c; text-decoration:none !important; }
 .block-account .block-content li a:hover { color:#ea7900; }
 .block-account .block-content li.last a { border-bottom:0; }

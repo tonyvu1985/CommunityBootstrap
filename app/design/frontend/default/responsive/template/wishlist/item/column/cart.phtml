@@ -36,10 +36,10 @@ $options = $this->getChild('customer.wishlist.item.options')
 <?php echo $this->getPriceHtml($product, empty($options));?>
 <div class="add-to-cart-alt">
 <?php if ($item->canHaveQty() && $item->getProduct()->isVisibleInSiteVisibility()): ?>
-    <input type="text" class="input-text qty validate-not-negative-number" name="qty[<?php echo $item->getId() ?>]" value="<?php echo $this->getAddToCartQty($item) * 1 ?>" /><br/>
+    <input type="text" class="form-control input-text qty validate-not-negative-number" name="qty[<?php echo $item->getId() ?>]" value="<?php echo $this->getAddToCartQty($item) * 1 ?>" />
 <?php endif; ?>
 <?php if ($product->isSaleable()): ?>
-    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" onclick="addWItemToCart(<?php echo $item->getId()?>);" class="button btn-cart btn btn-default btn-xs"><?php echo $this->__('Add to Cart') ?></button>
+    <button type="button" title="<?php echo $this->__('Add to Cart') ?>" onclick="addWItemToCart(<?php echo $item->getId()?>);" class="button btn-cart btn btn-default btn-sm"><?php echo $this->__('Add to Cart') ?></button>
 <?php else: ?>
     <?php if ($product->getIsSalable()): ?>
         <p class="availability in-stock"><span><?php echo $this->__('In stock') ?></span></p>
