@@ -1209,6 +1209,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart .crosssell .product-name { font-weight:bold; }
 .cart .crosssell li.item { margin:12px 0; }
 .cart .crosssell .link-compare { font-weight:normal; }
+.cart .crosssell .add-to-links li {float: left; margin-right: 5px}
 
 /* Discount Codes & Estimate Shipping and Tax Boxes */
 .cart .discount,
