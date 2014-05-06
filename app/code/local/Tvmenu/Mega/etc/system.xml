@@ -187,6 +187,18 @@
                                 <comment>Example: VAIO1</comment>                     
                         </product4>
                         
+                        <example translate="comment">
+                            <label>Example array field</label>
+                            <frontend_model>mega/custom</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                           <!-- <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>-->
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment></comment>
+                        </example>
+                        
                         <ad translate="label">
                                 <label>Left Banner</label>
                                 <frontend_type>image</frontend_type>

@@ -16,6 +16,9 @@
            // navbar-default is an option in the setting/header/navbar
            $narbar_style = 'navbar-default';
         }    
+        
+        $arr = Mage::getStoreConfig('yamm/sale/example');
+        var_dump($arr);
 ?>
 
 <div class="navbar yamm <?php echo $narbar_style ?>">
