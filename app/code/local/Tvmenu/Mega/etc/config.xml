@@ -22,7 +22,11 @@
                 <class>Tvmenu_Mega_Helper</class>
             </mega>
         </helpers>        
-
+        <blocks>
+            <mega>
+                <class>Tvmenu_Mega_Block</class>
+            </mega>
+        </blocks>
     </global>
     
     <adminhtml>
