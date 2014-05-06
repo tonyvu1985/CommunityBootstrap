@@ -8,17 +8,15 @@
 
 <?php        
     // get storeconfig
-     $is_Megamenu = Mage::getStoreConfig('yamm/setting/yes_no');
+     $is_Megamenu = Mage::getStoreConfig('yamm/setting/yes_no', Mage::app()->getStore()->getId());
      // if Megamenu is yes
      if($is_Megamenu  == 1){ 
-        $narbar_style = Mage::getStoreConfig('yamm/setting/navbar'); 
+        $narbar_style = Mage::getStoreConfig('yamm/setting/navbar', Mage::app()->getStore()->getId()); 
         if ($narbar_style ==''){
            // navbar-default is an option in the setting/header/navbar
            $narbar_style = 'navbar-default';
         }    
-        
-        $arr = Mage::getStoreConfig('yamm/sale/example');
-        var_dump($arr);
+      
 ?>
 
 <div class="navbar yamm <?php echo $narbar_style ?>">
@@ -35,20 +33,20 @@
       <div id="navbar-collapse-1" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <!-- fist menu item -->
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo Mage::getStoreConfig('yamm/first_menu_item/title') ?> <b class="caret"></b></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo Mage::getStoreConfig('yamm/first_menu_item/title', Mage::app()->getStore()->getId()) ?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li>
                 <!-- Content container to add padding -->
                 <div class="yamm-categories yamm-content megamenu_cat_1">
                  <!-- banner for promotion -->          
-                 <?php if(Mage::getStoreConfig('yamm/first_menu_item/ad') != null): ?>
+                 <?php if(Mage::getStoreConfig('yamm/first_menu_item/ad', Mage::app()->getStore()->getId()) != null): ?>
                     <div class="row">
-                        <a href="<?php echo Mage::getStoreConfig('yamm/first_menu_item/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/first_menu_item/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/first_menu_item/alt') ?>"></a>
+                        <a href="<?php echo Mage::getStoreConfig('yamm/first_menu_item/link', Mage::app()->getStore()->getId()) ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/first_menu_item/ad', Mage::app()->getStore()->getId()); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/first_menu_item/alt', Mage::app()->getStore()->getId()) ?>"></a>
                     </div>
                  <?php endif; ?>
                  <?php 
                     // back end config 
-                    $subcat = Mage::getStoreConfig('yamm/first_menu_item/catid');
+                    $subcat = Mage::getStoreConfig('yamm/first_menu_item/catid', Mage::app()->getStore()->getId());
                     
                     $categories = Mage::helper('mega/data')->getCatergorybyLevel($subcat);    
                     echo $categories;
@@ -59,12 +57,12 @@
             </ul>
           </li>
           <!-- Second Menu Item -->
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo Mage::getStoreConfig('yamm/second_menu_item/title') ?><b class="caret"></b></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><?php echo Mage::getStoreConfig('yamm/second_menu_item/title', Mage::app()->getStore()->getId()) ?><b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li>
                 <div class="yamm-content megamenu_cat_2">                                
                     <?php 
-                        $catid = Mage::getStoreConfig('yamm/second_menu_item/catid');
+                        $catid = Mage::getStoreConfig('yamm/second_menu_item/catid', Mage::app()->getStore()->getId());
                         //echo $catid;
                         $featured_category = Mage::helper('mega/data')->getFeaturedCategory($catid);    
                         echo $featured_category;
@@ -81,19 +79,20 @@
                         <div class='row'>
                             <?php if(Mage::getStoreConfig('yamm/sale/ad') != null): ?>
                                 <div class='col-sm-12 banner'>
-                                    <a href="<?php echo Mage::getStoreConfig('yamm/sale/link') ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/sale/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/sale/alt') ?>"></a>
+                                    <a href="<?php echo Mage::getStoreConfig('yamm/sale/link', Mage::app()->getStore()->getId()) ?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'ad_banner/' . Mage::getStoreConfig('yamm/sale/ad'); ?>" class="img-responsive" alt="<?php echo Mage::getStoreConfig('yamm/sale/alt') ?>"></a>
                                 </div>
                             <?php endif; ?>
                             <div class='col-sm-12'>
                                 <?php 
                                     //get feature products from getstoreconfig
-                                    $product_sku_1 = trim(Mage::getStoreConfig('yamm/sale/product1'));
-                                    $product_sku_2 = trim(Mage::getStoreConfig('yamm/sale/product2'));
-                                    $product_sku_3 = trim(Mage::getStoreConfig('yamm/sale/product3'));
-                                    $product_sku_4 = trim(Mage::getStoreConfig('yamm/sale/product4'));                       
-                                    $arr_product_sku = array($product_sku_1, $product_sku_2, $product_sku_3, $product_sku_4) ;
-                                    $sale_product_list = Mage::helper('mega/data')->getSaleProducts($arr_product_sku);                            
-                                    echo $sale_product_list;
+                                      $product_arr = unserialize(Mage::getStoreConfig('yamm/sale/product', Mage::app()->getStore()->getId()));
+                                        if (!empty($product_arr)){
+                                            $product_sale_list = array();
+                                            foreach($product_arr as $product){
+                                                array_push($product_sale_list ,trim($product['product_sku']));
+                                            }
+                                            echo Mage::helper('mega/data')->getSaleProducts($product_sale_list);
+                                        }                              
                                 ?>
                             </div>
                         </div>

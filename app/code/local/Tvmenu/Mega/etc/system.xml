@@ -140,64 +140,18 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>    
-                    <fields>
-                        <description translate="label">
-                            <label><![CDATA[<span style="color:red">Product sku</span>]]></label>
-                            <frontend_type>label</frontend_type>
-                            <sort_order>5</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                
-                        </description>
-                        
-                        <product1 translate="label">
-                                <label>Product 1</label>
-                                <frontend_type>text</frontend_type>
-                                <sort_order>10</sort_order>
-                                <show_in_default>1</show_in_default>
-                                <show_in_website>1</show_in_website>
-                                <show_in_store>1</show_in_store>                                
-                        </product1>
-                        
-                        <product2 translate="label">
-                                <label>Product 2</label>
-                                <frontend_type>text</frontend_type>
-                                <sort_order>40</sort_order>
-                                <show_in_default>1</show_in_default>
-                                <show_in_website>1</show_in_website>
-                                <show_in_store>1</show_in_store>                                
-                        </product2>
-                        
-                        <product3 translate="label">
-                                <label>Product 3</label>
-                                <frontend_type>text</frontend_type>
-                                <sort_order>60</sort_order>
-                                <show_in_default>1</show_in_default>
-                                <show_in_website>1</show_in_website>
-                                <show_in_store>1</show_in_store>                                
-                        </product3>
-                        
-                        <product4 translate="label">
-                                <label>Product 4</label>
-                                <frontend_type>text</frontend_type>
-                                <sort_order>90</sort_order>
-                                <show_in_default>1</show_in_default>
-                                <show_in_website>1</show_in_website>
-                                <show_in_store>1</show_in_store>           
-                                <comment>Example: VAIO1</comment>                     
-                        </product4>
-                        
-                        <example translate="comment">
-                            <label>Example array field</label>
-                            <frontend_model>mega/custom</frontend_model>
+                    <fields>                      
+                        <product translate="comment">
+                            <label>Add product sku</label>
+                            <frontend_model>mega/textfields</frontend_model>
                             <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
                            <!-- <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>-->
                             <sort_order>25</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                            <comment></comment>
-                        </example>
+                            <comment>Add product sku for SALE MENU</comment>
+                        </product>
                         
                         <ad translate="label">
                                 <label>Left Banner</label>
