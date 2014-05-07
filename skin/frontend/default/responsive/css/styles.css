@@ -868,9 +868,9 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Regular price */
 .regular-price { color:#c76200; }
-.regular-price .price {font-size:13px; color:#c76200; }
+.regular-price .price, .price  {font-size:13px; color:#c76200; }
 .block .regular-price,
-.block .regular-price .price { color:#2f2f2f; }
+.block .regular-price .price{ color:#2f2f2f; }
 
 /* Old price */
 .old-price { margin:0; }
@@ -1873,4 +1873,4 @@ tr.summary-details-excluded { font-style:italic; }
 /* New Arrival */
 .newarrival {padding-top: 35px}
 .newarrival .heading{padding-bottom: 25px}
-.newarrival h3{text-transform: uppercase; font-weight: normal; padding-top: 4px; color: #E26703}
+.newarrival h3{text-transform: uppercase; font-weight: normal; padding-top: 4px; color: #E26703; border-left: 4px solid #1e7ec8; padding-left: 5px}
