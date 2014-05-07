@@ -97,7 +97,8 @@
     
     .block-tags{display: none}
     
-    
+    /* new arrival */
+    .jcarousel-prev i, .jcarousel-next i{font-size: 1em}
 }
  
 /* Landscape phones and down */

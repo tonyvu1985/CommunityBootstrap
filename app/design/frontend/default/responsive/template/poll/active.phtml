@@ -51,7 +51,7 @@
                 <?php foreach( $poll_answers as $answer ): ?>
                 <li>
                     <input type="radio" name="vote" class="radio poll_vote" id="vote_<?php echo $answer->getId() ?>" value="<?php echo $answer->getAnswerId() ?>" />
-                    <span class="label"><label for="vote_<?php echo $answer->getId() ?>"><?php echo $this->escapeHtml($answer->getAnswerTitle()) ?></label></span>
+                    <span for="vote_<?php echo $answer->getId() ?>"><?php echo $this->escapeHtml($answer->getAnswerTitle()) ?></span>
                 </li>
                 <?php endforeach; ?>
             </ul>

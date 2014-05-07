@@ -37,15 +37,13 @@
     </script>
     <?php endif; ?>
     <form id="addTagForm" action="<?php echo $this->getFormAction(); ?>" method="get">
-        <div class="form-add">
-            <label for="productTagName"><?php echo $this->__('Add Your Tags:') ?></label>            
-            <div class="input-group">
-                <input type="text" class="input-text required-entry form-control" name="productTagName" id="productTagName" />
-                <div class="input-group-btn">
-                    <button type="button" title="<?php echo $this->__('Add Tags') ?>" class="button btn btn-default" onclick="submitTagForm()">
-                        <?php echo $this->__('Add Tags') ?>
-                    </button>
-                </div>
+        <div class="form-add input-group">
+            <span class="input-group-addon" for="productTagName"><?php echo $this->__('Your Tags') ?></span>            
+            <input type="text" class="input-text required-entry form-control" name="productTagName" id="productTagName" />
+            <div class="input-group-btn">
+                <button type="button" title="<?php echo $this->__('Add Tags') ?>" class="button btn btn-default" onclick="submitTagForm()">
+                    <?php echo $this->__('Add Tags') ?>
+                </button>
             </div>
         </div>
     </form>

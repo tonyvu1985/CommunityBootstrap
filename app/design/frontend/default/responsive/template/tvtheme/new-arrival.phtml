@@ -6,42 +6,33 @@
  */
 ?>
 
-<h3>Best Selling Products</h3>    <!-- Prev/next controls -->
-       <a class="jcarousel-prev">&lsaquo; Prev</a>
-   | <span style="font-weight: bold">Slider</span> |
-   <a class="jcarousel-next">Next &rsaquo;</a>  
-<div style="padding: 10px 0;" class="row jcarousel"><!-- row 1 example data -->
-    <ul>
-        <li>
-            <div>
-            <a href="sony-vaio-vgn-txn27n-b-11-1-notebook-pc.html"><img class="product-img" src="<?php echo $this->getSkinUrl('images/media/best_selling_img01.jpg') ?>" alt="" /></a>
-            <p><a href="sony-vaio-vgn-txn27n-b-11-1-notebook-pc.html">Sony VAIO VGN-TXN27N/B 11.1" Notebook PC</a></p>
-            </div>
-        </li> 
-        
-        <li>
-            <div>
-            <a href="nine-west-women-s-lucero-pump.html"><img class="product-img" src="<?php echo $this->getSkinUrl('images/media/best_selling_img02.jpg') ?>" alt="" /></a>
-            <p><a href="nine-west-women-s-lucero-pump.html">Nine West Women's Lucero Pump</a></p>
-            </div>
-        </li>
-        
-        <li>
-            <div>
-                <a href="nine-west-women-s-lucero-pump.html"><img class="product-img" src="<?php echo $this->getSkinUrl('images/media/best_selling_img02.jpg') ?>" alt="" /></a>
-                <p><a href="nine-west-women-s-lucero-pump.html">Nine West Women's Lucero Pump</a></p>
-            </div>
-        </li>
-        
-        <li>
-            <div>
-                <a href="nine-west-women-s-lucero-pump.html"><img class="product-img" src="<?php echo $this->getSkinUrl('images/media/best_selling_img02.jpg') ?>" alt="" /></a>
-                <p><a href="nine-west-women-s-lucero-pump.html">Nine West Women's Lucero Pump</a></p>
-            </div>
-        </li>
-    </ul>
+<div class="newarrival">
+    <div class="row heading">
+        <div class="col-xs-8">
+            <h3>New Arrival</h3>
+        </div>
 
+        <div class="col-xs-4" style="text-align: right">
+            <a class="jcarousel-prev"><i class="fa fa-angle-left fa-2x"></i></a>
+            <a class="jcarousel-next"><i class="fa fa-angle-right fa-2x"></i></a>
+        </div>
+    </div>
+   
+    <div class="col-xs-12 jcarousel"><!-- row 1 example data -->
+    <?php 
+        //get feature products from getstoreconfig
+        $product_arr = unserialize(Mage::getStoreConfig('block/newarrival/product', Mage::app()->getStore()->getId()));
+        if (!empty($product_arr)){
+            $new_arrival = array();
+            foreach($product_arr as $product){
+                array_push($new_arrival ,trim($product['product_sku']));
+            }
+            echo Mage::helper('blockcustom/data')->getNewArrival($new_arrival);
+        }
+    ?>
+    </div>
 </div>
+
 
 <script>
 jQuery(function() {

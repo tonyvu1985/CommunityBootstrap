@@ -69,6 +69,14 @@ Default layout, loads most of the pages
             </block>
             <!-- end script for jcarousel -->
         </reference>
+        
+        <reference name="right">
+            <block type="tag/popular" name="tags_popular" template="tag/popular.phtml"/>
+        </reference>
+        
+        <reference name="content">
+            <block type="core/template" name="new.arrival" template="tvtheme/new-arrival.phtml" />
+        </reference>
     </cms_index_index>
 
     <cms_index_defaultindex>
