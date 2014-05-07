@@ -741,7 +741,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Block: Subscribe */
 .block-subscribe{border:0; text-align:left}
-.block-subscribe .block-content { padding:5px 10px; background:none}
+.block-subscribe .block-content {padding:5px 0px;}
 .block-subscribe .block-title {border-bottom:0}
 .block-subscribe label { font-weight:bold; color:#666; }
 .block-subscribe input.input-text {/* display:block; width:167px; margin:3px 0;*/ }
