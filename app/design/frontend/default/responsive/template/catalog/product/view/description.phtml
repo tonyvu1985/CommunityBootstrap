@@ -25,22 +25,15 @@
  */
 
 /**
- * Product additional attributes template
+ * Product description template
  *
- * @see Mage_Catalog_Block_Product_View_Attributes
+ * @see Mage_Catalog_Block_Product_View_Description
  */
 ?>
-<?php
-    $_helper = $this->helper('catalog/output');
-    $_product = $this->getProduct()
-?>
-<?php if($_additional = $this->getAdditionalData()): ?>
-    <h2><?php echo $this->__('Additional Information') ?></h2>
-    <div id="product-attribute-specs-table">        
-        <?php foreach ($_additional as $_data): ?>
-            <p><span style="font-weight: bold"><?php echo $this->escapeHtml($this->__($_data['label'])) ?></span>:
-            <span class="data"><?php echo $_helper->productAttribute($_product, $_data['value'], $_data['code']) ?></span></p>
-        <?php endforeach; ?>        
+<?php $_description = $this->getProduct()->getDescription(); ?>
+<?php if ($_description): ?>
+  <!--  <h2><?php //echo $this->__('Details') ?></h2>-->
+    <div class="std">
+        <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
     </div>
-    <script type="text/javascript">decorateTable('product-attribute-specs-table')</script>
-<?php endif;?>
+<?php endif; ?>

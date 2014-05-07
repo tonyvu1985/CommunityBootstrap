@@ -977,8 +977,10 @@ tr.summary-details-excluded { font-style:italic; }
 
 .product-collateral { padding:25px 15px; }
 .product-collateral h2 {font-size:13px; color:#e26703;text-transform: uppercase; margin:0 0 15px; }
-.product-collateral .box-collateral { margin:0 0 25px; }
-
+/*.product-collateral .box-collateral { margin:0 0 25px; }*/
+.product-collateral .nav-tabs>li {text-transform: uppercase}
+.product-collateral .nav-tabs>li.active a{color: #e26703}
+.product-collateral .tab-content{padding: 20px 10px;}
 /* Product Images */
 .product-view .product-img-box {/* float:left; width:267px; */}
 .col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
