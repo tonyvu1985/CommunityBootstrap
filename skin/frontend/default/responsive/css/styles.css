@@ -975,7 +975,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-essential { padding:25px 0; /*background:#fff url(../images/bkg_product-view.gif) 100% 0 no-repeat;*/ }
 .product-essential h2 { font:bold 13px/1.35 Arial, Helvetica, sans-serif; }
 
-.product-collateral { background:#faf7ee /*url(../images/bkg_product_collateral.gif) 0 0 repeat-x*/; padding:25px 15px; }
+.product-collateral { padding:25px 15px; }
 .product-collateral h2 {font-size:13px; color:#e26703;text-transform: uppercase; margin:0 0 15px; }
 .product-collateral .box-collateral { margin:0 0 25px; }
 
