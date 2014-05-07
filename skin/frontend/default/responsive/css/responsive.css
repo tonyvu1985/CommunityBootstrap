@@ -98,7 +98,7 @@
     .block-tags{display: none}
     
     /* new arrival */
-    .jcarousel-prev i, .jcarousel-next i{font-size: 1em}
+    .jcarousel-prev i, .jcarousel-next i, .bestsale-jcarousel-prev i, .bestsale-jcarousel-next i{font-size: 1em}
 }
  
 /* Landscape phones and down */
@@ -126,4 +126,5 @@
     #product-review-table input[type="radio"]{margin:0; }
     
     .usp .icon{display: none}
+    .bestsale h3, .newarrival h3{font-size: 20px !important;}
 }

@@ -76,6 +76,7 @@ Default layout, loads most of the pages
         
         <reference name="content">
             <block type="core/template" name="new.arrival" template="tvtheme/new-arrival.phtml" />
+            <block type="core/template" name="best.sale" template="tvtheme/best-sale.phtml" />
         </reference>
     </cms_index_index>
 

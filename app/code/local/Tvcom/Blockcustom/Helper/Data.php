@@ -7,7 +7,7 @@
 
 class Tvcom_Blockcustom_Helper_Data extends Mage_Core_Helper_Abstract{
     /* get feature product list from their sku */
-    public function getNewArrival($arry_product_sku){   
+    public function getProducts($arry_product_sku){   
         $products = Mage::helper('mega/data')->getProductBySku($arry_product_sku);
         $html .= '<ul>';
         foreach($products as $product){

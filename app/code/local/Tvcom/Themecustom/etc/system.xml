@@ -160,16 +160,6 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
-                        <goofont translate="label">
-                            <label>Google Font</label>
-                            <frontend_type>textarea</frontend_type>
-                            <sort_order>0</sort_order>
-                            <show_in_default>1</show_in_default>    
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <comment><![CDATA[Example: <br/> &lt;link href='http://fonts.googleapis.com/css?family=Alegreya+Sans' rel='stylesheet' type='text/css'&gt;]]></comment>
-                        </goofont>
-                        
                         <fontfamily translate="label">
                             <label>Font family</label>
                             <fontend_type>text</fontend_type>

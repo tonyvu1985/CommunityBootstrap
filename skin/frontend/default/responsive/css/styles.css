@@ -1871,8 +1871,3 @@ tr.summary-details-excluded { font-style:italic; }
 
 .dropdown-menu.pull-right i{padding-right: 10px;}
 .usp .table td{border-top: 0}
-
-/* New Arrival */
-.newarrival {padding-top: 35px}
-.newarrival .heading{padding-bottom: 25px}
-.newarrival h3{text-transform: uppercase; font-weight: normal; padding-top: 4px; color: #E26703; border-left: 4px solid #1e7ec8; padding-left: 5px}
