@@ -594,10 +594,10 @@ tr.summary-details-excluded { font-style:italic; }
 .block .actions a { float:left; }
 .block .actions button.button { float:right; }
 .block .empty {/* margin:0; padding:5px 9px; */}
-
+/*
 .block li.odd { background-color:#f4f3f3; }
 .block li.even { background-color:#fafafa; }
-
+*/
 /* Mini Blocks */
 .block-cart,
 .block-wishlist,

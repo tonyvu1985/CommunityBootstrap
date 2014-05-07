@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <sections>
+        <block tranlate="label" module="blockcustom">
+            <label>Promotion Blocks</label>
+            <tab>tvcomthemecustom</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>438</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups translate="label" module="slider">
+                <bestsell translate="label">
+                    <label>Best Sell Product List</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>Set up product to display in homepage Best Sell Block</comment>
+                    <fields>                      
+ 
+
+                        
+                    </fields>
+                </bestsell>    
+                                                                                
+              </groups>
+        </block>
+    </sections>
+</config>

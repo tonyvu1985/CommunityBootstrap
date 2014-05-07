@@ -61,6 +61,14 @@ Default layout, loads most of the pages
 
     <cms_index_index translate="label">
         <label>CMS Home Page</label>
+        <reference name="head">
+             <!-- script for jcarousel -->        
+            <action method="addCss"><stylesheet>css/jcarousel/jcarousel.skeleton.css</stylesheet></action>
+            <block type="core/text" name="jcarousel">
+                <action method="setText"><text><![CDATA[<script src="http://sorgalla.com/jcarousel/dist/jquery.jcarousel.min.js" defer="defer"></script>]]></text></action>
+            </block>
+            <!-- end script for jcarousel -->
+        </reference>
     </cms_index_index>
 
     <cms_index_defaultindex>
