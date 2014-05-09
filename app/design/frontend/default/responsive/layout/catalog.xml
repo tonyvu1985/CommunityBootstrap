@@ -75,7 +75,10 @@ Category default layout
         <reference name="head">
             <!-- lazy load image -->
             <action method="addItem"><type>skin_js</type><name>js/lazyload/jquery.lazyload.min.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>js/lazyload/load.lazyscript.js</name></action>    
+            <action method="addItem"><type>skin_js</type><name>js/lazyload/load.lazyscript.js</name></action> 
+            
+            <!-- same height script -->
+            <action method="addItem"><type>skin_js</type><name>js/grids.min.js</name></action>
         </reference>
         <reference name="left">
             <block type="catalog/navigation" name="catalog.leftnav" after="currency" template="catalog/navigation/left.phtml"/>
@@ -120,6 +123,9 @@ Category layered navigation layout
             <!-- lazy load image -->
             <action method="addItem"><type>skin_js</type><name>js/lazyload/jquery.lazyload.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/lazyload/load.lazyscript.js</name></action>    
+            
+            <!-- same height script -->
+            <action method="addItem"><type>skin_js</type><name>js/grids.min.js</name></action>
         </reference>
         
         <reference name="left">

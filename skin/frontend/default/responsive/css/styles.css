@@ -783,13 +783,13 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* View Type: Grid */
 .products-grid.last { border-bottom:0; }
-.products-grid li.item {/* float:left; width:138px; */padding:12px 10px 60px; }
+.products-grid li.item {/* float:left; width:138px; */padding:12px 10px 10px; }
 .products-grid .product-image { /*display:block; width:135px; height:135px; margin:0 0 10px; */}
 .products-grid .product-name {margin:0 0 5px; color:#203548; font-size: 13px}
 .products-grid .product-name a { color:#203548; }
 .products-grid .price-box { margin:5px 0; }
 .products-grid .availability { line-height:21px; }
-.products-grid .actions { position:absolute; bottom:12px; }
+/*.products-grid .actions { position:absolute; bottom:12px; }*/
 .products-grid .add-to-links li{float: left; margin-right: 5px}
 .col2-left-layout .products-grid,
 .col2-right-layout .products-grid {/* width:632px; margin:0 auto;*/ }
