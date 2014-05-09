@@ -953,9 +953,9 @@ tr.summary-details-excluded { font-style:italic; }
 .add-to-links { font-size:11px; margin:5px 0 0; }
 .add-to-links .separator { display:none; }
 
-/* Add to Cart 
-.add-to-cart label { float:left; margin-right:5px; font-weight:bold; color:#666; }
-.add-to-cart .qty { float:left; margin-right:5px; }
+/* Add to Cart */
+.add-to-cart label {font-weight:normal;}
+/*.add-to-cart .qty { float:left; margin-right:5px; }
 .add-to-cart button.button { float:left; }*/
 .add-to-cart .paypal-logo { clear:left; margin:0; text-align:right; }
 .add-to-cart .paypal-logo .paypal-or { clear:both; display:block; margin:5px 60px 5px 0; }
@@ -978,7 +978,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-collateral { padding:25px 15px; }
 .product-collateral h2 {font-size:13px; color:#e26703;text-transform: uppercase; margin:0 0 15px; }
 /*.product-collateral .box-collateral { margin:0 0 25px; }*/
-.box-collateral .box-additional{padding-top: 15px}
+.box-collateral.box-additional{padding-top: 15px}
 .product-collateral .nav-tabs>li {text-transform: uppercase}
 .product-collateral .nav-tabs>li.active a{color: #e26703}
 .product-collateral .tab-content{padding: 20px 10px;}
