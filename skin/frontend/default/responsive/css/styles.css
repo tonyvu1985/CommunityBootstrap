@@ -493,7 +493,7 @@ tr.summary-details-excluded { font-style:italic; }
 /*.header h1.logo { margin:0; }*/
 .header .quick-access { /*float:right; width:600px; padding:28px 10px 0 0; */}
 .header .quick-link{margin-top: 15px;}
-.header .welcome-msg { margin-bottom:0; /*text-align:right; */ color:#888; }
+.header .welcome-msg { margin-bottom:0; color:#31708f; }
 .header .welcome-msg a { color:#ebbc58; }
 .header .usp{margin-top: 15px;}
 .header .usp i{color: #000}
