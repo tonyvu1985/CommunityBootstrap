@@ -105,9 +105,9 @@
     .jcarousel-prev i, .jcarousel-next i, .bestsale-jcarousel-prev i, .bestsale-jcarousel-next i{font-size: 1em}
     
     /* homepage */
-    
     .main-banner1 {text-align: center}
     .main-banner2 {text-align: center; padding-top: 10px}
+    .header .form-language .input-group{float: left}
 }
  
 /* Landscape phones and down */
