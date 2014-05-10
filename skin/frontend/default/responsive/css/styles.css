@@ -1855,7 +1855,7 @@ tr.summary-details-excluded { font-style:italic; }
 #divnetworkshare i{margin-right: 5px}
 
 /* popup cart page */
-#popupcart{position: absolute; right: 0; z-index: 2; margin: 25px 14px 0px 0px; background:#fff; text-align: left; display: none; width: 250px}
+#popupcart{position: absolute; right: 0; z-index: 10; margin: 25px 14px 0px 0px; text-align: left; display: none; width: 250px}
 
 /* pagination catalog / category */
 .pagination{margin: 0}
