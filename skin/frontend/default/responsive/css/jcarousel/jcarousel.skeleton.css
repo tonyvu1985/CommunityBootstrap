@@ -16,3 +16,6 @@
 
 /* 3 blocks */
 .mainblocks{padding: 30px 0 40px 0}
+
+.jcarousel-vertical{position: relative; overflow: hidden; height: 115px}
+.jcarousel-vertical ul{position: relative; list-style: none;}
