@@ -116,7 +116,7 @@
     /* catalog category */
     .block-compare, .block-poll, .block-viewed, .paypal-logo, .block-wishlist{display: none}
     .col-main .category-image{display: none}
-    
+    .sorter .sort-by{padding-right: 0}
     /* catalog product view */
     .products-list .product-shop{margin-left: 0}
     .sorter .sort-by label{display: none}
@@ -136,6 +136,9 @@
     
     .usp .icon{display: none}
     .bestsale h3, .newarrival h3{font-size: 20px !important;}
+    
+    
     /*homepage*/
     .mainblocks{display: none}
+    
 }
