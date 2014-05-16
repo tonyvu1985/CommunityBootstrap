@@ -73,7 +73,7 @@ ul,ol         { list-style:none; }
 .col-left { /*float:left; width:195px; padding:0 0 1px; */}
 .col-left.sidebar{padding-left: 0px}
 .col-main { /*float:left; width:685px; padding:0 0 1px; */}
-.col-right { /*float:right; width:195px; padding:0 0 1px; */}
+.col-right { padding-left:0; padding-right:0}
 
 /* 1 Column Layout */
 .col1-layout .col-main { float:none; width:auto; }
@@ -84,7 +84,7 @@ ul,ol         { list-style:none; }
 
 /* 3 Columns Layout */
 .col3-layout .col-main {/* width:475px; margin-left:17px; */}
-.col3-layout .col-wrapper { /*float:left; width:687px;*/ }
+.col3-layout .col-wrapper {padding-left:0; padding-right:0 }
 .col3-layout .col-wrapper .col-main { /*float:right;*/ }
 
 /* Content Columns */
@@ -586,7 +586,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block .block-title a { text-decoration:none !important; }
 .block .block-subtitle {/* margin:0; padding:5px 9px; font-size:1em; font-weight:bold; color:#0a263c; */}
 .block .block-content {/* background:#f8f7f5; */ }
-.block .block-content li.item { padding:7px 9px; }
+.block .block-content li.item { padding:7px 0px; }
 .block .block-content .product-name { color:#1e7ec8; }
 .block .btn-remove,
 .block .btn-edit { float:right; margin:1px 0 2px 5px; }
@@ -733,8 +733,7 @@ tr.summary-details-excluded { font-style:italic; }
 .block-gr-search button.button span { border-color:#406a83; background:#618499; }
 
 /* Block: Tags */
-.block-tags .block-title strong {/* background-image:url(../images/i_block-tags.gif); */}
-.block-tags .block-content .tags-list { background:none; border:0;/* font-size:12px; */}
+.block-tags .block-content .tags-list { background:none; border:0;}
 .block-tags .block-content a { /*color:#1b2d3b; */}
 .block-tags .actions { text-align:right; }
 .block-tags .actions a { float:none; }
@@ -1137,7 +1136,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-name a { color:#1e7ec8; text-decoration: none}
 .product-name a:hover{color: #434343} 
 /* Product Tags */
-.tags-list { display:block; font-size:13px; border:1px solid #c1c4bc; background:#f8f7f5; padding:10px; }
+.tags-list { display:block; }
 .tags-list li { display:inline !important; margin:0 4px 0 0; }
 .tags-list li a { color:#1b2d3b; }
 
