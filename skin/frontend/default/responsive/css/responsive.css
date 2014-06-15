@@ -43,7 +43,7 @@
 @media (min-width:768px){
     /* quick access nav */
     .quick-access{text-align: right}   
-    .navbar-header .navbar-brand{display: none;}
+    .navbar-header .navbar-brand, .navbar-inverse .navbar-brand{display: none;}
 }
 @media (max-width: 767px) {
     .col-right{margin-top: 20px;}
