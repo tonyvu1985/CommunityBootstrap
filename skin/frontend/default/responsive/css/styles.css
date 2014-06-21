@@ -1011,7 +1011,8 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-shop .product-name { margin:0 0 5px; }
 .product-view .product-shop .product-name h1 { margin:0; font:bold 15px/1.35 Arial, Helvetica, sans-serif; }
 .product-view .product-shop .availability { margin:10px 0; }
-.product-view .product-shop .short-description { margin:10px 0; /*background:url(../images/bkg_divider1.gif) 0 0 repeat-x;*/ padding:10px 0 0; }
+.product-view .product-shop .short-description { margin:10px 0; padding:10px 0 0; }
+.product-view .product-shop .short-description h2{ color:#1e7ec8; text-transform:uppercase; font-weight:normal; margin-bottom:10px }
 .product-view .product-shop .price-box { margin:10px 0; }
 .product-view .product-shop .add-to-links { margin:0; }
 .product-view .product-shop .add-to-links { font-size:12px; text-align:right; }
