@@ -468,7 +468,7 @@
                         <link translate="label">
                             <label><![CDATA[<span style="color:red">a link</span>]]></label>
                             <frontend_type>label</frontend_type>
-                            <sort_order>4</sort_order>
+                            <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>                
