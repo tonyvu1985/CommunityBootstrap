@@ -30,9 +30,9 @@
     <form action="<?php echo $this->getAction() ?>" method="post" id="review-form">
         <fieldset>
             <?php echo $this->getChildHtml('form_fields_before')?>
-            <h3><?php echo $this->__("You're reviewing:"); ?> <span><?php echo $this->escapeHtml($this->getProductInfo()->getName()) ?></span></h3>
+            <p><?php echo $this->__("You're reviewing:"); ?> <span style="font-weight:bold"><?php echo $this->escapeHtml($this->getProductInfo()->getName()) ?></span></p>
             <?php if( $this->getRatings() && $this->getRatings()->getSize()): ?>
-                <h4><?php echo $this->__('How do you rate this product?') ?> <em class="required">*</em></h4>
+                <p><?php echo $this->__('How do you rate this product?') ?> <em class="required">*</em></p>
                 <span id="input-message-box"></span>
                 <table class="data-table table" id="product-review-table">
                     <col />

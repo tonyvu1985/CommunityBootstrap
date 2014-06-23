@@ -159,9 +159,15 @@
     <!-- tab -->
     
     <ul id="myTab" class="nav nav-tabs">
-      <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
-      <li class=""><a href="#upsells" data-toggle="tab">Related Product</a></li>
-      <li class=""><a href="#tags" data-toggle="tab">Product Tags</a></li>
+	<?php if($this->getChildHtml('description')) : ?>
+		<li class="active"><a href="#details" data-toggle="tab">Details</a></li>
+	<?php endif; ?>
+	<?php if($this->getChildHtml('upsell_products')) : ?>
+	      <li class=""><a href="#upsells" data-toggle="tab">Related Product</a></li>
+	<?php endif; ?>
+	<?php if($this->getChildHtml('product_additional_data')) : ?>
+	      <li class=""><a href="#tags" data-toggle="tab">Product Tags</a></li>
+	<?php endif; ?>
     </ul>
     
     <div id="ProductTabContent" class="tab-content">
@@ -176,12 +182,18 @@
             </div>
         <?php endforeach;?>
       </div>
-      <div class="tab-pane fade" id="upsells">
-          <?php echo $this->getChildHtml('upsell_products') ?>
-      </div>
-      <div class="tab-pane fade" id="tags">
-          <?php echo $this->getChildHtml('product_additional_data') ?>
-      </div>
+	<?php if($this->getChildHtml('upsell_products')) : ?>
+	      <div class="tab-pane fade" id="upsells">
+		  <?php echo $this->getChildHtml('upsell_products') ?>
+	      </div>
+	<?php endif; ?>
+	<?php if($this->getChildHtml('product_additional_data')) : ?>
+		<div class="tab-pane fade" id="tags">
+		  <?php echo $this->getChildHtml('product_additional_data') ?>
+		</div>
+	<?php endif; ?>
     </div>
+    <!-- Review Product From -->
+    <?php echo $this->getChildHtml('review_product') ?>
     </div>
 </div>
