@@ -1709,14 +1709,11 @@ tr.summary-details-excluded { font-style:italic; }
 .footer .store-switcher label { font-weight:bold; vertical-align:middle; }
 .footer .store-switcher select { padding:0; vertical-align:middle; }
 .footer a:hover { text-decoration:underline;}
-/*.footer .bugs { margin:13px 0 0; color:<?php echo $footer_link_color ?>;}
-.footer .bugs a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}
-.footer .bugs a:hover { text-decoration:none; } */
 .footer address { margin:0 0 20px;}
 .footer address a:hover { text-decoration:none; }
 .footer ul { display:inline; }
 .footer ul.links { display:block; }
-.footer li { display:inline;/* background:url(../images/bkg_pipe2.gif) 100% 60% no-repeat;*/ padding:0 10px 0 0px; }
+.footer li { display:inline; padding:0 10px 0 0px; }
 .footer li.last { background:none !important; padding-right:0 !important; }
 .footer-container .bottom-container { margin:0 0 5px; }
 /* ======================================================================================= */
