@@ -38,7 +38,7 @@
     <?php endif ?>
 
     <?php if($this->getShowAmounts()): ?>
-    <p class="amount col-sm-6 col-xs-12">
+    <p class="amount col-xs-6">
         <?php if($this->getLastPageNum()>1): ?>
             <?php echo $this->__('Items %s to %s of %s total', $this->getFirstNum(), $this->getLastNum(), $this->getTotalNum()) ?>
         <?php else: ?>
@@ -48,7 +48,7 @@
     <?php endif ?>
 
     <?php if($this->getShowPerPage()): ?>
-    <div class="limiter col-sm-6 col-xs-12">
+    <div class="limiter col-xs-6">
         <?php echo $this->__('Show') ?>
         <select onchange="setLocation(this.value)">
         <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
