@@ -1119,17 +1119,8 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .box-reviews .form-add .form-list textarea { width:354px; }
 
 */
-/* Send a Friend 
-.send-friend .form-list { width:615px; overflow:hidden; }
-.send-friend .form-list li { margin-right:-15px; }
-.send-friend .form-list li p { margin:0 15px 0 0; }
-.send-friend .form-list .field { width:315px; }
-.send-friend .form-list .input-box { width:300px; }
-.send-friend .form-list input.input-text,
-.send-friend .form-list textarea { width:294px; }
-.send-friend .form-list li.wide .input-box { width:612px; }
-.send-friend .form-list li.wide textarea { width:609px; }
-.send-friend .buttons-set .limit { float:right; margin:0 7px 0 0; font-size:11px; line-height:21px; }
+/* Send a Friend */
+.send-friend label{margin:10px 0px 0 0;}
 /* ======================================================================================= */
 
 
