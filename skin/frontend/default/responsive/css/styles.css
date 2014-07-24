@@ -67,7 +67,7 @@ ul,ol         { list-style:none; }
 .page-print { background:#fff; padding:25px 30px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
-.main { /*width:900px; margin:0 auto; min-height:400px; */padding:0px 15px 30px; background:#fffff; text-align:left; }
+.main { /*width:900px; margin:0 auto; min-height:400px; padding:0px 15px 30px; background:#fffff;*/ text-align:left; }
 
 /* Base Columns */
 .col-left { /*float:left; width:195px; padding:0 0 1px; */}
