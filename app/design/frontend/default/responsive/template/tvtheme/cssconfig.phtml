@@ -18,7 +18,6 @@
     $textcolor = '#' . Mage::getStoreConfig('setting/themefont/textcolor', Mage::app()->getStore()->getId());
     
     /* header */
-    $header_bgcolor = '#' . Mage::getStoreConfig('setting/header/bgcolor', Mage::app()->getStore()->getId()); 
     $header_link_color = '#' . Mage::getStoreConfig('setting/header/link_color', Mage::app()->getStore()->getId());
     $header_link_size = Mage::getStoreConfig('setting/header/link_size', Mage::app()->getStore()->getId());
     $header_hoverlink_color = '#' . Mage::getStoreConfig('setting/header/hoverlink_color', Mage::app()->getStore()->getId());
@@ -26,7 +25,6 @@
  
     
     /* footer */
-    $footer_bgcolor = '#' . Mage::getStoreConfig('setting/footer/bgcolor', Mage::app()->getStore()->getId());
     $footer_link_color = '#' . Mage::getStoreConfig('setting/footer/link_color', Mage::app()->getStore()->getId());
     $footer_link_size = Mage::getStoreConfig('setting/footer/link_size', Mage::app()->getStore()->getId());
     
@@ -49,13 +47,6 @@
         $footer_text_size = $fontsize;
     }
     
-    $footer_line_color = '#' . Mage::getStoreConfig('setting/footer/line_color', Mage::app()->getStore()->getId());
-    $footer_line_size = Mage::getStoreConfig('setting/footer/line_size', Mage::app()->getStore()->getId());
-    // get default size 10px
-    if ($footer_line_size == ''){
-        $footer_line_size = '10px';
-    }
-    
 ?>
 
 <style type="text/css">
@@ -63,12 +54,11 @@
 .fullgrid-footer{margin: 0 auto; background: <?php echo $fullgrid_footer_bgcolor?>}
 .fullgrid-main-container {background:<?php echo $fullgrid_footer_main_container; ?>; margin: 0 auto; padding: 20px 0 40px}
 
-.header{padding: 10px 0px; background: <?php echo $header_bgcolor ?>}
 .header .links a { color:<?php echo $header_link_color ?>; font-size: <?php echo $header_link_size ?>;}
 .header .links a:hover { color:<?php echo $header_hoverlink_color ?>; font-size: <?php echo $header_hoverlink_size ?>;}
 .header .links .top-link-cart i{margin-left: 5px;}
 .navbar-header .navbar-brand{text-transform: uppercase}
-.footer { /*width:930px; margin:0 auto; */padding:10px 10px 50px; background: <?php echo $footer_bgcolor ?>; color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>; border-top:<?php echo $footer_line_size ?> solid <?php echo $footer_line_color ?>; text-align:left}
+.footer {color:<?php echo $footer_text_color ?>; font-size: <?php echo $footer_text_size ?>; text-align:left}
 .footer a { color:<?php echo $footer_link_color ?>; text-decoration:none; font-size: <?php echo $footer_link_size ?>}
 .footer .title{color:<?php echo $footer_title_color ?>; font-size: <?php echo $footer_title_size ?>; font-weight:bold; text-transform: uppercase; padding: 2px 0}
 .footer address a { color:<?php echo $footer_link_color ?>; text-decoration:underline; font-size: <?php echo $footer_link_size ?>}

@@ -28,8 +28,8 @@
  */
 ?>
 <div class="header-container">
-    <div class="header row">    
-        <div class="col-sm-5">
+    <div class="header container">    
+        <div class="col-sm-6 col-xs-12">
             <!-- company logo -->
             <?php if(Mage::getStoreConfig('setting/header/logo', Mage::app()->getStore()->getId()) != ''): ?>
             <a href="<?php echo $this->getBaseUrl(); ?>"><img class="img-responsive" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'logo/' . Mage::getStoreConfig('setting/header/logo') ?>" alt="<?php echo Mage::getStoreConfig('setting/header/logoalt') ?>"></a>
@@ -44,7 +44,7 @@
             <?php endif; ?>
         </div>
         
-        <div class="quick-access col-sm-7">      
+        <div class="quick-access col-sm-6 col-xs-12">      
             <?php echo $this->getChildHtml('topSearch') ?>
             <div class="row quick-link">
                 <div class="welcome-box col-sm-12 col-xs-4">

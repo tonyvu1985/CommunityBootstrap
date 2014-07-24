@@ -144,16 +144,6 @@
                             <show_in_store>1</show_in_store>                        
                         </navbar>
                         
-                        <bgcolor translate="label"> <!-- header background color -->
-                            <label>Bg color</label>
-                            <frontend_type>text</frontend_type>
-                            <validate>color</validate>                             
-                            <sort_order>50</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>  
-                        </bgcolor>
-                        
                         <link translate="label">
                             <label><![CDATA[<span style="color:red">a link</span>]]></label>
                             <frontend_type>label</frontend_type>
@@ -280,16 +270,6 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>    
                     <fields>
-                        <bgcolor translate="label">
-                            <label>Bg color</label>
-                            <frontend_type>text</frontend_type>
-                            <validate>color</validate>                             
-                            <sort_order>0</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </bgcolor>
-                        
                         <title translate="label">
                             <label><![CDATA[<span style="color:red">Title</span>]]></label>
                             <frontend_type>label</frontend_type>
@@ -374,35 +354,6 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </text_size>                  
-                        
-                        <line translate="label"> <!-- line style -->
-                            <label><![CDATA[<span style="color:red">Line</span>]]></label>
-                            <frontend_type>label</frontend_type>
-                            <sort_order>12</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                
-                        </line>
-                        
-                        <line_color translate="label"> <!-- line color -->
-                            <label>Color</label>
-                            <frontend_type>text</frontend_type>                            
-                            <validate>color</validate>                  
-                            <sort_order>14</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>                            
-                        </line_color>                  
-                        
-                        <line_size translate="label"> <!-- footer line size -->
-                            <label>Size</label>
-                            <frontend_type>text</frontend_type>                            
-                            <sort_order>15</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                            <comment>If empty, It will take 10px as default line size</comment>
-                        </line_size>                  
                         
                         <contact translate="label">
                             <label>Contact details</label>
