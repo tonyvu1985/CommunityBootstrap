@@ -75,8 +75,8 @@ ul,ol         { list-style:none; }
 .col-main { /*float:left; width:685px; padding:0 0 1px; */}
 .col-right { padding-left:0; padding-right:0}
 
-/* 1 Column Layout */
-.col1-layout .col-main { float:none; width:auto; }
+/* 1 Column Layout 
+.col1-layout .col-main { float:none; width:auto; }*/
 
 /* 2 Columns Layout */
 .col2-left-layout .col-main { /*float:right; */}
