@@ -525,6 +525,7 @@ tr.summary-details-excluded { font-style:italic; }
 #nav li ul li a{text-transform: none; text-align: left}
 #nav-parentlink{color: #e26703}
 .navbar-header .navbar-brand{text-decoration: none;}
+.navbar{margin-bottom:0}
 /* All Levels */ /* Style consistent throughout all nav levels */
 /*#nav li { position:relative; text-align:left; }
 #nav li.over { z-index:998; }
@@ -1696,7 +1697,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Footer ================================================================================ */
-/*.footer-container { }*/
+.footer-container {padding: 30px 0 0 0}
 .footer .store-switcher { display:inline; margin:0 5px 0 0; color:#fff; }
 .footer .store-switcher label { font-weight:bold; vertical-align:middle; }
 .footer .store-switcher select { padding:0; vertical-align:middle; }
