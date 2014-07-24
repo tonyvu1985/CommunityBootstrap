@@ -969,7 +969,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /*.product-view { border:1px solid #c4c6c8; }*/
 
-.product-essential { padding:25px 0; /*background:#fff url(../images/bkg_product-view.gif) 100% 0 no-repeat;*/ }
+/*.product-essential { padding:25px 0; background:#fff url(../images/bkg_product-view.gif) 100% 0 no-repeat; }*/
 .product-essential h2 { font:bold 13px/1.35 Arial, Helvetica, sans-serif; }
 .product-essential .product-options .required{margin: 11px 0 0 0; display: inline-block}
 .product-collateral { padding:25px 15px; }
