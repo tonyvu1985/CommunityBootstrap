@@ -34,6 +34,8 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
             ->addAttributeToSelect('name')
             ->addAttributeToSelect('url_path')      
             ->addAttributeToSelect('price')    
+            ->addAttributeToSelect('special_price')    
+            ->addAttributeToSelect('special_to_date')    
             ->addAttributeToSelect('small_image')
             ->addAttributeToFilter('status', 1)
             ->addAttributeToFilter('sku', array('in'=> $arry_product_sku))
@@ -84,7 +86,7 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
         /* get feature product list from their sku */
     public function getSaleProducts($arry_product_sku){        
         $products = $this->getProductBySku($arry_product_sku);        
-        $html .= '<table class="table table-hover">';   
+        $html .= '<table class="table table-hover tblsale">';   
         $html .= '<thead>';
         $html .= '<tr>';
         $html .= '<th colspan="3" class="salelists">Sale Product List</th>';
@@ -92,10 +94,15 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
         $html .= '</thead>';
         $html .= '<tbody>';
         foreach($products as $product){
+	echo 'tonyv' . $product->getSpecialToDate();
            $html .= '<tr>';
            $html .= '<td align="left"><img src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(40) . '" alt=""></td>';                             
            $html .= '<td><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '">' . $product->getName() . '</a></td>';
-           $html .= '<td>' . Mage::helper('core')->currency($product->getPrice()) . '</td>';               
+	   if($product->getSpecialPrice() != NULL){
+		   $html .= '<td><strike>' . Mage::helper('core')->currency($product->getPrice()) .'</strike>  ' .  Mage::helper('core')->currency($product->getSpecialPrice()). '</td>';               
+	   }else{
+		   $html .= '<td>' . Mage::helper('core')->currency($product->getPrice()) . '</td>';               
+	   }
            $html .= '</tr>';
         }            
         $html .= '</tbody>';
