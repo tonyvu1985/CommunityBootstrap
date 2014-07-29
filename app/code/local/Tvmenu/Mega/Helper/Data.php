@@ -4,6 +4,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+require_once (Mage::getBaseDir().DS."app".DS."code".DS."core".DS."Mage".DS."Catalog".DS."Block".DS."Product.php");
 
 class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{  
    public function getSubCategories($parent_id){
@@ -34,12 +35,10 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
             ->addAttributeToSelect('name')
             ->addAttributeToSelect('url_path')      
             ->addAttributeToSelect('price')    
-            ->addAttributeToSelect('special_price')    
-            ->addAttributeToSelect('special_to_date')    
             ->addAttributeToSelect('small_image')
             ->addAttributeToFilter('status', 1)
             ->addAttributeToFilter('sku', array('in'=> $arry_product_sku))
-                ->load();
+		->load();
     }
     
     public function getCatergorybyLevel($rootid) {
@@ -93,29 +92,18 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
         $html .= '</tr>';
         $html .= '</thead>';
         $html .= '<tbody>';
+	$product_block = new Mage_Catalog_Block_Product;
+//	echo get_class($product_block);
         foreach($products as $product){
-	echo 'tonyv' . $product->getSpecialToDate();
            $html .= '<tr>';
            $html .= '<td align="left"><img src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(40) . '" alt=""></td>';                             
            $html .= '<td><a href="' . Mage::getBaseUrl(). $product->getUrl_path() . '">' . $product->getName() . '</a></td>';
-	   if($product->getSpecialPrice() != NULL){
-		   $html .= '<td><strike>' . Mage::helper('core')->currency($product->getPrice()) .'</strike>  ' .  Mage::helper('core')->currency($product->getSpecialPrice()). '</td>';               
-	   }else{
-		   $html .= '<td>' . Mage::helper('core')->currency($product->getPrice()) . '</td>';               
-	   }
+	   $html .= '<td>' . $product_block->getPriceHtml($product) . '</td>';               
            $html .= '</tr>';
         }            
         $html .= '</tbody>';
         $html .= '</table>';
         return $html;
     }
-    
-     
-                        
-               
-                            
-                        
-                       
-                      
 }
 ?>
