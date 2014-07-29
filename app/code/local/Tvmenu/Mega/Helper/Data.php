@@ -89,7 +89,6 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
         $html .= '</thead>';
         $html .= '<tbody>';
 	$product_block = new Mage_Catalog_Block_Product;
-//	echo get_class($product_block);
         foreach($products as $product){
            $html .= '<tr>';
            $html .= '<td align="left"><img src="' . Mage::helper('catalog/image')->init($product, 'small_image')->resize(40) . '" alt=""></td>';                             
