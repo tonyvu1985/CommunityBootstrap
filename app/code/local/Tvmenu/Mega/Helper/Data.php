@@ -20,7 +20,7 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
     public function getCategory($catId){
         return Mage::getModel('catalog/category')
                 ->getCollection()
-                ->addAttributeToSelect('name')
+                ->addAttributeToSelect('*')
                 ->addAttributeToSelect('url_path')
                 ->addAttributeToSelect('description')
                 ->addAttributeToSelect('image')
@@ -32,11 +32,7 @@ class Tvmenu_Mega_Helper_Data extends Mage_Core_Helper_Abstract{
     public function getProductBySku($arry_product_sku){        
          return Mage::getModel("catalog/product")
             ->getCollection()
-            ->addAttributeToSelect('name')
-            ->addAttributeToSelect('url_path')      
-            ->addAttributeToSelect('price')    
-            ->addAttributeToSelect('small_image')
-            ->addAttributeToFilter('status', 1)
+            ->addAttributeToSelect('*')
             ->addAttributeToFilter('sku', array('in'=> $arry_product_sku))
 		->load();
     }
