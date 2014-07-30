@@ -34,8 +34,19 @@
     if($interval == null || $interval == 0){
         $interval = 5000;
     }
+
+    // get Banner Links
+$banner_arr = unserialize(Mage::getStoreConfig('carousel/setting/banner', Mage::app()->getStore()->getId()));
+if(!empty($banner_arr)){
+	$banner_list = array();
+	foreach($banner_arr as $banner){
+		$banner_list[trim($banner['image_name'])] = trim($banner['image_link']);
+	}
+	var_dump($banner_list);
+}
+
 ?>
-<div id="tvcarousel" data-interval="<?php echo $interval ?>" data-wrap="<?php echo $is_loop ?>" class="carousel <?php echo $transition ?>" data-ride="carousel" style="margin-bottom: 20px;">
+<div id="tvcarousel" data-interval="<?php echo $interval ?>" data-wrap="<?php echo $is_loop ?>" class="carousel <?php echo $transition ?>" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <?php 
