@@ -48,7 +48,7 @@
     $_minimalPriceValue = $_product->getMinimalPrice();
     $_minimalPrice = $_taxHelper->getPrice($_product, $_minimalPriceValue, $_simplePricesTax);
 	//$_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStoreLabel();
-	$_specialPriceStoreLabel = '';
+	$_specialPriceStoreLabel = '<span class="price-label">Special Price</span>';
 	if ($this->getProductAttribute('special_price')) $_specialPriceStoreLabel = $this->getProductAttribute('special_price')->getStoreLabel();
 ?>
 

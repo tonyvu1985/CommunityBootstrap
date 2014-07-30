@@ -871,7 +871,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Old price */
 .old-price { margin:0; }
-.old-price .price-label { white-space:nowrap; color:#999; }
+.old-price .price-label { white-space:nowrap; color:#999; font-size:12px }
 .old-price .price { font-weight:bold; color:#c76200; text-decoration:line-through; }
 
 /* Special price */
