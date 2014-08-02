@@ -297,7 +297,7 @@ p.required { font-size:11px; text-align:right; color:#EB340A; }
 .error-msg{background-color: #fcf8e3; border-color: #faebcc; color: #8a6d3b; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;}
 .notice-msg, .note-msg{background-color: #d9edf7; border-color: #bce8f1; color: #31708f; padding: 15px; margin-bottom: 20px; border: 1px solid transparent; border-radius: 4px;}
 /* BreadCrumbs */
-.breadcrumbs { font-size:11px; line-height:1.25; margin:0 0 13px; }
+.breadcrumbs { font-size:11px; margin:15px 0px 0 30px; text-align:left; background:none}
 .breadcrumbs li { display:inline; }
 .breadcrumbs li strong { font-weight:bold; }
 
