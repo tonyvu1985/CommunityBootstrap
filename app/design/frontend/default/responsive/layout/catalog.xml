@@ -210,7 +210,7 @@ Product view
     
             <!-- script for jcarousel -->        
             <action method="addCss"><stylesheet>css/jcarousel/jcarousel.skeleton.css</stylesheet></action>
-		<action method="addItem"><type>skin_js</type><name>js/jquery.jcarousel.min.js</name></action>
+		<action method="addItem"><type>skin_js</type><name>jquery.jcarousel.min.js</name></action>
             <!-- end script for jcarousel -->
             
         </reference>
